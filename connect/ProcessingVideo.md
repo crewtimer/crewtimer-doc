@@ -135,14 +135,60 @@ If the CrewTimer station already assigned the split, ***CrewTimer Video Review**
 
 Much like the similar buttons in the video timeline, these buttons allow you to move by a single frame within the selected video. This is typically used to narrow down the exact moment the bow crosses the line.
 
-(6) Save Screenshot
+### (6) Save Screenshot
 
-(7) Timestamp | Previous | Next Frame
+If your umpires or maybe the media team wants to document a particularly close finish. The "Save Screenshot" button can be used to make a copy of the active video frame.
 
-(8) Assign Split
+### (7) Timestamp | Previous | Next Frame
 
-(9) Assign Bow
+This panels show the timestamp associated with the current video frame. This is the timestamp used to populate the result when you hit the "ADD SPLIT" button.
 
-(10) File Selector
+The arrow buttons can be used to move between video frames
+
+### (8) Assign Split
+
+To assign a split there is three things that you need to set or check
+
+- [ ] Make sure you have selected the frame that best reflects the time the boat crossed the finish line
+- [ ] Make sure the correct event is selected
+- [ ] Enter the "BOW" number for the boat you are scoring
+- [ ] Press the "ADD SPLIT" button
+
+As soon as you do this, it will be reflected on the CrewTimer website, like any other CrewTimer timing signal.
+
+Please note that "EVENT" and "BOW" might have been pre-populated when you clicked the market in the timeline.
+
+### (9) Assign Bow
+
+This is where you enter the bow number. You can do this in two ways:
+
+- [ ] Enter the bow number into the field directly
+- [ ] Click the "ENTRY" for the bow number in the event list
+
+### (10) File Selector
+
+Another way to select the file you want to look at, is by selecting it from the file list. This can be useful if you have the time in the filename and you want to quickly jump to a given time.
+
+The more common use is to delete files without any finishes from there. It's common that you have recordings from periods without finishes, for review and data storage considerations, it's recommended to delete them whenever there is some time available. Deleting a file is straight forward:
+
+- [ ] Review the "VIDEO TIMELINE" for any files that do now show any results
+- [ ] Select the segment in the "VIDEO TIMELINE", this highlight the video in the "FILE SELECTOR"
+- [ ] Right click on the file in question (it should be highlighted in blue) and select "DELETE"
+
+![image-20240602104450606](assets/image-20240602104450606.png)
+
+- [ ] Confirm the delete action if you are sure this the file you want to remove
 
 (11) Assigned Timestamps
+
+After you start scoring races, your assigned times will start to show in here. You can switch between events by using the dropdown, or move to the next|previous event with the buttons on the side:
+
+![image-20240602110317753](assets/image-20240602110317753.png)
+
+If you want to remove a timestamp, click on the triple dot and select "DELETE":
+
+![image-20240602110548970](assets/image-20240602110548970.png)
+
+You will be asked to confirm that you want to delete this timestamp:
+
+![image-20240602110659225](assets/image-20240602110659225.png)
