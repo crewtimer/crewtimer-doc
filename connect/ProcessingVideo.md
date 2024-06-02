@@ -81,3 +81,68 @@ If you are reviewing the video in a different timezone then where the regatta is
 The remaining options allow you to control whether lane lines are visible in the scoring user interface.
 
 The User Interface section below provides more detail on it's usage.
+
+## Using the software
+
+We will start with an overview of the main User Interface to get you familiar:
+
+![Main_UI](assets/Main_UI.png)
+
+1. Video Timeline
+2. Previous | Next File
+3. Jump to end | Split Video
+4. Video Scrub
+5. Previous | Next Frame
+6. Save Screenshot
+7. Timestamp | Previous | Next Frame
+8. Assign Split
+9. Assign Bow
+10. File Selector
+11. Assigned Timestamps
+
+### (1) Video Timeline
+
+This bar will show all the different capture files for today. Note that you should not have files from previous days in the same directory. It causes issues with this display. The currently active video is shown in blue. Other files are green. You can click on any of the "blocks" to jump to that file.
+
+Note that this is also where you will see any markers from the CrewTimer Station you picked for your "Hints":![image-20240602092338717](assets/image-20240602092338717.png)
+
+### (2) Previous | Next File
+
+Instead of using your mouse to select the file of interest, you can click the single arrow on the left and right side of the video timeline. This is another way to navigate the timeline.
+
+### (3) Jump to end | Split Video
+
+This double arrow button jumps to the last file in the video directory. If you are in the same network as the capture software this button might do two other things:
+
+- Start the recorder software if it was not running yet
+- Ask the recorder software to start a new file
+
+This is very helpful in the normal finishline workflow, as you see boats approaching, generate a new file. This will allow you later to remove blank video files and make review faster.
+
+### (4) Video Scrub
+
+The blue dot can be selected with the mouse and dragged around, or you can left click a position on the timeline with your mouse to jump there. This is your primary method for quick navigation within a video file.
+
+Note that when your current video file has CrewTimer hints, they will also show here:
+
+![image-20240602093206276](assets/image-20240602093206276.png) 
+
+Click on one of those markers will be the fastest way to locate events of interest.
+
+If the CrewTimer station already assigned the split, ***CrewTimer Video Review*** will populate the Bow and Event for you! **Just make very sure in your review that you agree with the Bow number selection**.
+
+### (5) Previous | Next Frame
+
+Much like the similar buttons in the video timeline, these buttons allow you to move by a single frame within the selected video. This is typically used to narrow down the exact moment the bow crosses the line.
+
+(6) Save Screenshot
+
+(7) Timestamp | Previous | Next Frame
+
+(8) Assign Split
+
+(9) Assign Bow
+
+(10) File Selector
+
+(11) Assigned Timestamps
