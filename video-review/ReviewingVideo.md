@@ -1,16 +1,16 @@
-# Video processing with CrewTimer Connect
+# Video processing with CrewTimer Video Review
 
 ## Introduction
 
-The CrewTimer Connect module provides the ability to process finish line recordings in a format created by CrewTimer Recorder or RiaB Camera. These recordings combine video and timestamps for accurate evaluation of the finishes. 
+The CrewTimer Video Review module provides the ability to process finish line recordings in a format created by CrewTimer Recorder or RiaB Camera. These recordings combine video and timestamps for accurate evaluation of the finishes. 
 
-CrewTimer Connect makes processing the results highly efficient by integrating "hints" from other CrewTimer stations into the Workflow.
+CrewTimer Video Review makes processing the results highly efficient by integrating "hints" from other CrewTimer stations into the Workflow.
 
 It's strongly recommended to test the full suite of hardware, software and volunteers before your actual regatta. Although the overall process is not complicated, it's more involved then operating a clicker.
 
 ## Getting started
 
-You will need to download and installed the CrewTimer Connect software from here (Windows, Mac). These links will always take you to the latest version available. It's recommended you update the software as part of the preparation for your regatta.
+You will need to download and installed the CrewTimer Video Review software from here (Windows, Mac). These links will always take you to the latest version available. It's recommended you update the software as part of the preparation for your regatta.
 
 You can determine the current version you are running by clicking the three lines at the top right of your Connect window -> About. A window will show you the current version.
 
@@ -32,7 +32,7 @@ Below is the most common setup, your setup should now look like the below:
 
 ![image-20240601101217235](assets/image-20240601101217235.png)
 
-Before you can complete the next steps, work with your CrewTimer regatta administrator to get the MobileID and MobilePIN. Also make sure that you have both **Finish** and **Finish2** setup. CrewTimer Connect works in the same way as any other timing station. But using the **Finish** and **Finish2** names provides some additional functionality for review in the [admin portal](https://admin.crewtimer.com/).
+Before you can complete the next steps, work with your CrewTimer regatta administrator to get the MobileID and MobilePIN. Also make sure that you have both **Finish** and **Finish2** setup. CrewTimer Video Review works in the same way as any other timing station. But using the **Finish** and **Finish2** names provides some additional functionality for review in the [admin portal](https://admin.crewtimer.com/).
 
 If you are confident about your video setup, it's recommended that the video system is your primary (most accurate) source of timing.
 
@@ -192,3 +192,5 @@ If you want to remove a timestamp, click on the triple dot and select "DELETE":
 You will be asked to confirm that you want to delete this timestamp:
 
 ![image-20240602110659225](assets/image-20240602110659225.png)
+
+/Add the info it jumps to the video file
