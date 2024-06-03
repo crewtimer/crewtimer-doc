@@ -179,9 +179,9 @@ The more common use is to delete files without any finishes from there. It's com
 
 - [ ] Confirm the delete action if you are sure this the file you want to remove
 
-(11) Assigned Timestamps
+### (11) Assigned Timestamps
 
-After you start scoring races, your assigned times will start to show in here. You can switch between events by using the dropdown, or move to the next|previous event with the buttons on the side:
+After you start scoring races, your assigned times will start to show in here. You can switch between events by using the dropdown, or move to the next | previous event with the buttons on the side:
 
 ![image-20240602110317753](assets/image-20240602110317753.png)
 
@@ -193,4 +193,12 @@ You will be asked to confirm that you want to delete this timestamp:
 
 ![image-20240602110659225](assets/image-20240602110659225.png)
 
-/Add the info it jumps to the video file
+#### Jumping to scored entries
+
+A very handy feature is the ability to jump to the exact frame of a video for the finish time you recorded. This is handy when you have a set of close finishes that the umpire wants to review. You can keep scoring while the rest of the race finishes. When it's time to show them the playback, you click the timestamp and the video recorded at that moment will open.
+
+#### Sorting by finish time
+
+This can be done in the CrewTimer admin portal as well. But a quick way to review the recorded finish order with the umpire is to click on the small triangle next to "ENTRY". Clicking there will switch between sorting by BOW and sorting by TIME:
+
+![image-20240602181106126](assets/image-20240602181106126.png)
