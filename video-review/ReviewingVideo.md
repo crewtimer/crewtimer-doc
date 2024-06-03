@@ -56,6 +56,7 @@ You have a few other options to review that can help you process your results fa
 
 - [ ] Select the "Video Settings" tab in the main Connect window (the playback + gear icon)
 - [ ] If you are reviewing the video in a different timezone than where the regatta is, you can set the "Course Timezone" to where the event is taking place. This will ensure that timestamps are shown in the local timezone for where the event takes place. This is very convenient when you are looking at the times on a race schedule or heat sheet.
+- [ ] The "Mouse Wheel Factor" allows you to control how many frames the video will move when you use the scroll wheel on your mouse. Higher numbers provided finer control. Adjust this to fit your workflow.
 - [ ] Probably the only other setting you want to make is to select "Finish" in the "Guide Visibility" section
 
 The remaining options allow you to control whether lane lines are visible in the scoring user interface. The advanced features section covers it's use. Your setting will look like the below:
@@ -248,6 +249,8 @@ Double clicking the image will reset the blue lines.
 
 The software allows you to place lane lines. When you click between the lane lines, the software will populate the bow number based on the information you provided.
 
-When lane guides are enabled, they can be adjusted in a manner similar to the finish line by clicking and dragging the end points.
+When lane guides are enabled, they can be adjusted in a manner similar to the finish line by clicking and dragging the end points:
 
-Visibility of lane guides is configured in the Video Settings tab.
+![image-20240603082612026](assets/image-20240603082612026.png)
+
+Visibility of lane guides is configured in the "Video Settings" tab. See the "Other Setup" section earlier in this document.
