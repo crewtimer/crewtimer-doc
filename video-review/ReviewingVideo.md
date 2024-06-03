@@ -227,6 +227,23 @@ The undo any introduced angle, press and hold SHIFT while moving either marker.
 
 To bring the finish line back to the center, go back into the "Video Settings" and press the "RESET FINISH" button.
 
+#### Interpolated finish times
+
+**Note you should discuss this approach with your Chief Judge at the Finish to ensure they are OK with these calculations.**
+
+Because boats move at fairly constant speed, times from two different video frames can be used to calculate a finish time. This is useful when two boats finish very closely (and the exact time is critical) and no single frame provides a view of the bow crossing the line exactly. This is done by following these steps:
+
+- [ ] Find the last video frame before the bow crosses the line
+- [ ] Press and hold SHIFT and click on the location of the bow ball. A blue line will appear
+- [ ] Move to the next video frame where the bow crossed the line
+- [ ] Press and hold SHIFT and click on the location of the bow ball. A blue line will appear
+
+After doing this, the calculated time will show below the video timestamp. In the example below, you can see the frame before the video has a timestamp of *12:07:09.292*, followed by *12:07:09.308*. The calculated timestamp is *12:07:09.300* and will be assigned when you press the "ADD SPLIT" button
+
+![image-20240602211758398](assets/image-20240602211758398.png)
+
+Double clicking the image will reset the blue lines.
+
 #### Using lane lines
 
 The software allows you to place lane lines. When you click between the lane lines, the software will populate the bow number based on the information you provided.
