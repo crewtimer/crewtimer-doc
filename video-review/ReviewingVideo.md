@@ -56,7 +56,7 @@ You have a few other options to review that can help you process your results fa
 
 - [ ] Select the "Video Settings" tab in the main Connect window (the playback + gear icon)
 - [ ] If you are reviewing the video in a different timezone than where the regatta is, you can set the "Course Timezone" to where the event is taking place. This will ensure that timestamps are shown in the local timezone for where the event takes place. This is very convenient when you are looking at the times on a race schedule or heat sheet.
-- [ ] The "Mouse Wheel Factor" allows you to control how many frames the video will move when you use the scroll wheel on your mouse. Higher numbers provided finer control. Adjust this to fit your workflow.
+- [ ] The "Mouse Wheel Factor" adjusts the sensitivity of the mouse wheel in relation to frame scrolling. Higher numbers provided finer control if you are seeing multi-frame jumps for each wheel click. Adjust this to fit your workflow.  For windows, 100 seems to work well while on MacOS, 4 works well.
 - [ ] Probably the only other setting you want to make is to select "Finish" in the "Guide Visibility" section
 
 The remaining options allow you to control whether lane lines are visible in the scoring user interface. The advanced features section covers it's use. Your setting will look like the below:
