@@ -11,10 +11,7 @@ The CrewTimer Video Recorder app is used to record mp4 video files for use with 
 
 ## Installation
 
-Download the installer:
-
-* [Windows Installer](https://storage.googleapis.com/resources.crewtimer.com/installers/recorder/CrewTimer%20Video%20Recorder%20Setup%201.0.1.exe)
-* [MacOS Installer](https://storage.googleapis.com/resources.crewtimer.com/installers/recorder/CrewTimer%20Video%20Recorder-1.0.1.dmg)
+Download the installer from the [Downloads Page](https://admin.crewtimer.com/help/Downloads).
 
 ## Getting Started
 

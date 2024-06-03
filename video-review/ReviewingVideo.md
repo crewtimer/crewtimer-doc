@@ -10,7 +10,7 @@ It is strongly recommended to test the full suite of hardware, software, and vol
 
 ## Getting started
 
-You will need to download and install the CrewTimer Video Review software from here (Windows, Mac). These links will always take you to the latest version available. It is recommended that you always update the software to the latest version as part of the preparation for your regatta.
+You will need to download and install the CrewTimer Video Review software from the [Downloads Page](https://admin.crewtimer.com/help/Downloads). These links will always take you to the latest version available. It is recommended that you always update the software to the latest version as part of the preparation for your regatta.
 
 You can determine the current version you are running by clicking the three lines at the top right of the application window and selecting *About*. A window will show you the current version.
 

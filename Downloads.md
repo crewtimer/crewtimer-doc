@@ -16,12 +16,12 @@ Latest version 1.0.2
 * [MacOS Intel](https://storage.googleapis.com/resources.crewtimer.com/installers/video-recorder/CrewTimer%20Video%20Recorder-1.0.2.dmg)
 * [Windows](https://storage.googleapis.com/resources.crewtimer.com/installers/video-recorder/CrewTimer%20Video%20Recorder%20Setup%201.0.2.exe)
 
-* [Operating Manual](https://admin.crewtimer.com/help/CrewTimerVideoRecorder)
+* [Operating Manual](https://admin.crewtimer.com/help/VideoRecorder)
 
 ## CrewTimer FinishLynx Connect
 
 Latest version 1.0.11
 
-* [Windows](https://storage.googleapis.com/resources.crewtimer.com/installers/CrewTimer%20FinishLynx%20Connect%20Setup%201.0.11.exe)
+* [Windows](https://storage.googleapis.com/resources.crewtimer.com/installers/finishlynx-connect/CrewTimer%20FinishLynx%20Connect%20Setup%201.0.11.exe)
 
 * [Operating Manual](https://admin.crewtimer.com/help/FinishLynx)

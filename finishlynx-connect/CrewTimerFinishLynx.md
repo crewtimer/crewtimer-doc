@@ -39,7 +39,7 @@ For a quick overview see the [CrewTimer FinishLynx Connect video](https://www.yo
 
 ## Installing CrewTimer FinishLynx Connect
 
-- Download the [CrewTimer FinishLynx Connect Installer](https://storage.googleapis.com/resources.crewtimer.com/installers/CrewTimer%20FinishLynx%20Connect%20Setup%201.0.11.exe)
+- Download the CrewTimer FinishLynx Connect Installer from the [Downloads Page](https://admin.crewtimer.com/help/Downloads).
 - Run the installer.  If a previous version is running you will be prompted to remove it during installation.
 
 ## FinishLynx Configuration
