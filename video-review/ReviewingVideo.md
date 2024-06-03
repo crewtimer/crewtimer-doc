@@ -2,33 +2,33 @@
 
 ## Introduction
 
-The CrewTimer Video Review module provides the ability to process finish line recordings in a format created by CrewTimer Recorder or RiaB Camera. These recordings combine video and timestamps for accurate evaluation of the finishes. 
+The CrewTimer Video Review module provides the ability to process finish line recordings in a format created by CrewTimer Recorder or RiaB Camera. These recordings combine video and timestamps for accurate evaluation of the finish times.
 
-CrewTimer Video Review makes processing the results highly efficient by integrating "hints" from other CrewTimer stations into the Workflow.
+CrewTimer Video Review makes processing the results highly efficient by integrating "hints" from other CrewTimer stations into the workflow.
 
-It's strongly recommended to test the full suite of hardware, software and volunteers before your actual regatta. Although the overall process is not complicated, it's more involved then operating a clicker.
+It is strongly recommended to test the full suite of hardware, software, and volunteers before your actual regatta. Although the overall process is not complicated, it is more involved then operating a clicker or Add Split button on the CrewTimer Mobile App.
 
 ## Getting started
 
-You will need to download and installed the CrewTimer Video Review software from here (Windows, Mac). These links will always take you to the latest version available. It's recommended you update the software as part of the preparation for your regatta.
+You will need to download and install the CrewTimer Video Review software from here (Windows, Mac). These links will always take you to the latest version available. It is recommended that you always update the software to the latest version as part of the preparation for your regatta.
 
-You can determine the current version you are running by clicking the three lines at the top right of your Connect window -> About. A window will show you the current version.
+You can determine the current version you are running by clicking the three lines at the top right of the application window and selecting *About*. A window will show you the current version.
 
 ## Configuration
 
-There is a few setups steps to complete before you can process results. You will need to complete these steps before each regatta.
+There are a few setups steps to complete before you can process results. You will need to complete these steps before each regatta.
 
-You will need the regattas **MobileID** and **MobilePIN** from the administration website.
+Firstly, you will need the regattas **MobileID** and **MobilePIN** from the CrewTimer admin website.
 
 ### Associating with the correct CrewTimer regatta
 
-If you are familiar with the CrewTimer phone app, this is going to be very familiar. 
+If you are familiar with the CrewTimer Mobile App, this is going to be very familiar.
 
-Before you can complete the next steps, work with your CrewTimer regatta administrator to get the MobileID and MobilePIN. Also make sure that you have both **Finish** and **Finish2** "WAYPOINTS" setup in the regatta. This screenshot show what it would look like in the [CrewTimer Admin Portal](https://admin.crewtimer.com/):
+Before you can complete the next steps, work with your CrewTimer regatta administrator to get the MobileID and MobilePIN. Also make sure that you have both **Finish** and **Finish2** "WAYPOINTS" setup in the regatta. This screenshot shows what it would look like in the [CrewTimer Admin Portal](https://admin.crewtimer.com/):
 
 ![image-20240602182404056](assets/image-20240602182404056.png)
 
-CrewTimer Video Review works in the same way as any other timing station. But using the **Finish** and **Finish2** names provides some additional functionality for review in the admin portal.
+CrewTimer Video Review works the same way as any other timing station. Using both **Finish** and **Finish2** names provides some additional functionality for review in the admin portal.
 
 If you are confident about your video setup, it's recommended that the video system is your primary (most accurate) source of timing.
 
@@ -43,8 +43,8 @@ If all goes well you should see the name of the regatta and a green checkbox app
 
 You will now be able to test the final two settings here:
 
-- [ ] The "Timing Waypoint Selection" is what the video scoring will publish it's results to. As mentioned earlier, the video station should be your most accurate station and probably be assigned the "Finish" Waypoint.
-- [ ] The "Timing Hint Waypoint" is a fantastic feature will help you locate crews crossing the line much faster. If another volunteer is using CrewTimer with station "Finish2", select that station from the dropdown. You will see later in this manual how beneficial is it (but not required!).
+- [ ] The "Timing Waypoint Selection" is where the video scoring will publish its results. As mentioned earlier, the video station should be your most accurate station and probably be assigned the "Finish" Waypoint.
+- [ ] The "Timing Hint Waypoint" is a fantastic feature which will help you locate crews crossing the line much faster. If another volunteer is using CrewTimer with station "Finish2", select that station from the dropdown. You will see later in this manual how beneficial is it (but not required!).
 
 Your setting will likely look like the below:
 
@@ -52,10 +52,10 @@ Your setting will likely look like the below:
 
 ### Other setup
 
-You have a few other options to review that can help you process your results faster. 
+You have a few other options to review that can help you process your results faster.
 
-- [ ] Select the "Video Setting" tab in the main Connect window (the playback + gear icon)
-- [ ] If you are reviewing the video in a different timezone then where the regatta is, you can set the "Course Timezone" to where the event is taking place. This will ensure that timestamps are shown in the local timezone for where the event takes place. This is very convenient when you are for example looking at the times on a race schedule or heat sheet.
+- [ ] Select the "Video Settings" tab in the main Connect window (the playback + gear icon)
+- [ ] If you are reviewing the video in a different timezone than where the regatta is, you can set the "Course Timezone" to where the event is taking place. This will ensure that timestamps are shown in the local timezone for where the event takes place. This is very convenient when you are looking at the times on a race schedule or heat sheet.
 - [ ] Probably the only other setting you want to make is to select "Finish" in the "Guide Visibility" section
 
 The remaining options allow you to control whether lane lines are visible in the scoring user interface. The advanced features section covers it's use. Your setting will look like the below:
@@ -71,7 +71,7 @@ Before you can use the video review features, you need to let the software know 
 
 ![image-20240601174018477](assets/image-20240601174018477.png)
 
-- [ ] In the folder explorer that now open, browse to the directory that will contain the video file
+- [ ] In the folder explorer that now opens, browse to the directory that will contain the video file
 
 Your UI will now update with any files that exist in the directory you selected. It's fine if there is no files yet.
 
@@ -95,7 +95,7 @@ We will start with an overview of the main User Interface to get you familiar:
 
 ### (1) Video Timeline
 
-This bar will show all the different capture files for today. Note that you should not have files from previous days in the same directory. It causes issues with this display. The currently active video is shown in blue. Other files are green. You can click on any of the "blocks" to jump to that file.
+This bar will show all the different capture files present in your chosen folder. Note that you should not have files from previous days in the same directory to avoid conflicts with timestamp names in the filenames. The currently active video is shown in blue. Other files are green. You can click on any of the "blocks" to jump to that file.
 
 Note that this is also where you will see any (orange) markers from the CrewTimer Station you picked for your "Hints":
 
@@ -107,26 +107,26 @@ Instead of using your mouse to select the file of interest, you can click the si
 
 ### (3) Jump to end | Split Video
 
-This double arrow button jumps to the last file in the video directory. If you are in the same network as the capture software this button might do two other things:
+This double arrow button jumps to the last file in the video directory. If you are in the same network as the capture software this button might also do two other things:
 
-- Start the recorder software if it was not running yet
+- Start the recorder software if it was not running
 - Ask the recorder software to start a new file
 
-This is very helpful in the normal finishline workflow, as you see boats approaching, generate a new file. This will allow you later to remove blank video files and make review faster.
+This is very helpful in the normal finishline workflow. As you see boats approaching, generate a new file. This will allow you to later remove blank video files and make review faster.
 
 ### (4) Video Scrub
 
-The blue dot can be selected with the mouse and dragged around, or you can left click a position on the timeline with your mouse to jump there. This is your primary method for quick navigation within a video file.
+The blue dot can be selected with the mouse and dragged left and right. Or, you can left click a position on the timeline with your mouse to jump there. This is your primary method for quick navigation within a video file.
 
 Note that when your current video file has CrewTimer hints, they will also show here:
 
-![image-20240602185711841](assets/image-20240602185711841.png) 
+![image-20240602185711841](assets/image-20240602185711841.png)
 
-Click on one of those markers will be the fastest way to locate areas of interest.
+Clicking on one of the markers will be the fastest way to locate areas of interest.
 
-If the CrewTimer station already assigned the split, ***CrewTimer Video Review*** will pre-populate the Bow and Event for you!
+If the CrewTimer station using the mobile app already assigned the split, ***CrewTimer Video Review*** will pre-populate the Bow and Event for you!
 
-!! **Just make very sure in your review that you agree with the Bow number selection** !!.
+**Note: Make very sure in your review that you agree with the Bow number selection.**
 
 ### (5) Previous | Next Frame
 
@@ -138,17 +138,17 @@ If your umpires or maybe the media team wants to document a particularly close f
 
 ### (7) Timestamp | Previous | Next Frame
 
-This panels show the timestamp associated with the current video frame. This is the timestamp used to populate the result when you hit the "ADD SPLIT" button.
+This panel show the timestamp associated with the current video frame. This is the timestamp used to populate the result when you hit the "ADD SPLIT" button.
 
 The arrow buttons can be used to move between video frames
 
 ### (8) Assign Split
 
-To assign a split there is three things that you need to set or check
+To assign a split there are three things that you need to be set or check
 
 - [ ] Make sure you have selected the frame that best reflects the time the boat crossed the finish line
 - [ ] Make sure the correct event is selected
-- [ ] Enter the "BOW" number for the boat you are scoring
+- [ ] Enter the "BOW" number for the boat you are scoring or click on the screen between lane guides
 - [ ] Press the "ADD SPLIT" button
 
 As soon as you do this, it will be reflected on the CrewTimer website, like any other CrewTimer timing signal.
@@ -157,10 +157,11 @@ Please note that "EVENT" and "BOW" might have been pre-populated when you clicke
 
 ### (9) Assign Bow
 
-This is where you enter the bow number. You can do this in two ways:
+This is where you enter the bow number. You can do this several ways:
 
 - [ ] Enter the bow number into the field directly
 - [ ] Click the "ENTRY" for the bow number in the event list
+- [ ] Click on the video between lane guides (if using lane guides)
 
 ### (10) File Selector
 
@@ -178,7 +179,7 @@ The more common use is to delete files without any finishes from there. It's com
 
 ### (11) Assigned Timestamps
 
-After you start scoring races, your assigned times will start to show in here. You can switch between events by using the dropdown, or move to the next | previous event with the buttons on the side:
+After you start scoring races, your assigned times will start to show here. You can switch between events by using the dropdown, or move to the next | previous event with the buttons on the side:
 
 ![image-20240602110317753](assets/image-20240602110317753.png)
 
@@ -216,13 +217,13 @@ To fully reset the zoom, double-click anywhere in the image.
 
 It's best practice to ensure the center line of the camera is exactly on the finish line, and pointed exactly at the finish marker at the far side of the course.
 
-If this is not possible, CrewTimer Video Review allow you to move the finish line marker. When you move your mouse close to the finish line, you will see a small white box appear on both ends of the line.
+If this is not possible, CrewTimer Video Review allow you to move the finish line marker. When you move your mouse close to the top of the finish line, you will see a small white box appear on both ends of the line.
 
-When you drag to top marker, the line moves in it's entirety. When you move the bottom marker, only that ends moves. This allow you to angle the finish line:
+When you drag the top marker, the line moves in it's entirety. When you move the bottom marker, only the bottom end moves. This allow you to angle the finish line:
 
 ![image-20240602204657986](assets/image-20240602204657986.png)
 
-The undo any introduces angle, press and hold SHIFT while moving the bottom market.
+The undo any introduced angle, press and hold SHIFT while moving either marker.
 
 To bring the finish line back to the center, go back into the "Video Settings" and press the "RESET FINISH" button.
 
@@ -230,3 +231,6 @@ To bring the finish line back to the center, go back into the "Video Settings" a
 
 The software allows you to place lane lines. When you click between the lane lines, the software will populate the bow number based on the information you provided.
 
+When lane guides are enabled, they can be adjusted in a manner similar to the finish line by clicking and dragging the end points.
+
+Visibility of lane guides is configured in the Video Settings tab.
