@@ -2,11 +2,13 @@
 
 ## Introduction
 
-The CrewTimer Video Review module provides the ability to process finish line recordings in a format created by CrewTimer Recorder or RiaB Camera. These recordings combine video and timestamps for accurate evaluation of the finish times.
+The *CrewTimer Video Review* application provides the ability to process finish line recordings in a format created by [CrewTimer Recorder](https://admin.crewtimer.com/help/VideoRecorder) or RiaB Camera. These recordings combine video and timestamps for accurate evaluation of the finish times.
 
 CrewTimer Video Review makes processing the results highly efficient by integrating "hints" from other CrewTimer stations into the workflow.
 
 It is strongly recommended to test the full suite of hardware and software before your actual regatta. Although the overall process is not complicated, it is more involved then operating a clicker or Add Split button on the CrewTimer Mobile App.
+
+The *CrewTimer Recorder* application utilizes NDI streaming cameras while the *RiaB Camera* application uses Basler machine vision cameras.  These applications record a series of mp4 files providing continuous coverage with no gaps. Each mp4 file is timeboxed to a specific time period and has embedded  timestamps for each video frame.  When used in conjunction with the *CrewTimer Video Review* application, the operator is able to easly access all video for the regatta for use in determining finish order quickly as well as to determine accurate timing.
 
 ## Getting started
 
