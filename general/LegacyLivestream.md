@@ -1,6 +1,6 @@
-# Kiosk Mode and Live Stream Support
+# Legacy Kiosk Mode and Live Stream Support
 
-**Note: This page documents the legacy livestream support in CrewTimer.  New users of livestream are encouraged to use the new [Livestream Overflay](https://admin.crewtimer.com/help/LiveStream) capability.**
+**Note: This page documents the legacy livestream support in CrewTimer.  New users of livestream are encouraged to use the new [Livestream Overlay](https://crewtimer.com/help/LiveStream) capability.**
 
 ## Kiosk Mode
 

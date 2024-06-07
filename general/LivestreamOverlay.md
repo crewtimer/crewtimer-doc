@@ -97,4 +97,4 @@ The position and size can be done two ways (at least)
 
 ## Legacy Livestream Support
 
-Prior versions of CrewTimer supported kiosk and livestreaming by allowing customization of the existing CrewTimer views.  This option is still available and is described in the [Legacy Livestream Support](https://admin.crewtimer.com/help/LegacyLivestream) page.
+Prior versions of CrewTimer supported kiosk and livestreaming by allowing customization of the existing CrewTimer views.  This option is still available and is described in the [Legacy Livestream Support](https://crewtimer.com/help/LegacyLivestream) page.
