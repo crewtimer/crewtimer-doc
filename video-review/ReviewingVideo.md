@@ -58,12 +58,13 @@ You have a few other options to review that can help you process your results fa
 
 - [ ] Select the "Video Settings" tab in the main window (the playback + gear icon, the second from the left)
 - [ ] If you are reviewing the video in a different timezone than where the regatta is, you can set the "Course Timezone" to where the event is taking place. This will ensure that timestamps are shown in the local timezone for where the event takes place. This is very convenient when you are looking at the times on a race schedule or heat sheet.
+- [ ] The "Invert wheel direction" allow you to adjust the behavior of the scroll wheel to your preference.
 - [ ] The "Mouse Wheel Factor" adjusts the sensitivity of the mouse wheel in relation to frame scrolling. Higher numbers provide finer control if you are seeing multi-frame jumps for each wheel click. Adjust this to fit your workflow.  For windows, 100 seems to work well while on MacOS, 4 works well.
 - [ ] Probably the only other setting you want to make is to select "Finish" in the "Guide Visibility" section
 
 The remaining options allow you to control whether lane guides are visible in the scoring user interface. The advanced features section covers it's use. Your setting will look like the below:
 
-![image-20240602183715237](assets/image-20240602183715237.png)
+![image-20240609172140888](assets/image-20240609172140888.png)
 
 ### Selecting the video directory
 
