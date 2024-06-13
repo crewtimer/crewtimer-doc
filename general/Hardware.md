@@ -13,13 +13,14 @@
 Firmware updates are provided for all CrewTimer Hardware devices **Except V1 Clickers**.  The same firmware image is used for all types of hardware.  To upgrade the firmware in your devices, download the firmware image below and follow the instructions in the PDF document.
 
 * [CrewTimer Firmware Image](https://storage.googleapis.com/resources.crewtimer.com/firmware/crewtimer-3.02.uf2)
-* [CrewTimer Firmware Upgrade Instructions PDF](FirmwareUpgrade.md)
+* [CrewTimer Firmware Upgrade Instructions PDF](../general/FirmwareUpgrade.md)
 
 ### Firmware History
 
 | Version | Date       | Notes                                                                                                                                        |
 | ------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | 3.02    | 2024-06-13 | Remove long press.  Clicks held for more than 2 seconds and less than 5s were discarded.  >5s still enters command mode.                     |
+| 3.01    | 2024-05-13 | Remove need for configuration straps.  Hardware config stored in flash memory.                                                               |
 | 2.23    | 2023-12-23 | Support for importing clicks that occur while unpaired.  Allows changing mobile devices without losing clicks.                               |
 | 2.22    | 2023-05-21 | Support for additional I/O for Beach Sprints                                                                                                 |
 | 2.21    | 2023-04-28 | Internal Release for Beach Sprint testing                                                                                                    |
