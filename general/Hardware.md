@@ -13,7 +13,7 @@
 Firmware updates are provided for all CrewTimer Hardware devices **Except V1 Clickers**.  The same firmware image is used for all types of hardware.  To upgrade the firmware in your devices, download the firmware image below and follow the instructions in the PDF document.
 
 * [CrewTimer Firmware Image](https://storage.googleapis.com/resources.crewtimer.com/firmware/crewtimer-3.02.uf2)
-* [CrewTimer Firmware Upgrade Instructions PDF](../general/FirmwareUpgrade.md)
+* [CrewTimer Firmware Upgrade Instructions](../general/FirmwareUpgrade.md)
 
 ### Firmware History
 

@@ -34,7 +34,7 @@ CrewTimer Video Review works the same way as any other timing station. Using bot
 
 If you are confident about your video setup, it's recommended that the video system is your primary (most accurate) source of timing.
 
-- [ ] Select the "CrewTimer Settings" tab in the main Connect window (the gear icon)
+- [ ] Select the "CrewTimer Settings" tab in the main Connect window (the rower icon)
 - [ ] Enter your MobileID and MobilePin for the regatta
 
 ![image-20240602182639603](assets/image-20240602182639603.png)
@@ -190,7 +190,7 @@ The more common use is to delete files without any finishes from there. It's com
 
 ### (12) Assigned Timestamps
 
-After you start scoring races, your assigned times will start to show here. 
+After you start scoring races, your assigned times will start to show here.
 
 If you want to remove a timestamp, click on the triple dot and select "DELETE":
 
