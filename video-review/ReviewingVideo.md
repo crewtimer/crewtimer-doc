@@ -262,3 +262,7 @@ When lane guides are enabled, they can be adjusted in a manner similar to the fi
 ![image-20240603082612026](assets/image-20240603082612026.png)
 
 Visibility of lane guides is configured in the "Video Settings" tab. See the "Other Setup" section earlier in this document.
+
+## Suggested Equipment
+
+Please visit the [Suggested Equipment Page](https://crewtimer.com/help/Equipment) for various options.

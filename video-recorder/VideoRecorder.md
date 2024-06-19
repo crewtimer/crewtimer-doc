@@ -50,19 +50,20 @@ If only WiFi is available, there are several configurations which can work in th
 
 ## Camera Selection
 
+For suggested configurations, please check out the [Equipment Page](../general/Equipment.md).
+
 All NDI capable cameras should work with CrewTimer Video Recorder.  However, some low end SMTAV cameras provide unreliable frame timing.  The following cameras have been tested and work well with CrewTimer Video Recorder.
 
 If you find an NDI camera that works well for you please send an email to [CrewTimer](info@crewtimer.com) so it can be added to the list.
 
-| Price | Zoom | PTZ | FPS |                                          | Verified | Model                                                                                                                    |
-| ----- | ---- | --- | --- | ---------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------ |
-| $1075 | 30X  |     | 60  | ![Aida](./assets/aida-UHD-NDI3-X30.png)  | **Yes**  | [AIDA UHD-NDI3-X30](https://usbroadcast.co/product/aida-imaging-uhd-ndihx3-ip-srt-hdmi-poe-30x-zoom-pov-camera/)         |
-| $1450 | 20X  | Yes | 120 | ![Aida](./assets/aida-PTZ-NDI3-X20.png)  | **Yes**  | [AIDA PTZ-NDI3-X20](https://usbroadcast.co/product/aida-imaging-ptz-ndi3-x20b-full-hd-ndihx2-ptz-camera-20x-zoom-black/) |
-| $719  | 30X  | Yes | 60  | ![SMTAV BX30N](./assets/SMTAV-BX30N.png) | **Yes**  | [SMTAV BX30N](https://www.smtav.com/collections/ndi/products/smtav-ai-tracking-ndi-ptz-camera-30x-optics-zoom)           |
-| $799  | 30X  | Yes | 60  | ![AKVANS 30X](./assets/AKVANS-30X.png)   | **Yes**  | [AVKANS NDI PTZ Camera](https://a.co/d/1FIcJW9)                                                                          |
+| Price | Zoom | PTZ | FPS |                                          | Verified | Model                                                                                                                                   |
+| ----- | ---- | --- | --- | ---------------------------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| $1075 | 30X  |     | 60  | ![Aida](./assets/aida-UHD-NDI3-X30.png)  | **Yes**  | [AIDA UHD-NDI3-X30](https://www.bhphotovideo.com/c/product/1776614-REG/aida_imaging_uhd_ndi3_x30_uhd_4k_60_ndihx3_ip_srt_hdmi_poe.html) |
+| $1450 | 20X  | Yes | 120 | ![Aida](./assets/aida-PTZ-NDI3-X20.png)  | **Yes**  | [AIDA PTZ-NDI3-X20](https://usbroadcast.co/product/aida-imaging-ptz-ndi3-x20b-full-hd-ndihx2-ptz-camera-20x-zoom-black/)                |
+| $719  | 30X  | Yes | 60  | ![SMTAV BX30N](./assets/SMTAV-BX30N.png) | **Yes**  | [SMTAV BX30N](https://www.smtav.com/collections/ndi/products/smtav-ai-tracking-ndi-ptz-camera-30x-optics-zoom)                          |
+| $799  | 30X  | Yes | 60  | ![AKVANS 30X](./assets/AKVANS-30X.png)   | **Yes**  | [AVKANS NDI PTZ Camera](https://a.co/d/1FIcJW9)                                                                                         |
 
  **Note**:Cameras often needed software upgrades to operate properly.  Be sure to update software as soon as you purchase one.  The SMTAV BA series had unreliable NDI timestamps and are not recommended.
-
 
 The SMTAV BX30N camera requires a software update to version 8.02.88 or better to properly work with DHCP.  Contact <info@smtav.com> for firmware updates.  They also have a .pkg file update to fix an issue with the Chrome browser on version 8.02.88.
 
@@ -70,22 +71,22 @@ The SMTAV BX30N camera requires a software update to version 8.02.88 or better t
 
 ### Camera Mounting
 
-| Item                                             | Description                                         |
-| ------------------------------------------------ | --------------------------------------------------- |
-| [NEEWER GM38](https://amzn.to/3K7IPJj)           | Three way geared tripod head.                       |
-| [Manfroto Super Clamp](hhttps://amzn.to/4bNIYO1) | Handy to mount your camera to scaffolding or rails. |
-| [SLIK Pro 700 DX](https://amzn.to/3QWb7dB)       | Sturdy Tripod.                                      |
-| [SLIK Pro CF-734](https://amzn.to/4amuPWU)       | Carbon Fiber Tripod.  Can fit in carry-on luggage   |
-| [Focusing Rail](https://amzn.to/3wIi37i)         | Horizontal adjustment of camera on tripod head.     |
+| Item                                            | Description                                         |
+| ----------------------------------------------- | --------------------------------------------------- |
+| [NEEWER Tripod Head](https://amzn.to/4cq5cpn)   | Three way geared tripod head.                       |
+| [Manfroto Super Clamp](https://amzn.to/4bNIYO1) | Handy to mount your camera to scaffolding or rails. |
+| [SLIK Pro 700 DX](https://amzn.to/3KO2ZIP)      | Sturdy Tripod.                                      |
+| [SLIK Pro CF-734](https://amzn.to/4cuixxg)      | Carbon Fiber Tripod.  Can fit in carry-on luggage   |
+| [Focusing Rail](https://amzn.to/3wIi37i)        | Horizontal adjustment of camera on tripod head.     |
 
 ### Networking and Power
 
-| Item                                          | Description                                          |
-| --------------------------------------------- | ---------------------------------------------------- |
-| [BVTech PoE+ Switch](https://amzn.to/3QSzwkt) | Network switch to power camera over CAT5/6 cable.    |
-| [LTE Router](https://amzn.to/3QMPTP9)         | Provide local DHCP and Internet access               |
-| [Micro USB PoE+](https://amzn.to/3QSqzHw)     | Power micro usb device (e.g. router) via PoE+ switch |
-| [USB C PoE+](https://amzn.to/3QU2Vup)         | Power USB C device (e.g. router) via PoE+ switch     |
+| Item                                                  | Description                                          |
+| ----------------------------------------------------- | ---------------------------------------------------- |
+| [BVTech PoE+ Gitabit Switch](https://amzn.to/3QSzwkt) | Network switch to power camera over CAT5/6 cable.    |
+| [LTE Router](https://amzn.to/3QMPTP9)                 | Provide local DHCP and Internet access               |
+| [Micro USB PoE+](https://amzn.to/3QSqzHw)             | Power micro usb device (e.g. router) via PoE+ switch |
+| [USB C PoE+](https://amzn.to/3QU2Vup)                 | Power USB C device (e.g. router) via PoE+ switch     |
 
 ## Software Tools
 
