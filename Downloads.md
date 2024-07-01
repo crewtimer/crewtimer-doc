@@ -11,10 +11,10 @@ Latest version 1.0.2
 
 ## CrewTimer Video Recorder
 
-Latest version 1.0.2
+Latest version 1.0.3
 
-* [Windows Installer](https://storage.googleapis.com/resources.crewtimer.com/installers/video-recorder/CrewTimer%20Video%20Recorder%20Setup%201.0.2.exe)
-* [MacOS Intel](https://storage.googleapis.com/resources.crewtimer.com/installers/video-recorder/CrewTimer%20Video%20Recorder-1.0.2.dmg)
+* [Windows Installer](https://storage.googleapis.com/resources.crewtimer.com/installers/video-recorder/CrewTimer%20Video%20Recorder%20Setup%201.0.3.exe)
+* [MacOS Intel](https://storage.googleapis.com/resources.crewtimer.com/installers/video-recorder/CrewTimer%20Video%20Recorder-1.0.3.dmg)
 
 * [Operating Manual](https://admin.crewtimer.com/help/VideoRecorder)
 
