@@ -54,15 +54,26 @@ Your setting will likely look like the below:
 
 ### Other setup
 
-You have a few other options to review that can help you process your results faster.
+You have a few other options to review that can help you process your results faster.  These are found on the Video Settings tab (the playback + gear icon, the second from the left).
 
-- [ ] Select the "Video Settings" tab in the main window (the playback + gear icon, the second from the left)
-- [ ] If you are reviewing the video in a different timezone than where the regatta is, you can set the "Course Timezone" to where the event is taking place. This will ensure that timestamps are shown in the local timezone for where the event takes place. This is very convenient when you are looking at the times on a race schedule or heat sheet.
-- [ ] The "Invert wheel direction" allow you to adjust the behavior of the scroll wheel to your preference.
-- [ ] The "Mouse Wheel Factor" adjusts the sensitivity of the mouse wheel in relation to frame scrolling. Higher numbers provide finer control if you are seeing multi-frame jumps for each wheel click. Adjust this to fit your workflow.  For windows, 100 seems to work well while on MacOS, 4 works well.
-- [ ] Probably the only other setting you want to make is to select "Finish" in the "Guide Visibility" section
+| Course Configuration | Description |
+| --- | --- |
+| Course Timezone | If you are reviewing the video in a different timezone than where the regatta is, you can set the "Course Timezone" to where the event is taking place. This will ensure that timestamps are shown in the local timezone for where the event takes place. This is very convenient when you are looking at the times on a race schedule or heat sheet.|
+| Lane is Below Guide Line | Check if lane 1 is on the far side of the course. |
+| Travel Right to Left | Check if boats move right to left on the video. |
 
-The remaining options allow you to control whether lane guides are visible in the scoring user interface. The advanced features section covers it's use. Your setting will look like the below:
+| Interface Settings | Description |
+| --- | --- |
+| Hyperzoom Resolution | Sets the time resolution used when video is zoomed. Select *Native Video* to disable Hyperzoom. Hypezoom uses video processing to calculate the speed of objects and extrapolate their position between video frames. |
+| Invert wheel  direction| Allows adjusting the behavior of the scroll wheel to your preference. |
+| Mouse Wheel Factor | Adjusts the sensitivity of the mouse wheel in relation to frame scrolling. Higher numbers provide finer control if you are seeing multi-frame jumps for each wheel click. Adjust this to fit your workflow.  For windows, 100 seems to work well while on MacOS, 4 works well. |
+
+| Guide Visibility | Description |
+| --- | --- |
+| Finish | Check to show a finish line over the video. The *Reset Finish* button will reset the finish position to the center of the video.|
+| Lane X | Check to show invidual horizontal lane guides. The advanced features section covers it's use.|
+
+Your setting will look like the below for an 8 lane course.
 
 ![image-20240609172140888](assets/image-20240609172140888.png)
 
@@ -141,11 +152,11 @@ Much like the similar buttons in the video timeline, these buttons allow you to 
 
 If your umpires or maybe the media team wants to document a particularly close finish. The "Save Screenshot" button can be used to make a copy of the active video frame.
 
-### (7) Timestamp | Previous | Next Frame
+### (7) Timestamp
 
 This panel show the timestamp associated with the current video frame. This is the timestamp used to populate the result when you hit the "ADD SPLIT" button.
 
-The arrow buttons can be used to move between video frames
+If the timestamp has been computed utilizing Hyperzoom, an hourglass icon shows up next to the timestamp.
 
 ### (8) Assign Bow
 
@@ -212,15 +223,36 @@ This can be done in the CrewTimer admin portal as well. But a quick way to revie
 
 ### Advanced Features
 
+#### Keyboard Shortcuts
+
+A number of keyboard shortcuts are available to speed up scoring.
+
+| Key | Function |
+| --- | --- |
+| <, comma, left-arrow | Move the video one frame when fullscreen.  Move the video according to the Hyperzoom resolution while zooming. |
+| >, period, right-arrow | Move the video one frame when fullscreen.  Move the video according to the Hyperzoom resolution while zooming. |
+| Right Click | Press the *Add Split* button. |
+| Left Click | Zoom the video centered on the point of interest under the finish line. |
+| Mouse Wheel rotate | Move the video one frame when fullscreen. Move the video according to the Hyperzoom resolution while zooming. |
+| Drag left or right | When zooming, moves the video left or right |
+| Drag up and down | Adjust the video zoom factor |
+| Spacebar | Trigger companion video recorder to close current mp4 file and start a new one. |
+
 #### Zoom
 
-When reviewing the video it can be helpful to zoom into a bow ball of a boat. This is done by placing the mouse cursor on the point of interest, pressing the left mouse button and dragging the mouse down. This can be repeated a few time to achieve the desired amount of zoom:
+When reviewing the video it can be helpful to zoom into the bow ball of a boat. This is done by placing the mouse cursor on the point of interest, pressing the left mouse button and dragging the mouse down. This can be repeated a few time to achieve the desired amount of zoom:
 
 ![image-20240602203828239](assets/image-20240602203828239.png)
 
 You can reduce the amount of zoom, the steps are the same, but the mouse is dragged up.
 
-To fully reset the zoom, double-click anywhere in the image.
+To fully reset the zoom, double-click anywhere in the image or select another point in the timeline.
+
+#### Hyperzoom
+
+Hypezoom uses video processing to calculate the speed of objects and extrapolate their position between video frames.
+
+While the image is zoomed, dragging the mouse left and right moves the video in finer resolution than the native video resolution.  The movement resolution is controlled by the *Hyperzoom Resolution* setting.
 
 #### Moving the finish line
 
@@ -237,6 +269,8 @@ To undo any introduced angle, press and hold SHIFT while moving either marker.
 To bring the finish line back to the center and undo any angle, go back into the "Video Settings" and press the "RESET FINISH" button.
 
 #### Interpolated finish times
+
+**Note: with the additon of Hyperzoom, this features is deprecated and may be removed in the future.  Hyperzoom is much easier and quicker to use.**
 
 **Note you should discuss this approach with your Chief Judge at the Finish to ensure they are OK with these calculations.**
 
