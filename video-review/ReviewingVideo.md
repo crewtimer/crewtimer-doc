@@ -1,5 +1,7 @@
 # Video processing with CrewTimer Video Review
 
+![Video Overview](assets/VideoReviewOverview.png)
+
 ## Introduction
 
 The *CrewTimer Video Review* application provides the ability to process finish line recordings in a format created by [CrewTimer Recorder](https://admin.crewtimer.com/help/VideoRecorder) or RiaB Camera. These recordings combine video and timestamps for accurate evaluation of the finish times.

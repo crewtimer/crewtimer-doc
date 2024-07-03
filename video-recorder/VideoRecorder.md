@@ -4,6 +4,8 @@ The CrewTimer Video Recorder app is used to record mp4 video files for use with 
 
 *NOTICE: This software is in it's infancy.  Please report any issues to <info@crewtimer.com>*
 
+![Video Overview](../video-review/assets/VideoReviewOverview.png)
+
 ## Requirements
 
 * [NDI](https://en.wikipedia.org/wiki/Network_Device_Interface ) capable video camera.  Network Device Interface (NDI) is a protocol used to provide low latency video over a 100Mbit or Gigabit computer network.
