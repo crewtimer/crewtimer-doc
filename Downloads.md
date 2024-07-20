@@ -9,7 +9,7 @@
 This version adds [Hyperzoom](https://youtu.be/wGVP8Mf8w3E) to turbo charge scoring of times with improved resolution over native video.  Try it out!
 
 * [Windows Installer](https://storage.googleapis.com/resources.crewtimer.com/installers/video-review/CrewTimer%20Video%20Review%20Setup%201.0.7.exe)
-* [MacOS Intel](https://storage.googleapis.com/resources.crewtimer.com/installers/video-review/CrewTimer%20Video%20Review-1.0.6.dmg)
+* [MacOS Intel](https://storage.googleapis.com/resources.crewtimer.com/installers/video-review/CrewTimer%20Video%20Review-1.0.7.dmg)
 
 ## CrewTimer Video Recorder
 
