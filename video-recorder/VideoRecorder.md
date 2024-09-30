@@ -54,6 +54,8 @@ If only WiFi is available, there are several configurations which can work in th
 
 For suggested configurations, please check out the [Equipment Page](../general/Equipment.md).
 
+As an Amazon Associate, CrewTimer may earn a referral fee from qualifying purchases.
+
 All NDI capable cameras should work with CrewTimer Video Recorder.  However, some low end SMTAV cameras provide unreliable frame timing.  The following cameras have been tested and work well with CrewTimer Video Recorder.
 
 If you find an NDI camera that works well for you please send an email to [CrewTimer](info@crewtimer.com) so it can be added to the list.
