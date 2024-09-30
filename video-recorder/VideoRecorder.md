@@ -60,7 +60,7 @@ If you find an NDI camera that works well for you please send an email to [CrewT
 
 | Price | Zoom | PTZ | FPS |                                          | Verified | Model                                                                                                                                   |
 | ----- | ---- | --- | --- | ---------------------------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| $1075 | 30X  |     | 60  | ![Aida](./assets/aida-UHD-NDI3-X30.png)  | **Yes**  | [AIDA UHD-NDI3-X30](https://www.bhphotovideo.com/c/product/1776614-REG/aida_imaging_uhd_ndi3_x30_uhd_4k_60_ndihx3_ip_srt_hdmi_poe.html) |
+| $1075 | 30X  |     | 60  | ![Aida](./assets/aida-UHD-NDI3-X30.png)  | **Yes**  | [AIDA UHD-NDI3-X30](https://amzn.to/3N5sUg7) |
 | $1450 | 20X  | Yes | 120 | ![Aida](./assets/aida-PTZ-NDI3-X20.png)  | **Yes**  | [AIDA PTZ-NDI3-X20](https://usbroadcast.co/product/aida-imaging-ptz-ndi3-x20b-full-hd-ndihx2-ptz-camera-20x-zoom-black/)                |
 | $719  | 30X  | Yes | 60  | ![SMTAV BX30N](./assets/SMTAV-BX30N.png) | **Yes**  | [SMTAV BX30N](https://www.smtav.com/collections/ndi/products/smtav-ai-tracking-ndi-ptz-camera-30x-optics-zoom)                          |
 | $799  | 30X  | Yes | 60  | ![AKVANS 30X](./assets/AKVANS-30X.png)   | **Yes**  | [AVKANS NDI PTZ Camera](https://a.co/d/1FIcJW9)                                                                                         |
