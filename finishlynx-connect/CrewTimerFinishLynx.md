@@ -78,7 +78,7 @@ This can be used when focused on a single event but a boat appears that is from 
 appropriate event onto the bow number and proceed.
 
 When lineups are changed in CrewTimer cloud, CrewTimer FinishLynx Connect will also refresh it's Lynx.evt and Lynx.sch files.
-However, for FinishLynx to pick up any changes the operator must select 'Load Schedule' from the Goto Event Dialog or restart FinishLynx.
+When switching events in FinishLynx, the changes are immediately available.  However, events that are currently open will not receive changes.
 
 ## Release Notes
 
