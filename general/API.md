@@ -16,7 +16,8 @@ The CrewTimer Admin API is used to create, update, and manage a regatta thru req
       - [Example update JSON](#example-update-json)
     - [Clear timing data service](#clear-timing-data-service)
     - [Clear mobile timing data service](#clear-mobile-timing-data-service)
-    - [Delete a regatta](#delete-a-regatta)
+    - [Delete a regatta service](#delete-a-regatta-service)
+    - [Set Entry Status service](#set-entry-status-service)
   - [Configuration Fields](#configuration-fields)
   - [Other Services](#other-services)
     - [QR Code mobile app settings](#qr-code-mobile-app-settings)
@@ -105,7 +106,7 @@ Response
 ```json
 {
   "config" : {
-    "mobileId" : "abcd.qrst",
+    "mobileId" : "r10000",
     "mobilePin" : "27543",
     "status" : "OK"
     }
@@ -135,7 +136,7 @@ curl https://dev.crewtimer.com/api/regatta --request POST \
   }
 }'
 
-{"config":{"mobileId":"abcd.qrst","mobilePin":"82722","status":"OK"}}
+{"config":{"mobileId":"r10000","mobilePin":"82722","status":"OK"}}
 ```
 
 ### Refresh lineups service
@@ -147,7 +148,7 @@ Existing timing data is unmodified.  This action will reload lineups from the co
     "op" : "refresh",
     "email" : "youremail@gmail.com",
     "uid" : "X7XRcJ1Ld6N22X7nr3PUB4wrn2",
-    "regatta" : "abcd.qrst",
+    "regatta" : "r10000",
 }
 ```
 
@@ -177,7 +178,7 @@ This example updates the 'MobilePins' field which lock the mobile app into a spe
     "op" : "update",
     "email" : "youremail@gmail.com",
     "uid" : "X7XRcJ1Ld6N22X7nr3PUB4wrn2",
-    "regatta" : "abcd.qrst",
+    "regatta" : "r10000",
     "config": {
         "MobilePins" : [
             { "pin": "11111", "stationType": "Penalties" },
@@ -228,7 +229,7 @@ Any existing timing data is deleted and the cached data in the mobile device is 
     "op" : "clear",
     "email" : "youremail@gmail.com",
     "uid" : "X7XRcJ1Ld6N22X7nr3PUB4wrn2",
-    "regatta" : "abcd.qrst",
+    "regatta" : "r10000",
 }
 ```
 
@@ -241,20 +242,50 @@ Any existing timing data in the mobile device is cleared. Existing server timing
     "op" : "clearmobile",
     "email" : "youremail@gmail.com",
     "uid" : "X7XRcJ1Ld6N22X7nr3PUB4wrn2",
-    "regatta" : "abcd.qrst",
+    "regatta" : "r10000",
 }
 ```
 
-### Delete a regatta
+### Delete a regatta service
 
 ```json
 {
     "op" : "delete",
     "email" : "youremail@gmail.com",
     "uid" : "X7XRcJ1Ld6N22X7nr3PUB4wrn2",
-    "regatta" : "abcd.qrst",
+    "regatta" : "r10000",
 }
 ```
+
+### Set Entry Status service
+
+This service allows setting the status of an entry to one of DNS, DNF, Scratch, Exhibition, Excluded, or DQ.
+
+```json
+{
+  "op": "store-lap",
+  "email":"youremail@gmail.com",
+  "uid":"X7XRcJ1Ld6N22X7nr3PUB4wrn2",
+  "regatta":"'r10000",
+  "config": {
+    "Bow": "3",
+    "EventNum": "5",
+    "Gate": "Pen",
+    "PenaltyCode": "DNS",  // or "DNF", "Scratch", "Exhibition", "Excluded" or "DQ"
+    "Reporter": "Steve",
+    "SequenceNum": 1,
+    "Time": "19:23:22.111",
+    "src": "MyApp",
+    "uuid": "8cXE69TETtTLT5st2gPdRp"
+    }
+}
+```
+
+uuid should be a guid in string form. Any unique string convenient to you is OK.  All fields are string but SequenceNum.  You can send 1 for SequenceNum all the time and it'll work OK.  It's purpose is to avoid timing issues where quick successive changes might arrive out of order so the highest SequenceNum wins.
+
+If you want to 'Delete' a value you have sent previously, send the same message and uuid but add "State": "Deleted" as an additional field.
+
+If you edit an entry from Bow 3 to Bow 4 you must either mark deleted the Bow 3 entry or send the Bow 4 entry with the same uuid as used for Bow 3 and it'll replace it.
 
 ## Configuration Fields
 

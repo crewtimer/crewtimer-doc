@@ -8,17 +8,8 @@ On this page:
   - [Installing CrewTimer FinishLynx Connect](#installing-crewtimer-finishlynx-connect)
   - [FinishLynx Configuration](#finishlynx-configuration)
   - [Operation Notes](#operation-notes)
-  - [Release Notes](#release-notes)
-    - [Version 1.0.11](#version-1011)
-    - [Version 1.0.10](#version-1010)
-    - [Version 1.0.9](#version-109)
-    - [Version 1.0.8](#version-108)
-    - [Version 1.0.7](#version-107)
-    - [Version 1.0.6](#version-106)
-    - [Version 1.0.5](#version-105)
-    - [Version 1.0.4](#version-104)
-    - [Version 1.0.3](#version-103)
-    - [Version 1.0.2](#version-102)
+  - [Synchronizing Time](#synchronizing-time)
+  - [Alternatives to FinishLynx Comm Port plugin](#alternatives-to-finishlynx-comm-port-plugin)
 
 ## Introduction
 
@@ -28,7 +19,7 @@ receives updates from FinishLynx via the ScoreBoard module of FinishLynx.  To us
 integration, the following is needed:
 
 - Computer running FinishLynx
-- FinishLynx Network Comm Port option.  An alternative reported to work is the free version of the [Virtual Serial Ports](https://freevirtualserialports.com/) utility.
+- FinishLynx Network Comm Port option.  An alternative reported to work is [Virtual Serial Ports Emulator](https://eterlogic.com/Downloads.html) or the free version of the [Virtual Serial Ports](https://freevirtualserialports.com/) utility. See more details below for use of alternate Serial Port emulation.
 - CrewTimer FinishLynx Connect PC application
 
 Once the CrewTimer FinishLynx Connect application has been installed, it is configured with
@@ -80,50 +71,29 @@ appropriate event onto the bow number and proceed.
 When lineups are changed in CrewTimer cloud, CrewTimer FinishLynx Connect will also refresh it's Lynx.evt and Lynx.sch files.
 When switching events in FinishLynx, the changes are immediately available.  However, events that are currently open will not receive changes.
 
-## Release Notes
+## Synchronizing Time
 
-### Version 1.0.11
+Built in time synchronization is not always reliable on Windows PCs.  Time is often 'off' even when it claims to be synchronized.
 
-- Added tooltip for creation of custom flight from regex.
+To ensure your PC time is properly syncyronized, CrewTimer recommends use of [Speedsoft Time Sync](https://www.speed-soft.de/software/time_sync/index.php).
 
-### Version 1.0.10
+Once this is installed and running:
 
-- Allow using a regex to specify combined FinishLynx events.  This allows multiple events to be timed with one FL event.
+- Open a web browser to [nist.gov](https://nist.gov) and compare the time to your computer time.
+- Compare the time shown on the CrewTimer mobile app to your computer time.
 
-### Version 1.0.9
+## Alternatives to FinishLynx Comm Port plugin
 
-- Allow quote characters in event name
-- Update internal tooling
-- Support Manual and RadioLynx starts
-- Add support for Day selection
-- Replace CrewTimer.lss if outdated
-- Support DNF, DNS, DQ, and Scratch from FinishLynx 'Set Status' right click
+Times in FinishLynx are normally communicated via a 'scoreboard' interface which sends results via a COM port.  By using the FinishLynx Network Comm port option the
+connection can be done via a TCP/IP connection from FinishLynx to CrewTimer FinishLynx Connect.
 
-### Version 1.0.8
+If the Network Comm port option is not available, a Virtual Comm Port can be used.
 
-- Improve formatting of Status page
-
-### Version 1.0.7
-
-- Improve Time Trial support
-
-### Version 1.0.6
-
-- Add support for 'All Events' FL Event
-
-### Version 1.0.5
-
-- Internal Test Release
-
-### Version 1.0.4
-
-- Add support for persistent window size, location, and selected tab
-
-### Version 1.0.3
-
-- Add support for sprint starts
-- Add support for mixing time trial starts (head race timing) with sprint starts per event
-
-### Version 1.0.2
-
-- First public release
+1. Download the [Virtual Serial Ports Emulator](https://eterlogic.com/Downloads.html) from eterlogic.com.  The 32 bit version is free, the 64 bit version is $24.95 lifetime.  The 64 bit version can be used for 30 days to try it out.
+2. Run the Virtual Serial Port Emulator.
+3. Create a 'Connector' on a free Comm port and note the Comm port number.
+4. Create a TCP Client connecting to 127.0.0.1.  Change the default 0 port number to 5000 (The same as the CrewTimer FinishLynx Connect port setting).  *Be careful not to write the port in the TCP Console Textbox*
+5. Keep control point @ null and finish.
+6. Start emulation by clicking the Play button.
+7. Create the Scoreboard in FinishLynx but instead of 127.0.0.1 select the Comm port established above.
+8. Test with CrewTimer.
