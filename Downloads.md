@@ -4,12 +4,12 @@
 
 * [Operating Manual](https://admin.crewtimer.com/help/VideoReview)
 
-### Version 1.0.10
+### Version 1.0.11
 
 This version includes [Hyperzoom](https://youtu.be/wGVP8Mf8w3E) to turbo charge scoring of times with improved resolution over native video.  Try it out!
 
-* [Windows Installer](https://storage.googleapis.com/resources.crewtimer.com/installers/video-review/CrewTimer%20Video%20Review%20Setup%201.0.10.exe)
-* [MacOS Intel](https://storage.googleapis.com/resources.crewtimer.com/installers/video-review/CrewTimer%20Video%20Review-1.0.10.dmg)
+* [Windows Installer](https://storage.googleapis.com/resources.crewtimer.com/installers/video-review/CrewTimer%20Video%20Review%20Setup%201.0.11.exe)
+* [MacOS Intel](https://storage.googleapis.com/resources.crewtimer.com/installers/video-review/CrewTimer%20Video%20Review-1.0.11.dmg)
 
 ## CrewTimer Video Recorder
 
