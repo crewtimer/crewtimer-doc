@@ -8,11 +8,11 @@ The CrewTimer bluetooth devices (clickers, relays, and horns) support firmware u
 
 ## Identifying your clicker version
 
-Only V2,V3 or later clickers have firmware updates available. If you have a V1 clicker a firmware update is not necessary.
+Only V2 or later clickers have firmware updates available. If you have a V1 clicker a firmware update is not necessary.
 
 - V1 clickers have an LED on either side of the USB connector and utilize micro USB. Firmware updates are not required.
 - V2 clickers have three LEDs on one side of the USB connector and except for a few beta users, have V2 printed on the bottom.
-- V3 clickers have a USB-C charging port.
+- V3/V4 clickers have a USB-C charging port.
 
 ## Upgrading the Firmware
 
