@@ -12,13 +12,14 @@
 
 Firmware updates are provided for all CrewTimer Hardware devices **Except V1 Clickers**.  The same firmware image is used for all types of hardware.  To upgrade the firmware in your devices, download the firmware image below and follow the instructions in the PDF document.
 
-* [CrewTimer Firmware Image](https://storage.googleapis.com/resources.crewtimer.com/firmware/crewtimer-3.04.uf2)
+* [CrewTimer Firmware Image](https://storage.googleapis.com/resources.crewtimer.com/firmware/crewtimer-3.05.uf2)
 * [CrewTimer Firmware Upgrade Instructions](../general/FirmwareUpgrade.md)
 
 ### Firmware History
 
 | Version | Date       | Notes                                                                                                                                        |
 | ------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| 3.05    | 2024-11-04 | Add support for hardware configuration UI                                                                                                   |
 | 3.04    | 2024-10-03 | Add support for supplemental Mobile Horn Relay                                                                                               |
 | 3.03    | 2024-09-12 | Remove requirement for hardware configuration straps                                                                                         |
 | 3.02    | 2024-06-13 | Remove long press.  Clicks held for more than 2 seconds and less than 5s were discarded.  >5s still enters command mode.                     |
