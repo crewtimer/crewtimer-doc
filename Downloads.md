@@ -4,10 +4,10 @@
 
 * [Operating Manual](https://admin.crewtimer.com/help/VideoReview)
 
-### Version 1.0.14
+### Version 1.0.12
 
-* [Windows Installer](https://storage.googleapis.com/resources.crewtimer.com/installers/video-review/CrewTimer%20Video%20Review%20Setup%201.0.14.exe)
-* [MacOS Intel](https://storage.googleapis.com/resources.crewtimer.com/installers/video-review/CrewTimer%20Video%20Review-1.0.14.dmg)
+* [Windows Installer](https://storage.googleapis.com/resources.crewtimer.com/installers/video-review/CrewTimer%20Video%20Review%20Setup%201.0.12.exe)
+* [MacOS Intel](https://storage.googleapis.com/resources.crewtimer.com/installers/video-review/CrewTimer%20Video%20Review-1.0.12.dmg)
 
 ## CrewTimer Video Recorder
 
