@@ -2,8 +2,7 @@
 
 ## CrewTimer Video Review 1.0.14
 
-* [Windows Installer](https://storage.googleapis.com/resources.crewtimer.com/installers/video-review/CrewTimer%20Video%20Review%20Setup%201.0.14.exe)
-* [MacOS Intel](https://storage.googleapis.com/resources.crewtimer.com/installers/video-review/CrewTimer%20Video%20Review-1.0.14.dmg)
+* [Windows or Intel MacOS Installer](https://github.com/crewtimer/crewtimer-video-review/releases)
 
 * [Operating Manual](https://admin.crewtimer.com/help/VideoReview)
 
