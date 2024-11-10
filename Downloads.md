@@ -1,15 +1,14 @@
 # CrewTimer Downloads
 
-## CrewTimer Video Review 1.0.14
+## CrewTimer Video Review
 
 * [Windows or Intel MacOS Installer](https://github.com/crewtimer/crewtimer-video-review/releases)
 
 * [Operating Manual](https://admin.crewtimer.com/help/VideoReview)
 
-## CrewTimer Video Recorder 1.0.8
+## CrewTimer Video Recorder
 
-* [Windows Installer](https://storage.googleapis.com/resources.crewtimer.com/installers/video-recorder/CrewTimer%20Video%20Recorder%20Setup%201.0.8.exe)
-* [MacOS Intel](https://storage.googleapis.com/resources.crewtimer.com/installers/video-recorder/CrewTimer%20Video%20Recorder-1.0.8.dmg)
+* [Windows or Intel MacOS Installer](https://github.com/crewtimer/crewtimer-recorder/releases)
 
 * [Operating Manual](https://admin.crewtimer.com/help/VideoRecorder)
 
