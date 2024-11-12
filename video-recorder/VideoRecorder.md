@@ -1,6 +1,6 @@
 # CrewTimer Video Recorder
 
-The CrewTimer Video Recorder app is used to record mp4 video files for use with the CrewTimer Connect Video Review app.  It provides basic controls for controlling how video is captured, started, and stopped.
+The CrewTimer Video Recorder app is used to record mp4 video files for use with the CrewTimer Video Review app.  It provides basic controls for controlling how video is captured, started, and stopped as well as marking the position of the finish line.
 
 *NOTICE: This software is in it's infancy.  Please report any issues to <info@crewtimer.com>*
 
@@ -8,27 +8,58 @@ The CrewTimer Video Recorder app is used to record mp4 video files for use with 
 
 ## Requirements
 
-* [NDI](https://en.wikipedia.org/wiki/Network_Device_Interface ) capable video camera.  Network Device Interface (NDI) is a protocol used to provide low latency video over a 100Mbit or Gigabit computer network.
-* Hardwired network connection between the recording computer and the NDI camera.
-* Internet access.  Either hardwired or via a hotspot. The NDI cameras have built-in synchronization with Network Time Protocol (NTP) servers to timestamp the video.  If the video will only be used for finish order then Internet access is not required.
-* MacOS or Windows
+* [NDI](https://en.wikipedia.org/wiki/Network_Device_Interface ) capable video camera.  Network Device Interface (NDI) is a protocol used to provide low latency video over a 100Mbit or Gigabit computer network most commonly used in professional video production,
+* Hardwired network connection between the recording computer and the NDI camera.  WiFi can drop video frames due to RF interference.
+* Internet access.  Either hardwired or via a hotspot. The NDI cameras have built-in time synchronization utilizing Network Time Protocol (NTP) servers to timestamp each video frame.  If the video will only be used for finish order then Internet access is not required.
+* MacOS or Windows laptop.  Generally any laptop produced after 2020 is suitable.  The least expensive laptop from Costco works.
 
 ## Installation
 
-Download the installer from the [Downloads Page](https://admin.crewtimer.com/help/Downloads).
+Download the installer from the [Downloads Page](https://crewtimer.com/help/Downloads).
 
 ## Getting Started
 
 1. Connect your NDI camera to a network switch also connected to your recording computer.
 2. Start the CrewTimer Video Recorder app.
-3. Using the Camera dropdown in the app, identify the IP address of your camera.
-4. Connect to your camera - e.g. <http://10.0.1.188> and log in.  Cameras often default to 'admin' as the username and 'admin' as password.
-5. Configure your camera to 720p video - 1280x720.  Use 60 fps or higher rate for the NDI video stream.  This is often a choice under an NDI configuration menu.
-6. Click the Play button on the video preview area of the app.
-7. Review the event log. Look for reported Gaps in the recording.  It is normal to have an initial Gap reported as the video is starting.
-8. Use VLC or CrewTimer Connect to verify the video is being recorded properly.
-9. Use the camera web page (see step 4) to control camera aspects such as zoom, focus, aperature, and exposure as needed.
-10. Use the camera web interface presets to quickly change configurations.
+3. Review the default settings and change output folder or file prefix if desired.
+4. Press the Play button to start recording.
+
+## Customize and adjust your camera settings
+
+1. Using the Camera dropdown in the app, identify the IP address of your camera.
+2. Connect to your camera with a web browser. e.g. <http://10.0.1.188> and log in.  Cameras often default to 'admin' as the username and 'admin' as password.
+3. Configure your camera to 720p or 1080p video - 1280x720.  Use 60 fps or higher rate for the NDI video stream.  This is often a choice under an NDI configuration menu.
+4. Click the Play button on the video preview area of the app.
+5. Review the event log. Look for reported Gaps in the recording.  It is normal to have an initial Gap reported as the video is starting or properties are changed.  If you see gaps > 90ms you may need to get a faster computer, reduce the resolution, or use the crop function to reduce resolution.
+6. Use VLC or CrewTimer Video Review to verify the video is being recorded properly.
+7. Use the camera web page (see step 2) to control camera aspects such as zoom, focus, aperature, and exposure as needed.
+8. Use the camera web interface presets (if available) to quickly change configurations.
+
+## Camera Exposure
+
+The key setting in the camera for useful video is are the exposure controls.  Often 'auto' exposure can provide good results.  If you find the 'auto' setting is over exposed or not to your satisfaction try changing the aperature setting as follows:
+
+1. Choose 'auto' exposure to see if that is suitable.
+2. Choose an aperature of F11 or greater if possible.  This increases the size of the area that will be in focus.
+3. Adjust the shutter speed to give a suitable exposure.
+
+## Adjusting Finish Line guide
+
+A red line is drawn on the video to show the location of the finish line.  The position chosen is utilized by the Video Review app to help score the finish times for boats.  To adjust the finish line position:
+
+* Click the pencil icon to show the drag handles
+* Drag the top handle to adjust the position.  When the top handle is moved, the bottom handle moves with it.
+* Drag the bottom handle to adjust only the bottom position.  This allows selecting a finish line that has a orientation other than exactly vertical.
+* Press the 'move to center' icon to reset the guide to the center of the video.
+
+## Cropping Video
+
+Recorded video can be cropped to eliminate areas that do not provide useful context.  This results in smaller mp4 files as well as reducing overhead needed to encode the video.  If the log reports gaps, cropping the recorded video can eliminate the gaps by reducing the cpu overhead required to record.
+
+There are two icons shown on the video to assist with cropping video:
+
+* Pencil icon - Press to enable the crop handles.  The icon will change to a checkmark to comlplete the cropping action.
+* Maximize icon - Press the maximize icon to set the cropping rectangle to maximum size.
 
 ## Internet Connectivity
 
@@ -40,7 +71,7 @@ If the only use for the video is for finish order determination, Internet connec
 
 ### Hardwired Internet available
 
-If local hardwired internet is available, simple ensure the camera network connection has access to the network.  Hardwired Internet can be from a facility LAN drop or it could be from a hotspot with RJ45 cabled network connections.  The recording computer should preferably be on the same network switch as the camera.  See the equipment list below for an example hotspot.
+If local hardwired internet is available, simply ensure the camera network connection has access to the network.  Hardwired Internet can be from a facility LAN drop or it could be from a hotspot with RJ45 cabled network connections.  The recording computer should preferably be on the same network switch as the camera.  See the equipment list below for an example hotspot.
 
 ### Only WiFi available
 
@@ -54,18 +85,16 @@ If only WiFi is available, there are several configurations which can work in th
 
 For suggested configurations, please check out the [Equipment Page](../general/Equipment.md).
 
-As an Amazon Associate, CrewTimer may earn a referral fee from qualifying purchases.
-
 All NDI capable cameras should work with CrewTimer Video Recorder.  However, some low end SMTAV cameras provide unreliable frame timing.  The following cameras have been tested and work well with CrewTimer Video Recorder.
 
 If you find an NDI camera that works well for you please send an email to [CrewTimer](info@crewtimer.com) so it can be added to the list.
 
 | Price | Zoom | PTZ | FPS |                                          | Verified | Model                                                                                                                                   |
 | ----- | ---- | --- | --- | ---------------------------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| $1075 | 30X  |     | 60  | ![Aida](./assets/aida-UHD-NDI3-X30.png)  | **Yes**  | [AIDA UHD-NDI3-X30](https://amzn.to/3N5sUg7) |
+| $1075 | 30X  |     | 60  | ![Aida](./assets/aida-UHD-NDI3-X30.png)  | **Yes**  | [AIDA UHD-NDI3-X30](https://a.co/d/1T1P2zE) |
 | $1450 | 20X  | Yes | 120 | ![Aida](./assets/aida-PTZ-NDI3-X20.png)  | **Yes**  | [AIDA PTZ-NDI3-X20](https://usbroadcast.co/product/aida-imaging-ptz-ndi3-x20b-full-hd-ndihx2-ptz-camera-20x-zoom-black/)                |
 | $719  | 30X  | Yes | 60  | ![SMTAV BX30N](./assets/SMTAV-BX30N.png) | **Yes**  | [SMTAV BX30N](https://www.smtav.com/collections/ndi/products/smtav-ai-tracking-ndi-ptz-camera-30x-optics-zoom)                          |
-| $799  | 30X  | Yes | 60  | ![AKVANS 30X](./assets/AKVANS-30X.png)   | **Yes**  | [AVKANS NDI PTZ Camera](https://a.co/d/1FIcJW9)                                                                                         |
+| $799  | 30X  | Yes | 60  | ![AKVANS 30X](./assets/AKVANS-30X.png)   | **Yes**  | [AVKANS NDI PTZ Camera](https://a.co/d/acMZ1qf)                                                                                         |
 
  **Note**:Cameras often needed software upgrades to operate properly.  Be sure to update software as soon as you purchase one.  The SMTAV BA series had unreliable NDI timestamps and are not recommended.
 
