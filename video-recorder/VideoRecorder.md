@@ -116,7 +116,8 @@ The SMTAV BX30N camera requires a software update to version 8.02.88 or better t
 
 | Item                                                  | Description                                          |
 | ----------------------------------------------------- | ---------------------------------------------------- |
-| [BVTech PoE+ Gitabit Switch](https://amzn.to/3QSzwkt) | Network switch to power camera over CAT5/6 cable.    |
+| [STEAMEMO 5 Port Gigabit Ethernet Unmanaged PoE Switch](https://a.co/d/g7WprQ4) | Network switch to power camera over CAT5/6 cable.  |
+| [BVTech PoE+ Gitabit Switch](https://amzn.to/3QSzwkt) | Network switch to power camera over CAT5/6 cable.  (uses AC Adapter)  |
 | [LTE Router](https://amzn.to/3QMPTP9)                 | Provide local DHCP and Internet access               |
 | [Micro USB PoE+](https://amzn.to/3QSqzHw)             | Power micro usb device (e.g. router) via PoE+ switch |
 | [USB C PoE+](https://amzn.to/3QU2Vup)                 | Power USB C device (e.g. router) via PoE+ switch     |
