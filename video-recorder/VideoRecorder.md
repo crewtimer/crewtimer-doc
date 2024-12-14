@@ -130,6 +130,25 @@ NDI Tools are available to help monitor test NDI video streams.  The following p
 * [NDI Scan Converter](https://ndi.video/tools/ndi-scan-converter/) - Play a youtube video of a regatta, capture the video with NDI Scan Converter as an NDI stream and record it with CrewTimer Recorder to test it out.
 * [NDI Test Patterns](https://ndi.video/tools/ndi-test-patterns/) - No camera yet?  Generate your own video stream with test patterns.
 
+## Internet Connection Sharing
+
+In liu of a LTE Router or wired internet connection is it possible to leverage an internet connection from a laptop. 
+
+Both Mac and PC based laptops come with a feature called "Internet Connection Sharing" which allows the laptop internet connection to be shared with a local wired network connected to the camera.
+
+To enable internet connection sharing (ICS) on a Windows computer, you can do the following:
+
+1. Open the Power User menu by pressing Windows key + X 
+2. Select Network Connections, then Click Change adapter options 
+3. Right-click the network adapter you want to use (WiFi),Click Properties, Click Sharing 
+4. Check the Allow other network users to connect through this computer's Internet connection checkbox, Click OK 
+
+To enable internet connection sharing on a Mac:
+
+1. Go to the Apple menu, select "System Settings", then navigate to "General" in the sidebar
+2. Click "Sharing"; from there, check the "Internet Sharing" box
+3. Choose the WiFi internet connection you want to share from the "Share your connection from" menu
+
 ## Setting network priority
 
 **Note: This option is only used when you have a local NTP server (e.g. Raspberry Pi) on the wired network without Internet connection.**
