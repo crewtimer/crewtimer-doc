@@ -122,6 +122,7 @@ Advancements specified in the Progression column take precedence over automatic 
 | **Top 2 + 2 fastest** times advance                       | Places 1-2 plus 2 best times in bracket advance                                 |
 | **1st to Final, next 2** to semi                          | 1st place advances to A final, places 2 and 3 move on                           |
 | **Top 2 to Final, next 2** best times advance             | Places 1 and 2 advance to A final and next 2 best times move on to next bracket |
+| **6 best times** advance             | The top 6 times across heats or semis progress and are seeded by time |
 
 ### Distribution Method
 
