@@ -121,6 +121,7 @@ The SMTAV BX30N camera requires a software update to version 8.02.88 or better t
 | [LTE Router](https://amzn.to/3QMPTP9)                 | Provide local DHCP and Internet access               |
 | [Micro USB PoE+](https://amzn.to/3QSqzHw)             | Power micro usb device (e.g. router) via PoE+ switch |
 | [USB C PoE+](https://amzn.to/3QU2Vup)                 | Power USB C device (e.g. router) via PoE+ switch     |
+| [Eco Flow River 2](https://a.co/d/asskFah)            | Portable power without using a generator.            |
 
 ## Software Tools
 
