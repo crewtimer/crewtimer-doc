@@ -16,11 +16,11 @@
 
 <!-- /TOC -->
 
-To facilitate progressions where athletes move from heats to semifinals to finals, *CrewTimer* provides the [CrewTimer Progression Engine](https://workspace.google.com/marketplace/app/crewtimer_progression_engine/52923439813) add-on for **Google Sheets™** to assist with updating your configuration spreadsheet with results from races to populate placement in subsequent races.
+To facilitate progressions where athletes move from heats to semifinals to finals, _CrewTimer_ provides the [CrewTimer Progression Engine](https://workspace.google.com/marketplace/app/crewtimer_progression_engine/52923439813) add-on for **Google Sheets™** to assist with updating your configuration spreadsheet with results from races to populate placement in subsequent races.
 
-The *CrewTimer Progression Engine* add-on is used in conjunction with the *CrewTimer Mobile App* and [CrewTimer Results Website](https://crewtimer.com) to provide race day timing and presentation of results.  This is all driven from a spreadsheet utilizing *Google Sheets™* where lineups for each event along with crew names, bow numbers, and related information is configured in the spreadsheet.
+The _CrewTimer Progression Engine_ add-on is used in conjunction with the _CrewTimer Mobile App_ and [CrewTimer Results Website](https://crewtimer.com) to provide race day timing and presentation of results. This is all driven from a spreadsheet utilizing _Google Sheets™_ where lineups for each event along with crew names, bow numbers, and related information is configured in the spreadsheet.
 
-Once updates are made to the spreadsheet the *CrewTimer* cloud infrastructure is notified to refresh it's configuration from the spreadsheet.
+Once updates are made to the spreadsheet the _CrewTimer_ cloud infrastructure is notified to refresh it's configuration from the spreadsheet.
 
 Once the add-on is installed, it provides the following:
 
@@ -29,7 +29,7 @@ Once the add-on is installed, it provides the following:
 - Configuration of progression preferences such as 'Top 3 advance' or 'Top 2 plus 2 best times progress'
 - Configuration of lane priorities - best time should be in lane 3 then 4 etc.
 - Summary help tips
-- Ability to notify *CrewTimer- cloud to refresh lineups from the spreadsheet
+- Ability to notify \*CrewTimer- cloud to refresh lineups from the spreadsheet
 - Quick link to open results and admin websites
 
 A [video tutorial](https://youtu.be/KLHU3zyNCz4) of the CrewTimer Progression Engine is available on youtube.
@@ -38,13 +38,13 @@ A [video tutorial](https://youtu.be/KLHU3zyNCz4) of the CrewTimer Progression En
 
 ## Installation
 
-To add the *CrewTimer Progression Engine* add-on to your spreadsheet, search for 'CrewTimer Progression Engine' in the marketplace using the *Extensions -> Add-ons -> Get add-ons* menu found in your spreadsheet.  Once you have installed the add-on, look for it to appear as a menu item in the Extensions menu.  You can then select the 'Open Sidebar' menu item which will open a sidebar in your document.
+To add the _CrewTimer Progression Engine_ add-on to your spreadsheet, search for 'CrewTimer Progression Engine' in the marketplace using the _Extensions -> Add-ons -> Get add-ons_ menu found in your spreadsheet. Once you have installed the add-on, look for it to appear as a menu item in the Extensions menu. You can then select the 'Open Sidebar' menu item which will open a sidebar in your document.
 
 ## Using the add-on
 
 1. Install the add-on (see above)
-2. Define your events and entries for each event.  Tag unknown entries with TBD or similar for the crew name.  An [example spreadsheet](https://docs.google.com/spreadsheets/d/1zukjxnHsH1Twg47m0xImOoAgvVIgkMYX5M832fhA8fc) is available - use File -> Make a Copy.
-3. Tag each event name with a bracket suffix such as H1 for Heat1 and FA for an A final.  (see below for a list of suffixes)
+2. Define your events and entries for each event. Tag unknown entries with TBD or similar for the crew name. An [example spreadsheet](https://docs.google.com/spreadsheets/d/1zukjxnHsH1Twg47m0xImOoAgvVIgkMYX5M832fhA8fc) is available - use File -> Make a Copy.
+3. Tag each event name with a bracket suffix such as H1 for Heat1 and FA for an A final. (see below for a list of suffixes)
 4. Wait for preliminary events to finished and be declared official
 5. Select one of the preliminary events in the sidebar and review the progresssion plan
 6. Click 'Preview Seeding' and review the proposed advancement plan
@@ -55,7 +55,7 @@ You can revert the progression by using either the 'Undo' menu of the spreadshee
 
 ## Event Names
 
-*CrewTimer Progression Engine* relies on clues provided in the Event Name column to assist with progressions.
+_CrewTimer Progression Engine_ relies on clues provided in the Event Name column to assist with progressions.
 
 - A suffix indicating the progression level bracket (e.g. H1)
 - A common Event Name used in all brackets
@@ -70,7 +70,7 @@ An example with two heats and a final:
 
 ## Progression suffixes
 
-The bracket suffixes supported by the *CrewTimer Progression Engine* are listed below.
+The bracket suffixes supported by the _CrewTimer Progression Engine_ are listed below.
 
 | Designation  | Meaning                                 | Alternate Spelling     |
 | ------------ | --------------------------------------- | ---------------------- |
@@ -99,19 +99,19 @@ The Settings tab allows configuration of settings that apply to all races such a
 
 ### Lane Mappings
 
-Lane mappings establish the priority order in which lanes are assigned.  For a 6 lane sprint, this would typicall by from inside to outside with the inside lanes having higher priority.  The best performing crews are then placed first into the highest available priority lane.  Specifying a setting of '345216' would first assign lane 3 folloed by 4, then 5,2,1 and 6.
+Lane mappings establish the priority order in which lanes are assigned. For a 6 lane sprint, this would typicall by from inside to outside with the inside lanes having higher priority. The best performing crews are then placed first into the highest available priority lane. Specifying a setting of '345216' would first assign lane 3 folloed by 4, then 5,2,1 and 6.
 
 ### Advancement Methods
 
-The advancement method specifies how 'winners' that advance are determined.  This is typicaly something like 'top 2', 'top 3', or 'top 2 plus next 2 best times'.  While a number of options are provided by default, you can add your own customization to the list of options.
+The advancement method specifies how 'winners' that advance are determined. This is typicaly something like 'top 2', 'top 3', or 'top 2 plus next 2 best times'. While a number of options are provided by default, you can add your own customization to the list of options.
 
 By default, each race defaults to 'Automatic' advancement which will choose the first advancement method that fills all the entries in the destination bracket(s).
 
-The list of advancement methods can be ordered via drag-and-drop to prioritize the automatic selection.  Of course, you can specify the advanement method if automatic does not meet your needs.
+The list of advancement methods can be ordered via drag-and-drop to prioritize the automatic selection. Of course, you can specify the advanement method if automatic does not meet your needs.
 
-**CrewTimer prefers advancement hints to be defined in the Progression column of the spreadsheet**.  For example, 'Top 2 + next 2 times to Event 123' would be properly interpreted.
+**CrewTimer prefers advancement hints to be defined in the Progression column of the spreadsheet**. For example, 'Top 2 + next 2 times to Event 123' would be properly interpreted.
 
-An alternative is to use the **EventInfo** column to specify your progression.  If the advancement spec is suitable for general viewing as extra info for an event, this can be a good choice.
+An alternative is to use the **EventInfo** column to specify your progression. If the advancement spec is suitable for general viewing as extra info for an event, this can be a good choice.
 
 Advancements specified in the Progression column take precedence over automatic selection as well as Advancements specified in the EventInfo column.
 
@@ -122,21 +122,32 @@ Advancements specified in the Progression column take precedence over automatic 
 | **Top 2 + 2 fastest** times advance                       | Places 1-2 plus 2 best times in bracket advance                                 |
 | **1st to Final, next 2** to semi                          | 1st place advances to A final, places 2 and 3 move on                           |
 | **Top 2 to Final, next 2** best times advance             | Places 1 and 2 advance to A final and next 2 best times move on to next bracket |
-| **6 best times** advance             | The top 6 times across heats or semis progress and are seeded by time |
+| **6 best times** advance                                  | The top 6 times across heats or semis progress and are seeded by time           |
 
 ### Distribution Method
 
-Distribution method pertains to how winners are placed into multiple Heats, Quarter Finals, or Semi Finals.  For example, four heats populating 2 semi-final races will alternate between the two semi-final races when doing placement.  The distribution method specifies how the alternation is performed.
+Distribution method pertains to how winners are placed into multiple Heats, Quarter Finals, or Semi Finals. For example, four heats populating 2 semi-final races will alternate between the two semi-final races when doing placement. The distribution method specifies how the alternation is performed. A global default can be defined in the settings tab but race specific values can be specified with a 'Distribution' column.
 
-| Method      | Description                                                                                                                                                                                         |
-| ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Reversing   | The races are assigned in definition order in one direction and then reversed back to the first race.  For example, for three destination races, the pattern would be 1,2,3, 3,2,1, 1,2,3, 3,2,1... |
-| Round Robin | The races are assigned in definition order over and over again.  For example, for three destination races, the pattern would be 1,2,3, 1,2,3, 1,2,3, 1,2,3...                                       |
-| Random      | The races are assigned randomly.  For example, for three destination races, the pattern might be 1,3,2, 1,2,3, 3,1,2, 2,1,3, ...                                                                    |
+| Method      | 'Distribution' Spreadsheet Column | Description                                                                                                                                                                                        |
+| ----------- | --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Reversing   | reversing                         | The races are assigned in definition order in one direction and then reversed back to the first race. For example, for three destination races, the pattern would be 1,2,3, 3,2,1, 1,2,3, 3,2,1... |
+| Round Robin | roundrobin                        | The races are assigned in definition order over and over again. For example, for three destination races, the pattern would be 1,2,3, 1,2,3, 1,2,3, 1,2,3...                                       |
+| Random      | random                            | The races are assigned randomly. For example, for three destination races, the pattern might be 1,3,2, 1,2,3, 3,1,2, 2,1,3, ...                                                                    |
 
-## Column Data
+### Seeding Priority
 
-Generally, when populating brackets with new entries, existing column data in the row is also copied on the assumption it is related to the entry.  If a column should not be copied change the column title to end with underscore.  e.g. 'CheckedIn_' or 'CheckedIn_nocopy_'.
+Seeding priority pertains to how winners are assigned specific lanes in an event. A global default can be defined in the settings tab but race specific values can be specified with a 'Seeding' column.
+
+| Method         | 'Seeding' Spreadsheet Column | Description                                                                                                                                                                                         |
+| -------------- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Place Priority | place                        | By default entries are seeded into the next bracket by place priority. First place entries are seeded first followed by others progressed by place. If any entries remain, they are seeded by time. |
+| Time Priority  | time                         | All entries in a race are seeded lanes by their finish time regardelss of their place in qualifying events.                                                                                         |
+
+### Event specific settings
+
+## Ignoring column data when seeding events
+
+Generally, when populating brackets with new entries, existing column data in the row is also copied on the assumption it is related to the entry. If a column should not be copied change the column title to end with underscore. e.g. 'CheckedIn\_' or 'CheckedIn_nocopy'.
 
 ## References
 
