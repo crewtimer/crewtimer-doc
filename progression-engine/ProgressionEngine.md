@@ -11,6 +11,7 @@
     - [Lane Mappings](#lane-mappings)
     - [Advancement Methods](#advancement-methods)
     - [Distribution Method](#distribution-method)
+    - [Seeding Priority](#seeding-priority)
   - [Column Data](#column-data)
   - [References](#references)
 
@@ -142,8 +143,6 @@ Seeding priority pertains to how winners are assigned specific lanes in an event
 | -------------- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Place Priority | place                        | By default entries are seeded into the next bracket by place priority. First place entries are seeded first followed by others progressed by place. If any entries remain, they are seeded by time. |
 | Time Priority  | time                         | All entries in a race are seeded lanes by their finish time regardelss of their place in qualifying events.                                                                                         |
-
-### Event specific settings
 
 ## Ignoring column data when seeding events
 
