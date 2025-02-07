@@ -40,6 +40,8 @@ CrewTimer has both a production server and a development test server.  When test
 | Development | [https://dev.crewtimer.com/api/regatta](https://dev.crewtimer.com/api/regatta) | [https://admin.dev.crewtimer.com](https://admin.dev.crewtimer.com) |
 | Production  | [https://crewtimer.com/api/regatta](https://crewtimer.com/api/regatta)         | [https://admin.crewtimer.com](https://admin.crewtimer.com)         |
 
+Note: When using the development server for testing with the mobile app, the regatta should have t. prefixed to the name.  For example, t.r12601.  This instructs the mobile app to communicate with the development server for testing.
+
 ## Services
 
 | Service op  | Description                                                                                                  |
@@ -309,6 +311,9 @@ export interface RegattaConfigFields {
   /** The url of a source for Event lineups.  Typically a link to a Google Sheet but can be any URL. */
   DocUrl?: string;
 
+  /** The fee type for the event. */
+  FeeType?: 'Fee' | 'Test' | 'NoFee';
+
   /** True if the regatta is 'done'.  This blocks input from the mobie app and marks all races official.  */
   Finished?: boolean;
 
@@ -406,51 +411,26 @@ export interface RegattaConfigFields {
 
 By using QR Codes, mobile devices can scan the qrcode and have it start the CrewTimer Mobile App and configure it with specific settings.  Version 5.7.4 of the mobile app is required to utilize this feature.
 
-The URL provided by a CrewTimer QR code has the unique feature in that it will prompt users to install the CrewTimer Mobile App if it is not alredy installed.  If the app is already installed, it will start the app and configure it.
+If the app is already installed, it will start the app and configure it, otherwise it will prompt the user to visit the appropriate app store.
 
 This capability is referred to as [Deferred Deep Linking](https://en.wikipedia.org/wiki/Mobile_deep_linking#Deferred_deep_linking)
 
-A CrewTimer QR Code uses a base URL of `https://link.crewtimer.com/m/` with four required arguments:
+A CrewTimer QR Code uses a base URL of `https://crewtimer.com/goto/<mobileID>/<MobilePin>[/<base64 JSON properties>]`.
 
-| URL Argument | Value                                                                                |
-| ------------ | ------------------------------------------------------------------------------------ |
-| link         | A url of the form `https%3A//crewtimer.com/goto/<mobileID>/<base64 JSON properties>` |
-| apn          | net.entazza.crewtimer                                                                |
-| ibi          | net.entazza.crewtimer                                                                |
-| isi          | 1450216565                                                                           |
-
-- Note the %3A in place of colon in the link parameter.  This is required for the Android camera app and works on iOS as well.
 - `<mobileID>` is the CrewTimer mobileID such as r12071
-- `<base64 JSON properties>` is a base64 representation of additional required arguments specified as JSON (See below).
-
-The URL arguments 'apn', 'ibi', and 'isi' are needed to properly trigger the mobile device to open the CrewTimer app and are not optional.
-
-The base64 encoded JSON properties must specify the following:
-
-| Property Name | Description                                                                                                                                                |
-| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| mobilePin     | A mobile pin associated with the mobileID to customize behavior. This can be the 'master' pin or it can be one of the limited pins customized by the user. |
-
-For example, `{"mobilePin":"121212"}` would encode as 'eyJtb2JpbGVJRCI6InIxMjA3MSIsIm1vYmlsZVBpbiI6IjEyMTIxMiJ9eyJtb2JpbGVQaW4iOiIxMjEyMTIifQ=='.  The [JSON to Base64 Utility](https://codebeautify.org/json-to-base64-converter#) can be used to verify proper encoding.
-
-Thus, the full URL using the above example (albeit with an invalid pin) would be
-
-```txt
-https://link.crewtimer.com/m/?
-link=https%3A//crewtimer.com/goto/r12071/eyJtb2JpbGVQaW4iOiIxMjEyMTIifQ==&
-apn=net.entazza.crewtimer&
-ibi=net.entazza.crewtimer&
-isi=1450216565
-```
+- `mobilePin>` is the CrewTimer mobilePin associated with your event. This can be the 'master' pin or it can be one of the limited pins customized by the user.
+- `/<base64 JSON properties>` is an optional base64 representation of additional arguments specified as JSON (See below).
 
 #### Optional JSON Properties
 
-The following optional properties can be specified.
+The following optional properties can be specified.  The [JSON to Base64 Utility](https://codebeautify.org/json-to-base64-converter#) can be used to verify or generate proper encoding.
 
 | Property Name | Description                                                                                                                                       |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | waypoint      | The default timing waypoint with which to configure the mobile app.  e.g. Start, 1000m, Finish                                                    |
 | stationType   | One of "Timing", "Penalties", or "Timing+Penalties".  This is only applicable when used with the master pin as user pins specify this implicitly. |
+
+For example, the JSON string `{"stationType":"Timing"}` encoded as base64 would be 'eyJzdGF0aW9uVHlwZSI6IlRpbWluZyJ9'. Using this in a QRCode would look like `https://crewtimer.com/r12071/123456/eyJzdGF0aW9uVHlwZSI6IlRpbWluZyJ9`.
 
 #### QR Code Testing
 
