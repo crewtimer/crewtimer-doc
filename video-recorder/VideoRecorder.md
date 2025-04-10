@@ -89,12 +89,13 @@ All NDI capable cameras should work with CrewTimer Video Recorder.  However, som
 
 If you find an NDI camera that works well for you please send an email to [CrewTimer](info@crewtimer.com) so it can be added to the list.
 
-| Price | Zoom | PTZ | FPS |                                          | Verified | Model                                                                                                                                   |
-| ----- | ---- | --- | --- | ---------------------------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| $1075 | 30X  |     | 60  | ![Aida](./assets/aida-UHD-NDI3-X30.png)  | **Yes**  | [AIDA UHD-NDI3-X30](https://a.co/d/1T1P2zE) |
-| $1450 | 20X  | Yes | 120 | ![Aida](./assets/aida-PTZ-NDI3-X20.png)  | **Yes**  | [AIDA PTZ-NDI3-X20](https://usbroadcast.co/product/aida-imaging-ptz-ndi3-x20b-full-hd-ndihx2-ptz-camera-20x-zoom-black/)                |
-| $719  | 30X  | Yes | 60  | ![SMTAV BX30N](./assets/SMTAV-BX30N.png) | **Yes**  | [SMTAV BX30N](https://www.smtav.com/collections/ndi/products/smtav-ai-tracking-ndi-ptz-camera-30x-optics-zoom)                          |
-| $799  | 30X  | Yes | 60  | ![AKVANS 30X](./assets/AKVANS-30X.png)   | **Yes**  | [AVKANS NDI PTZ Camera](https://a.co/d/acMZ1qf)                                                                                         |
+| Price | Zoom | PTZ | Res |FPS |                                          | Verified | Model                                                                                                                                   |
+| ----- | ---- | --- | --- | --- | ---------------------------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| $475 | 8x (manual) |     | 1080P | 60  | ![Aida](./assets/aida-HD-NDI-TF.png)  | **Yes**  | [AIDA HD-NDI-TF](https://www.bhphotovideo.com/c/product/1828804-REG/aida_imaging_hd_ndi_tf_fhd_ndihx_ip_srt_poe.html) |
+| $1075 | 30X  |     | 4K | 60  | ![Aida](./assets/aida-UHD-NDI3-X30.png)  | **Yes**  | [AIDA UHD-NDI3-X30](https://a.co/d/1T1P2zE) |
+| $1450 | 20X  | Yes | 4K | 120 | ![Aida](./assets/aida-PTZ-NDI3-X20.png)  | **Yes**  | [AIDA PTZ-NDI3-X20](https://usbroadcast.co/product/aida-imaging-ptz-ndi3-x20b-full-hd-ndihx2-ptz-camera-20x-zoom-black/)                |
+| $719  | 30X  | Yes | 1080P | 60  | ![SMTAV BX30N](./assets/SMTAV-BX30N.png) | **Yes**  | [SMTAV BX30N](https://www.smtav.com/collections/ndi/products/smtav-ai-tracking-ndi-ptz-camera-30x-optics-zoom)                          |
+| $799  | 30X  | Yes | 1080P | 60  | ![AKVANS 30X](./assets/AKVANS-30X.png)   | **Yes**  | [AVKANS NDI PTZ Camera](https://a.co/d/acMZ1qf)                                                                                         |
 
  **Note**:Cameras often needed software upgrades to operate properly.  Be sure to update software as soon as you purchase one.  The SMTAV BA series had unreliable NDI timestamps and are not recommended.
 
