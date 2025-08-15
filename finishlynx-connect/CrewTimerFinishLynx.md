@@ -46,7 +46,7 @@ For a quick overview see the [CrewTimer FinishLynx Connect video](https://www.yo
    - Create New Scoreboard
       - Script: CrewTimer.lss
       - Serial Port: Network(connect)
-      - Port: 5000
+      - Port: 5000.  Use 4000 on a Mac and change to 4000 in CrewTimer FL Connect as port 5000 is used by mac services.
       - IP Address: 127.0.0.1 if CrewTimer connect running on same machine
       - Running Time: Off
       - Results:
@@ -97,3 +97,14 @@ If the Network Comm port option is not available, a Virtual Comm Port can be use
 6. Start emulation by clicking the Play button.
 7. Create the Scoreboard in FinishLynx but instead of 127.0.0.1 select the Comm port established above.
 8. Test with CrewTimer.
+
+## Manual Start Timing
+
+To send start times using manual capture, the following settings are required:
+
+1. File|Options|General and set the Hardware Type = None
+2. File|Options|LapTime and click New to create a LapTime instance
+3. Restart FinishLynx
+4. Select 'Record FinishLynx Start Times' in the FinishLynx tab of CrewTimer FinishLynx Connect.
+
+** You should change the Hardware Type back to 'Detect' when switching away from manual.**
