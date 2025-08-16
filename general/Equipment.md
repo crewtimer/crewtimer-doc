@@ -14,7 +14,7 @@ This package assumes you have wired internet available via either a facility dro
 
 1. [$1075 AIDA UHD-NDI3-X30 30x zoom Video Camera](https://www.bhphotovideo.com/c/product/1776614-REG/aida_imaging_uhd_ndi3_x30_uhd_4k_60_ndihx3_ip_srt_hdmi_poe.html)
 2. [$153 NEEWER Tripod Head](https://amzn.to/4cq5cpn) Three way geared tripod head.
-3. [$40 BVTech PoE+ Gigabit Switch](https://amzn.to/3QSzwkt)
+3. [$40 Steamemo 5 Port PoE Gigabit Switch]([https://amzn.to/3QSzwkt](https://a.co/d/bRrJQRB)
 4. [$46 Manfroto Super Clamp](https://amzn.to/4bNIYO1) for scaffolding/railing mounting.
 5. [$190 SLIK Pro 700 DX Tripod](https://amzn.to/3KO2ZIP) for portable mounting.
 6. [$171 2TB Portable SSD](https://amzn.to/3Rvhghm) if your computer needs more storage.
