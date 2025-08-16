@@ -47,18 +47,15 @@ The key setting in the camera for useful video is are the exposure controls.  Of
 
 A red line is drawn on the video to show the location of the finish line.  The position chosen is utilized by the Video Review app to help score the finish times for boats.  To adjust the finish line position:
 
-* Click the pencil icon to show the drag handles
 * Drag the top handle to adjust the position.  When the top handle is moved, the bottom handle moves with it.
-* Drag the bottom handle to adjust only the bottom position.  This allows selecting a finish line that has a orientation other than exactly vertical.
+* Drag the bottom handle to adjust only the bottom position.  This allows selecting a finish line that has a orientation other than exactly vertical.  However, it is better to properly align the camera than to adjust it digitally.
 * Press the 'move to center' icon to reset the guide to the center of the video.
 
 ## Cropping Video
 
-Recorded video can be cropped to eliminate areas that do not provide useful context.  This results in smaller mp4 files as well as reducing overhead needed to encode the video.  If the log reports gaps, cropping the recorded video can eliminate the gaps by reducing the cpu overhead required to record.
+Recorded video can be cropped to eliminate areas that do not provide useful context, decrease file size, and provide a snappier review process.  This results in smaller mp4 files as well as reducing overhead needed to encode the video.  If the log reports gaps, cropping the recorded video can eliminate the gaps by reducing the cpu overhead required to record.
 
-There are two icons shown on the video to assist with cropping video:
-
-* Pencil icon - Press to enable the crop handles.  The icon will change to a checkmark to comlplete the cropping action.
+* Utilize the drag handles in the corners of the video to adjust cropping.
 * Maximize icon - Press the maximize icon to set the cropping rectangle to maximum size.
 
 ## Internet Connectivity
@@ -78,24 +75,26 @@ If local hardwired internet is available, simply ensure the camera network conne
 If only WiFi is available, there are several configurations which can work in this situation.
 
 1. Use a WiFi router in client mode to connect to the available WiFi.  The network ports on the WiFi router would the connect to the camera and laptop.  Many WiFi routers support this type of connectivity.  In this scenario the WiFi in the laptop should be disabled or the WiFi should be set as the preferred Internet port (see instructions below).
-2. Utilize Windows Internet Connection Sharing (ICS) to share the WiFi connection with the computer wired interface.  In this scenario, connect a switch to the computer and also the camera.  The camera will obtain an IP address from the computer's ICS software and access the internet via it's WiFi connection.
-3. Add your own NTP server on the camera network using a Raspberry Pi.  Use fixed IP addresses on the wired network with the camera NTP server configured to utilize your local NTP server.  The laptop will also be configured with a fixed IP address on the wired network so it can communicate with the camera and record video.  WiFi should be set as the preferred Internet port (see instructions below).
+2. Utilize Windows Internet Connection Sharing (ICS) or MacOS Connection Sharing to share the WiFi connection with the computer wired interface.  In this scenario, connect a switch to the computer and also the camera.  The camera will obtain an IP address from the computer's ICS software and access the internet via it's WiFi connection.
+3. Optional - Add your own NTP server on the camera network using a Raspberry Pi.  Use fixed IP addresses on the wired network with the camera NTP server configured to utilize your local NTP server.  The laptop will also be configured with a fixed IP address on the wired network so it can communicate with the camera and record video.  WiFi should be set as the preferred Internet port (see instructions below).
 
 ## Camera Selection
 
 For suggested configurations, please check out the [Equipment Page](../general/Equipment.md).
 
-All NDI capable cameras should work with CrewTimer Video Recorder.  However, some low end SMTAV cameras provide unreliable frame timing.  The following cameras have been tested and work well with CrewTimer Video Recorder.
+Most NDI capable cameras should work with CrewTimer Video Recorder.  However, some low end SMTAV cameras provide unreliable frame timing.  The following cameras have been tested and work well with CrewTimer Video Recorder.
+
+When recording 1080P provides a good tradeoff between resolution and computer resources and file size.  A recording file using 4K uses 4x the space as 1080P and your computer will need to be top of the line.
 
 If you find an NDI camera that works well for you please send an email to [CrewTimer](info@crewtimer.com) so it can be added to the list.
 
 | Price | Zoom | Pan/Tilt | Res |FPS |                                          | Verified | Model                                                                                                                                   |
 | ----- | ---- | --- | --- | --- | ---------------------------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| $1075 | 30X  | No   | 4K | 60  | ![Aida](./assets/aida-UHD-NDI3-X30.png)  | Yes  | [AIDA UHD-NDI3-X30](https://a.co/d/1T1P2zE) |
+| $1075 | 30X  | No   | 4K | 60  | ![Aida](./assets/aida-UHD-NDI3-X30.png)  | Yes | [AIDA UHD-NDI3-X30](https://a.co/d/1T1P2zE) |
 | $1450 | 20X  | Yes | 4K | 120 | ![Aida](./assets/aida-PTZ-NDI3-X20.png)  | Yes  | [AIDA PTZ-NDI3-X20](https://usbroadcast.co/product/aida-imaging-ptz-ndi3-x20b-full-hd-ndihx2-ptz-camera-20x-zoom-black/)                |
 | $719  | 30X  | Yes | 1080P | 60  | ![SMTAV BX30N](./assets/SMTAV-BX30N.png) | Yes  | [SMTAV BX30N](https://www.smtav.com/collections/ndi/products/smtav-ai-tracking-ndi-ptz-camera-30x-optics-zoom)                          |
 | $799  | 30X  | Yes | 1080P | 60  | ![AKVANS 30X](./assets/AKVANS-30X.png)   | Yes  | [AVKANS NDI PTZ Camera](https://a.co/d/acMZ1qf)                                                                                         |
-| $475| 8x (manual) | No    | 1080P | 60  | ![Aida](./assets/aida-HD-NDI-TF.png)  | **Pending Test**  | AIDA HD-NDI-TF |
+| $475| 8x (manual) | No    | 1080P | 60  | ** Do not use ** ![Aida](./assets/aida-HD-NDI-TF.png)  | **NOT RECOMMENDED.  Drops random frames.**  | AIDA HD-NDI-TF |
  
  **Note**:Cameras often needed software upgrades to operate properly.  Be sure to update software as soon as you purchase one.  The SMTAV BA series had unreliable NDI timestamps and are not recommended.
 
