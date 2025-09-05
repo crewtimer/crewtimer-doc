@@ -8,6 +8,8 @@
 - Place a **far marker** *exactly* on the physical finish line, on the same vertical plane.
 - Run a **guide wire or string** along the finish line in front of the camera position.  Check with plumb line or level.
 
+>Parallax Warning: The guide wire should be placed in the same vertical plane as the far marker and as far from the camera as practical. If the guide wire is too close, its apparent position will shift with camera angle and zoom, making alignment inaccurate.
+
 ---
 
 ## Step 1 – Tilt Alignment
