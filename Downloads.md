@@ -2,7 +2,8 @@
 
 ## CrewTimer Video Review
 
-* [Windows or MacOS Installer](https://github.com/crewtimer/crewtimer-video-review/releases/latest)
+* [Windows or MacOS Installer](https://github.com/crewtimer/crewtimer-video-review/releases/latest) Stable
+* [Windows or MacOS Installer](https://github.com/crewtimer/crewtimer-video-review/releases/tag/beta) (Beta)
 
 * [Operating Manual](https://admin.crewtimer.com/help/VideoReview)
 
