@@ -2,14 +2,37 @@
 
 The CrewTimer Video Recorder app is used to record mp4 video files for use with the CrewTimer Video Review app.  It provides basic controls for controlling how video is captured, started, and stopped as well as marking the position of the finish line.
 
-*NOTICE: This software is in it's infancy.  Please report any issues to <info@crewtimer.com>*
-
 ![Video Overview](../video-review/assets/VideoReviewOverview.png)
+
+- [CrewTimer Video Recorder](#crewtimer-video-recorder)
+  - [Requirements](#requirements)
+  - [Installation](#installation)
+  - [Quickstart](#quickstart)
+  - [Customize and adjust your camera settings](#customize-and-adjust-your-camera-settings)
+  - [Camera Settings](#camera-settings)
+    - [Camera Exposure](#camera-exposure)
+    - [Adjusting Finish Line guide](#adjusting-finish-line-guide)
+    - [Cropping Video](#cropping-video)
+    - [Focus Assist](#focus-assist)
+    - [Camera Alignment](#camera-alignment)
+  - [Internet Connectivity](#internet-connectivity)
+    - [Hardwired Internet available](#hardwired-internet-available)
+    - [Only WiFi available](#only-wifi-available)
+  - [Camera Selection](#camera-selection)
+  - [Other useful equipment](#other-useful-equipment)
+    - [Camera Mounting](#camera-mounting)
+    - [Networking and Power](#networking-and-power)
+  - [Software Tools](#software-tools)
+  - [Internet Connection Sharing](#internet-connection-sharing)
+  - [Setting network priority](#setting-network-priority)
+    - [MacOS](#macos)
+    - [Windows](#windows)
+
 
 ## Requirements
 
 * [NDI](https://en.wikipedia.org/wiki/Network_Device_Interface ) capable video camera.  Network Device Interface (NDI) is a protocol used to provide low latency video over a 100Mbit or Gigabit computer network most commonly used in professional video production,
-* Hardwired network connection between the recording computer and the NDI camera.  WiFi can drop video frames due to RF interference.
+* **Hardwired network connection between the recording computer and the NDI camera.**  WiFi can drop video frames due to RF interference.
 * Internet access.  Either hardwired or via a hotspot. The NDI cameras have built-in time synchronization utilizing Network Time Protocol (NTP) servers to timestamp each video frame.  If the video will only be used for finish order then Internet access is not required.
 * MacOS or Windows laptop.  Generally any laptop produced after 2020 is suitable.  The least expensive laptop from Costco works.
 
@@ -17,46 +40,67 @@ The CrewTimer Video Recorder app is used to record mp4 video files for use with 
 
 Download the installer from the [Downloads Page](https://crewtimer.com/help/Downloads).
 
-## Getting Started
+## Quickstart
 
 1. Connect your NDI camera to a network switch also connected to your recording computer.
 2. Start the CrewTimer Video Recorder app.
 3. Review the default settings and change output folder or file prefix if desired.
-4. Press the Play button to start recording.
+4. Select your camera from the Camera selection dropdown
+5. Press the Start button to start recording.
+
+> Note: The camera must be connected with a wired ethernet interface.  Using WiFi will result in dropped video frames.
 
 ## Customize and adjust your camera settings
 
-1. Using the Camera dropdown in the app, identify the IP address of your camera.
-2. Connect to your camera with a web browser. e.g. <http://10.0.1.188> and log in.  Cameras often default to 'admin' as the username and 'admin' as password.
-3. Configure your camera to 720p or 1080p video - 1280x720.  Use 60 fps or higher rate for the NDI video stream.  This is often a choice under an NDI configuration menu.
-4. Click the Play button on the video preview area of the app.
-5. Review the event log. Look for reported Gaps in the recording.  It is normal to have an initial Gap reported as the video is starting or properties are changed.  If you see gaps > 90ms you may need to get a faster computer, reduce the resolution, or use the crop function to reduce resolution.
-6. Use VLC or CrewTimer Video Review to verify the video is being recorded properly.
-7. Use the camera web page (see step 2) to control camera aspects such as zoom, focus, aperature, and exposure as needed.
-8. Use the camera web interface presets (if available) to quickly change configurations.
+For compatible cameras, settings can be adjusted from the Video sidenav tab.  In order for this interface to
+work an interface named VISCA is utilized.  There is a preset on the main setup page to specify the VISCA
+port which must match what your camera vendor utilizes.  Some cameras allow you to specifiy a specify VISCA
+port to use.
 
-## Camera Exposure
+If your camera does not have VISCA support, use 0 for the VISCA port.  You can also click on the Camera icon to directly open the web page of the camera.
 
-The key setting in the camera for useful video is are the exposure controls.  Often 'auto' exposure can provide good results.  If you find the 'auto' setting is over exposed or not to your satisfaction try changing the aperature setting as follows:
+1. Connect to your camera with a web browser. e.g. <http://10.0.1.188> and log in.  Cameras often default to 'admin' as the username and 'admin' as password.
+2. Configure your camera to 720p (1280x720@60) or 1080p (1920x1080@60) video.  Use 60 fps or higher rate for the NDI video stream.  This is often a choice under an NDI configuration menu.
+3. Click the Start button on the video preview area of the app.
+4. Review the event log. Look for reported gaps in the recording.  It is normal to have an initial gap reported as the video is starting or properties are changed.  If you see gaps > 90ms you may need to get a faster computer, reduce the resolution, or use the crop function to reduce resolution.
 
-1. Choose 'auto' exposure to see if that is suitable.
-2. Choose an aperature of F11 or greater if possible.  This increases the size of the area that will be in focus.
-3. Adjust the shutter speed to give a suitable exposure.
+## Camera Settings
+### Camera Exposure
 
-## Adjusting Finish Line guide
+The key setting in the camera for useful video is are the exposure controls.  While 'auto' exposure can provide good results you lose control over key aspects such as shutter speed.  The following is recommended for use capturing video:
+
+1. Choose a shutter speed of 1/1000 and aperature Fstop of f5.6
+2. If the image is too light, reduce the aperature by increaseing the Fstop number has high as possible.  Choose an aperature of f5.6 or greater if possible.  A higher Fstop increases the size of the area that will be in focus.
+3. If the image is still too light at max Fstop, increase the shutter speed to get the desired light level.
+4. If the image is too dark at 1/1000 and f5.6, try increasing Gain before lowering shutter speed and Fstop.
+
+### Adjusting Finish Line guide
 
 A red line is drawn on the video to show the location of the finish line.  The position chosen is utilized by the Video Review app to help score the finish times for boats.  To adjust the finish line position:
 
 * Drag the top handle to adjust the position.  When the top handle is moved, the bottom handle moves with it.
-* Drag the bottom handle to adjust only the bottom position.  This allows selecting a finish line that has a orientation other than exactly vertical.  However, it is better to properly align the camera than to adjust it digitally.
+* Drag the bottom handle to adjust only the bottom position.  This allows selecting a finish line that has a orientation other than exactly vertical.  However, it is better to properly align the camera than to adjust the angle digitally.
 * Press the 'move to center' icon to reset the guide to the center of the video.
 
-## Cropping Video
+### Cropping Video
 
 Recorded video can be cropped to eliminate areas that do not provide useful context, decrease file size, and provide a snappier review process.  This results in smaller mp4 files as well as reducing overhead needed to encode the video.  If the log reports gaps, cropping the recorded video can eliminate the gaps by reducing the cpu overhead required to record.
 
 * Utilize the drag handles in the corners of the video to adjust cropping.
 * Maximize icon - Press the maximize icon to set the cropping rectangle to maximum size.
+
+### Focus Assist
+
+When the **Focus Assist** checkbox is checked, a small rectangle will show up over the video and a focus score will be computed for the region within the rectangle.  As you adjust focus a higher number represents better focus.  This works best if you have a stationary object such as a boat or buoy in the image.
+
+Try focusing at a point 1/3 across the timing zone.  Generally the area in focus will be 2/3 beyond the focus point and 1/3 before the focus point.
+
+### Camera Alignment
+
+If your recording includes the far line marker and you do not need to change zoom settings you can simply use the adjustment in the recorder app to set 'Finish Line'.  However, you need to change the camera angle or zoom
+differently than for production recording you will need to refine your camera mount a bit more so when you zoom you know you haven't moved off your finsih line.
+
+See the [Camera Alignment](./CameraAlignment.md) document for a detailed walkthrough to get ultimate alignment.
 
 ## Internet Connectivity
 
