@@ -12,13 +12,14 @@
 
 Firmware updates are provided for all CrewTimer Hardware devices **Except V1 Clickers**.  The same firmware image is used for all types of hardware.  To upgrade the firmware in your devices, download the firmware image below and follow the instructions in the PDF document.
 
-* [CrewTimer Firmware Image 3.07](https://storage.googleapis.com/resources.crewtimer.com/firmware/crewtimer-3.07.uf2)
+* [CrewTimer Firmware Image 3.09](https://storage.googleapis.com/resources.crewtimer.com/firmware/crewtimer-3.09.uf2)
 * [CrewTimer Firmware Upgrade Instructions](../general/FirmwareUpgrade.md)
 
 ### Firmware History
 
 | Version | Date       | Notes                                                                                                                                        |
 | ------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| 3.09    | 2026-01-30 | Add support Light Starting System and Pursuit Starts                     |
 | 3.07    | 2025-11-25 | Add support for AS1 LoRa band and Light Start Systems                                                                                                  |
 | 3.05    | 2024-11-04 | Add support for hardware configuration UI                                                                                                   |
 | 3.04    | 2024-10-03 | Add support for supplemental Mobile Horn Relay                                                                                               |
