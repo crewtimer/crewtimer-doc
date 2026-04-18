@@ -35,9 +35,11 @@ While the overlay is targeted to overlay of livestream video, it can also be use
 
 ## Event Navigation
 
-There are two hotspots on the overlay that can be clicked to move to the next or prior race.  Clicking on the left side of the separator bar moves to the prior race while clicking on the right side moves to the next race.
+You can move forward and backwards in the race list by using the Tab/Shift-Tab keys or the Right and Left arrow keys.
 
-A second way to navigate events is to click on the Title area of the overlay.  This will place a drop-down selector to allow selecting an event.  Be careful however as the drop-down may overlay your video and be visible in your livestream depending on your crop factors.  This can be useful to navigate when the overlay is not visible.  If the title disabled (showTitle=false), click on the blank area at the top of livestream graphic to show the drop-down.
+In addition, there are two hotspots on the overlay that can be clicked to move to the next or prior race.  Clicking on the left side of the separator bar moves to the prior race while clicking on the right side moves to the next race.
+
+A third way to navigate events is to click on the Title area of the overlay.  This will place a drop-down selector to allow selecting an event.  Be careful however as the drop-down may overlay your video and be visible in your livestream depending on your crop factors.  This can be useful to navigate when the overlay is not visible.  If the title disabled (showTitle=false), click on the blank area at the top of livestream graphic to show the drop-down.
 
 ## URL Arguments
 
