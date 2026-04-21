@@ -33,13 +33,11 @@ The *CrewTimer Recorder* application utilizes NDI streaming cameras while the *R
     - [(11) File Selector](#11-file-selector)
     - [(12) Assigned Timestamps](#12-assigned-timestamps)
       - [Jumping to scored entries](#jumping-to-scored-entries)
-      - [Sorting by finish time](#sorting-by-finish-time)
     - [Advanced Features](#advanced-features)
       - [Keyboard Shortcuts](#keyboard-shortcuts)
       - [Zoom](#zoom)
       - [Hyperzoom](#hyperzoom)
       - [Moving the finish line](#moving-the-finish-line)
-      - [Interpolated finish times](#interpolated-finish-times)
       - [Using lane guides](#using-lane-guides)
   - [Suggested Equipment](#suggested-equipment)
 
@@ -49,6 +47,8 @@ The *CrewTimer Recorder* application utilizes NDI streaming cameras while the *R
 You will need to download and install the CrewTimer Video Review software from the [Downloads Page](https://admin.crewtimer.com/help/Downloads). These links will always take you to the latest version available. It is recommended that you always update the software to the latest version as part of the preparation for your regatta.
 
 You can determine the current version you are running by clicking the three lines at the top right of the application window and selecting *About*. A window will show you the current version.
+
+**Please watch [this introductory video](https://youtu.be/rMzJ9kCMo-Y) for an overview of the CrewTimer Video Review app.**
 
 ## Configuration
 
@@ -247,40 +247,42 @@ You will be asked to confirm that you want to delete this timestamp:
 
 #### Jumping to scored entries
 
-By clicking an already scored entry in the event list, the software will open the exact time in the video for the entry. This can be be very useful in facilitating close finish reviews after a race completed.
-
-#### Sorting by finish time
-
-This can be done in the CrewTimer admin portal as well. But a quick way to review the recorded finish order with the umpire is to click on the small triangle next to "ENTRY". Clicking there will switch between sorting by BOW and sorting by TIME:
-
-![image-20240602181106126](assets/image-20240602181106126.png)
+By double clicking an already scored entry in the event list, the software will open the exact time in the video for the entry. This can be be very useful in facilitating close finish reviews after a race completed.
 
 ### Advanced Features
 
 #### Keyboard Shortcuts
 
-A number of keyboard shortcuts are available to speed up scoring.
-
-| Key | Function |
+| Video Gestures | Action |
 | --- | --- |
-| <, comma, left-arrow | Move the video one frame when fullscreen.  Move the video according to the Hyperzoom resolution while zooming. |
-| >, period, right-arrow | Move the video one frame when fullscreen.  Move the video according to the Hyperzoom resolution while zooming. |
-| Right Click | Press the *Add Split* button. |
-| Left Click | Zoom the video centered on the point of interest under the finish line. |
-| Mouse Wheel rotate | Move the video one frame when fullscreen. Move the video according to the Hyperzoom resolution while zooming. |
-| Drag left or right | When zooming, moves the video left or right |
-| Drag up and down | Adjust the video zoom factor |
-| Spacebar | Trigger companion video recorder to close current mp4 file and start a new one. |
+| space | Trigger the video recorder to close the current video file being recorded and start a new file. |
+| Mouse Wheel, Left Arrow Key, or Right Arrow Key | Jog the timeline by one video frame.  If zoomed, jog by a partial frame if possible. |
+| Right Click | Record the current Timestamp and Bow as if the Add Split button was pressed. | 
+| Tab | Jump to the next available clicker hint in the timeline. |
+| Double Click | Enter or Exit video zoom.  If auto-zoom is enabled and shift held, the click point is used to attempt to move the point to the finish guide. |
+| Shift click | Attempt to automatically move the selected point to the finish guide and enter 5x zoom.  Auto-zoom must be enabled in settings.|
+| z or / or double click | Exit video zoom. |
+| Shift Click on lane or finish guide drag handle| Restore guide to vertical or horizontal orientation. See also reset option in settings. |
+
+| Recorder Gestures | Action |
+| --- | --- |
+| Spacebar | Pressing the space bar while over video will request the recorder to start a new recording file. |
+| >> Icon | Request the recorder to start a new recording file. |
+
+| Timing Sidebar Gestures | Action |
+| --- | --- |
+| Click on Bow| Set the **Add Split** button Bow and Event properties. |
+| Right click on Bow | Open menu to delete timestamp if a timestamp has been recorded. |
+| Double click on Bow| Seek to associated timestamp.  If no timestamp recorded yet, a seek using the timing hint waypoint is done. |
+
 
 #### Zoom
 
-When reviewing the video it can be helpful to zoom into the bow ball of a boat. This is done by placing the mouse cursor on the point of interest, pressing the left mouse button and dragging the mouse down. This can be repeated a few time to achieve the desired amount of zoom:
+When reviewing the video it can be helpful to zoom into the bow ball of a boat. This is done by placing the mouse cursor on the point of interest, using double-click to zoom.
 
 ![image-20240602203828239](assets/image-20240602203828239.png)
 
-You can reduce the amount of zoom, the steps are the same, but the mouse is dragged up.
-
-To fully reset the zoom, double-click anywhere in the image or select another point in the timeline.
+To fully reset the zoom, press escape, double-click anywhere in the image, or select another point in the timeline.
 
 #### Hyperzoom
 
@@ -302,24 +304,7 @@ To undo any introduced angle, press and hold SHIFT while moving either marker.
 
 To bring the finish line back to the center and undo any angle, go back into the "Video Settings" and press the "RESET FINISH" button.
 
-#### Interpolated finish times
 
-**Note: with the additon of Hyperzoom, this features is deprecated and may be removed in the future.  Hyperzoom is much easier and quicker to use.**
-
-**Note you should discuss this approach with your Chief Judge at the Finish to ensure they are OK with these calculations.**
-
-Because boats move at fairly constant speed, times from two different video frames can be used to calculate a finish time. This is useful when two boats finish very closely (and the exact time is critical) and no single frame provides a view of the bow crossing the line exactly. This is done by following these steps:
-
-- [ ] Find the last video frame before the bow crosses the line
-- [ ] Press and hold SHIFT and click on the location of the bow ball. A blue line will appear
-- [ ] Move to the next video frame where the bow crossed the line
-- [ ] Press and hold SHIFT and click on the location of the bow ball. A blue line will appear
-
-After doing this, the calculated time will show below the video timestamp. In the example below, you can see the frame before the video has a timestamp of *12:07:09.292*, followed by *12:07:09.308*. The calculated timestamp is *12:07:09.300* and will be assigned when you press the "ADD SPLIT" button
-
-![image-20240602211758398](assets/image-20240602211758398.png)
-
-Double clicking the image will reset the blue lines.
 
 #### Using lane guides
 
