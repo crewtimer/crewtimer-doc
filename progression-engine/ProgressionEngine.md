@@ -12,7 +12,7 @@
     - [Advancement Methods](#advancement-methods)
     - [Distribution Method](#distribution-method)
     - [Seeding Priority](#seeding-priority)
-  - [Column Data](#column-data)
+  - [Ignoring column data when seeding events](#ignoring-column-data-when-seeding-events)
   - [References](#references)
 
 <!-- /TOC -->
@@ -155,6 +155,5 @@ Generally, when populating brackets with new entries, existing column data in th
 - [CrewTimer Privacy Policy](https://crewtimer.com/privacy)
 - [CrewTimer Results](https://crewtimer.com)
 - [CrewTimer Admin Access](https://admin.crewtimer.com)
-- Abbreviations are specfied in the [World Rowing Rules Appendix R7](https://worldrowing.com/technical/rules/2021-rule-book/).
 
 Document Source: CrewTimerProgressionEngine.md in the crewtimer-apps-script repository.
