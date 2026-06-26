@@ -12,6 +12,7 @@
 * [Windows or MacOS Installer](https://github.com/crewtimer/crewtimer-recorder/releases/latest)
 
 * [Operating Manual](https://admin.crewtimer.com/help/VideoRecorder)
+* [Example Video Setup](https://admin.crewtimer.com/help/VideoSetup)
 
 ## CrewTimer FinishLynx Connect 1.1.3
 

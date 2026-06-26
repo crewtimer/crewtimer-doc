@@ -23,4 +23,4 @@ This package assumes you have wired internet available via either a facility dro
 
 **Note** The cameras need Internet access to synchronize their time for recording.  This can be done using a [LTE Router](https://a.co/d/09MtQcZa), a local wired etherenet drop to the PoE switch, or using Internet Connection Sharing on Mac or Windows.  The Internet connection and camera operation should be tested before the regatta!
 
-Other cameras are listed on the [Video Recorder](../video-recorder/VideoRecorder.md) page.
+Other cameras are listed on the [Video Recorder](../video-recorder/VideoRecorder.md) page.  See [Example Video Setup and Configuration](../video-recorder/VideoSetup.md) for a sample camera, network, and laptop setup.

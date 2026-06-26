@@ -8,6 +8,7 @@ The CrewTimer Video Recorder app is used to record mp4 video files for use with 
   - [Requirements](#requirements)
   - [Installation](#installation)
   - [Quickstart](#quickstart)
+  - [Example setup](#example-setup)
   - [Customize and adjust your camera settings](#customize-and-adjust-your-camera-settings)
   - [Camera Settings](#camera-settings)
     - [Camera Exposure](#camera-exposure)
@@ -49,6 +50,10 @@ Download the installer from the [Downloads Page](https://crewtimer.com/help/Down
 5. Press the Start button to start recording.
 
 > Note: The camera must be connected with a wired ethernet interface.  Using WiFi will result in dropped video frames.
+
+## Example setup
+
+See [Example Video Setup and Configuration](./VideoSetup.md) for a complete sample laptop, camera, network, and alignment setup.
 
 ## Customize and adjust your camera settings
 
