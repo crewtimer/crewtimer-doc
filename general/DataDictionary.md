@@ -36,11 +36,14 @@ Handicaps can be automatically computed by CrewTimer or they can be manually ass
 
 **Note:** CrewTimer needs a hint as to the boat type to properly compute handicaps.  When using handicaps, be sure to include the boat type in the Event Name.  For example 1x, 2x, 2-, 4x, 4-, 4+, 8+, 8.
 
+By default, each race uses the regatta handicap configuration from the admin panel.  The HandicapType column can override the regatta setting for a specific race.  Supported race-level values are `None`, `Age`, and `Manual`.  Leave blank to use the regatta setting.  `Age` uses the regatta handicap method, or USRowing if the regatta method is blank or Manual.  If `Age` or `Manual` is specified for an Open race, CrewTimer will compute handicaps for that race.
+
 | Field Name | Acceptable Aliases            | Description                                                                                                                                                                     |
 | ---------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Event Name | Event, EventName, Description | Event name with boat type included (1x, 2x, 2-, 4x, 4-, 4+, 8+, 8). Canadian handicaps should also include the gender (W4+, M4+, Mx4+, 'Mens 8+', 'Womens 8+', 'Mixed 8+', etc) |
 | Age        | Avg_Age,&nbsp;Avg&nbsp;Age    | Average age of the entry.                                                                                                                                                       |
 | Handicap   |                               | When manual handicaps are configured for a regatta, this column represents the handicap associated with this entry.  Specified as seconds of handicap advantage.                |
+| HandicapType | Handicap Type               | A race specific handicap type. Supported values are `None`, `Age`, and `Manual`. If unspecified, the global setting in the admin control for the regatta is used.              |
 | Handicap Multiplier |  | A race specific handicap multiplier.  If a particular race or set of races have a different distance than the default specified in the admin configuration, the distance factor can be adjusted on a per race basis by specifying a handicap factor. Typically 1.0 represents a 1km distance. |
 
 ## Time only or Exhibition entries
