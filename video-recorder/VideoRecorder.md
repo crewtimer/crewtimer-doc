@@ -195,13 +195,20 @@ The SMTAV BX30N camera requires a software update to version 8.02.88 or better t
 
 ### Camera Mounting
 
+<img src="./assets/AidaCameraMounted.png" alt="AIDA UHD-NDI3-X30 mounted vertically" width="500">
+
+*AIDA UHD-NDI3-X30 mounted at 90 degrees with an L bracket on a three-way geared tripod head.*
+
 | Item                                            | Description                                         |
 | ----------------------------------------------- | --------------------------------------------------- |
 | [NEEWER Tripod Head](https://amzn.to/4cq5cpn)   | Three way geared tripod head.                       |
+| [Camera L Bracket](https://a.co/d/00L4ildj)     | Mounts the AIDA UHD-NDI3-X30 at 90 degrees for portrait recording. |
+| [3D-printed L-bracket shim](./assets/L-Bracket-Shim-v13.stl) | Printable shim that helps fit the AIDA UHD-NDI3-X30 securely to the L bracket. |
+| [3D-printed AIDA rain shield](./assets/Aida-Rain-Cover-Rotated-v10.stl) | Printable rain protection for the rotated AIDA camera. Secure it with a [1/4-20 camera screw](https://a.co/d/06aEvW0P). |
 | [Manfroto Super Clamp](https://amzn.to/4bNIYO1) | Handy to mount your camera to scaffolding or rails. |
 | [SLIK Pro 700 DX](https://amzn.to/3KO2ZIP)      | Sturdy Tripod.                                      |
 | [SLIK Pro CF-734](https://amzn.to/4cuixxg)      | Carbon Fiber Tripod.  Can fit in carry-on luggage   |
-| [Focusing Rail](https://amzn.to/3wIi37i)        | Horizontal adjustment of camera on tripod head.     |
+| [Focusing Rail](https://amzn.to/3wIi37i)        | Optional horizontal adjustment of camera on tripod head. |
 
 ### Networking and Power
 
