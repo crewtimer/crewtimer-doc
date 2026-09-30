@@ -1,6 +1,8 @@
 # CrewTimer Video Recorder
 
-The CrewTimer Video Recorder app is used to record mp4 video files for use with the CrewTimer Video Review app.  It provides basic controls for controlling how video is captured, started, and stopped as well as marking the position of the finish line.
+The CrewTimer Video Recorder app records timestamped MP4 video for use with the CrewTimer Video Review app. It accepts NDI and SRT network video, provides a live preview and camera controls, and records the crop, orientation, finish-line position, and timing metadata needed during review.
+
+Watch the [CrewTimer Video Recorder training videos](https://www.youtube.com/playlist?list=PLSIPH6-6DDtDjL5tFoddhv9D5MfUjvS0b) for setup and operating demonstrations.
 
 ![Video Overview](../video-review/assets/VideoReviewOverview.png)
 
@@ -8,6 +10,10 @@ The CrewTimer Video Recorder app is used to record mp4 video files for use with 
   - [Requirements](#requirements)
   - [Installation](#installation)
   - [Quickstart](#quickstart)
+  - [Recorder controls and output](#recorder-controls-and-output)
+    - [Recording settings](#recording-settings)
+    - [Preview and diagnostics](#preview-and-diagnostics)
+    - [Recorded files and timing metadata](#recorded-files-and-timing-metadata)
   - [Example setup](#example-setup)
   - [Customize and adjust your camera settings](#customize-and-adjust-your-camera-settings)
   - [Camera Settings](#camera-settings)
@@ -32,9 +38,9 @@ The CrewTimer Video Recorder app is used to record mp4 video files for use with 
 
 ## Requirements
 
-* [NDI](https://en.wikipedia.org/wiki/Network_Device_Interface ) capable video camera.  Network Device Interface (NDI) is a protocol used to provide low latency video over a 100Mbit or Gigabit computer network most commonly used in professional video production,
-* **Hardwired network connection between the recording computer and the NDI camera.**  WiFi can drop video frames due to RF interference.
-* Internet access.  Either hardwired or via a hotspot. The NDI cameras have built-in time synchronization utilizing Network Time Protocol (NTP) servers to timestamp each video frame.  If the video will only be used for finish order then Internet access is not required.
+* An SRT or [NDI](https://en.wikipedia.org/wiki/Network_Device_Interface)-capable network video camera. NDI provides low-latency video over a 100 Mbit or Gigabit network; SRT (Secure Reliable Transport) is also supported as an input protocol.
+* **A hardwired network connection between the recording computer and camera.** WiFi can drop video frames due to RF interference.
+* Internet access, either hardwired or via a hotspot, when video timestamps will be used for backup timing. SRT and NDI cameras commonly synchronize with Network Time Protocol (NTP) servers before timestamping frames. If the video will only be used to determine finish order, Internet access is not required.
 * MacOS or Windows laptop.  Generally any laptop produced after 2020 is suitable.  The least expensive laptop from Costco works.
 
 ## Installation
@@ -43,13 +49,52 @@ Download the installer from the [Downloads Page](https://crewtimer.com/help/Down
 
 ## Quickstart
 
-1. Connect your NDI camera to a network switch also connected to your recording computer.
+1. Connect your camera to a network switch also connected to your recording computer.
 2. Start the CrewTimer Video Recorder app.
-3. Review the default settings and change output folder or file prefix if desired.
-4. Select your camera from the Camera selection dropdown
-5. Press the Start button to start recording.
+3. Select **SRT** or **NDI** in the Protocol field, then select the camera or stream from the Camera dropdown. The dropdown displays the source IP address when available. **SRT** is preferred.
+4. Review the recording folder, filename prefix, recording slice duration, and waypoint. Select **Any** for the waypoint unless this recorder should respond only to split commands for a particular course location.
+5. Verify the live preview. Adjust rotation, crop, and finish-line position before recording.
+6. Press **Start** in the top bar. While recording, the top bar displays elapsed time, current filename, input resolution, cropped resolution, frame rate, and encoder backlog. Click the red recording status to stop.
 
 > Note: The camera must be connected with a wired ethernet interface.  Using WiFi will result in dropped video frames.
+
+On macOS, if no cameras appear, allow CrewTimer Video Recorder access under **System Settings → Privacy & Security → Local Network**. The recorder also displays a shortcut to this setting when discovery is blocked.
+
+## Recorder controls and output
+
+### Recording settings
+
+The Settings page provides these controls:
+
+* **Camera and Protocol** - Select an automatically discovered NDI or SRT source. A missing previously selected source is shown in red.
+* **VISCA Port** - Enable in-app camera control by selecting the TCP port used by the camera. Select port 0 if the camera does not support VISCA. The camera icon opens the selected camera's web interface.
+* **Recording Folder and Filename Prefix** - Choose where clips are saved and the prefix added to every filename. The adjacent folder button opens the selected location in Finder or File Explorer.
+* **Recording Slice (sec)** - Set the target duration of each MP4 clip. Recording continues across slice boundaries, producing manageable consecutive files rather than one very large file.
+* **Waypoint** - Bind a recorder to a CrewTimer Video Review waypoint such as Start or Finish. **Any** accepts split commands for every waypoint, which is useful when only one recorder is running.
+* **Finish Line** - Show or hide the finish-line guide in the preview. Its saved position is used by Video Review.
+* **Live Preview** - Keep the selected source preview active whenever it is available, including while navigating between Settings, Video, and Event Log pages.
+
+Settings are retained between app launches. Changes to the camera, protocol, rotation, slice duration, or filename prefix apply when recording is restarted. Changing the crop while recording automatically restarts the recording after a short delay.
+
+### Preview and diagnostics
+
+The Settings preview and the larger Video page provide the same framing tools:
+
+* Drag the crop handles to select the recorded region. Use the crop icon to enter or leave crop adjustment, and use the view icon to switch between the whole source and a preview fitted to the cropped area.
+* Right-click the preview to cycle through whole-frame, cropped, and 6x inspection views. Drag while zoomed to inspect another part of the image.
+* Select 0°, +90°, -90°, or 180° rotation. Rotation supports landscape, portrait, and inverted camera mounting and resets the crop and finish guide.
+* Drag the finish-line guide. Hold **Shift** while dragging to move only one end and set an angled line; use the center-line icon to reset it.
+* Enable **Focus Assist** to display a movable measurement region and focus score. A higher score indicates a sharper image for the selected region.
+* When VISCA is enabled, the Video page can control focus, one-shot autofocus, zoom, exposure mode, iris, shutter, gain, and brightness. Five recorder-side presets can save and restore supported camera settings.
+* An exposure warning appears when the connected camera is not using Manual or Shutter Priority mode at 1/500 second or faster.
+
+The Event Log reports source, timing, and recording events, including detected frame gaps. An initial gap while a stream starts or settings change is normal. Repeated gaps over about 90 ms indicate that the network, camera, or computer cannot sustain the selected stream; try cropping, lowering resolution, or checking the wired network. A growing encoder backlog in the top bar is another indication that the computer is not keeping up.
+
+### Recorded files and timing metadata
+
+Each recording slice produces an MP4 file and a JSON sidecar file with the same base name. The sidecar records image dimensions, the crop within the original source, source rotation, finish-line geometry, and available sensor/rolling-shutter timing information. Keep the MP4 and JSON files together when copying recordings to another computer or loading them into Video Review.
+
+The recorder uses hardware-accelerated video decoding and encoding where supported. Frame timestamps are also embedded in the recorded output so Video Review can correlate video with race timing. For accurate backup timing, synchronize the camera with NTP and confirm its clock before the event.
 
 ## Example setup
 
@@ -57,16 +102,13 @@ See [Example Video Setup and Configuration](./VideoSetup.md) for a complete samp
 
 ## Customize and adjust your camera settings
 
-For compatible cameras, settings can be adjusted from the Video sidenav tab.  In order for this interface to
-work an interface named VISCA is utilized.  There is a preset on the main setup page to specify the VISCA
-port which must match what your camera vendor utilizes.  Some cameras allow you to specifiy a specify VISCA
-port to use.
+For compatible cameras, focus, zoom, exposure, and presets can be adjusted from the **Video** side-navigation tab. These controls use VISCA over IP. Select the VISCA port on the Settings page; it must match the port configured by the camera vendor.
 
 If your camera does not have VISCA support, use 0 for the VISCA port.  You can also click on the Camera icon to directly open the web page of the camera.
 
 1. Connect to your camera with a web browser. e.g. <http://10.0.1.188> and log in.  Cameras often default to 'admin' as the username and 'admin' as password.
-2. Configure your camera to 720p (1280x720@60) or 1080p (1920x1080@60) video.  Use 60 fps or higher rate for the NDI video stream.  This is often a choice under an NDI configuration menu.
-3. Click the Start button on the video preview area of the app.
+2. Configure your camera to 1080p (1920x1080@60) video.  Use 60 fps or higher rate for the video stream.  This is often a choice under a configuration menu on the web interface.  Use of 4K is not recommended due to 4x higher cpu load and file size without a significant benefit.
+3. Confirm that **Live Preview** is selected and review the video preview. Press **Start** in the top bar when you are ready to record.
 4. Review the event log. Look for reported gaps in the recording.  It is normal to have an initial gap reported as the video is starting or properties are changed.  If you see gaps > 90ms you may need to get a faster computer, reduce the resolution, or use the crop function to reduce resolution.
 
 ## Camera Settings
@@ -131,11 +173,11 @@ If only WiFi is available, there are several configurations which can work in th
 
 For suggested configurations, please check out the [Equipment Page](../general/Equipment.md).
 
-Most NDI capable cameras should work with CrewTimer Video Recorder.  However, some low end SMTAV cameras provide unreliable frame timing.  The following cameras have been tested and work well with CrewTimer Video Recorder.
+Most NDI or SRT capable cameras should work with CrewTimer Video Recorder.  However, some low end SMTAV cameras provide unreliable frame timing.  The following cameras have been tested and work well with CrewTimer Video Recorder.
 
 When recording 1080P provides a good tradeoff between resolution and computer resources and file size.  A recording file using 4K uses 4x the space as 1080P and your computer will need to be top of the line.
 
-If you find an NDI camera that works well for you please send an email to [CrewTimer](info@crewtimer.com) so it can be added to the list.
+If you find a camera that works well for you please send an email to [CrewTimer](info@crewtimer.com) so it can be added to the list.
 
 | Price | Zoom | Pan/Tilt | Res |FPS |                                          | Verified | Model                                                                                                                                   |
 | ----- | ---- | --- | --- | --- | ---------------------------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------- |

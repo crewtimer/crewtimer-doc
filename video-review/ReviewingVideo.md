@@ -1,321 +1,282 @@
-# Video processing with CrewTimer Video Review
+# Reviewing video with CrewTimer Video Review
 
 ![Video Overview](assets/VideoReviewOverview.png)
 
 ## Introduction
 
-The *CrewTimer Video Review* application provides the ability to process start or finish line recordings in a format created by [CrewTimer Recorder](https://admin.crewtimer.com/help/VideoRecorder) or RiaB Camera. While much of this document references finish times, it is applicable to Start times or intermediate waypoint times. These recordings combine video and timestamps for accurate evaluation of the finish times.
+CrewTimer Video Review processes start, finish, and intermediate-waypoint recordings made by [CrewTimer Recorder](https://admin.crewtimer.com/help/VideoRecorder) or RiaB Camera. The recordings contain frame timestamps, allowing an operator to identify the exact crossing time and publish it directly to CrewTimer.
 
-CrewTimer Video Review makes processing the results highly efficient by integrating "hints" from other CrewTimer stations into the workflow.
+The application can also display timing hints from other CrewTimer stations. Hints make it much faster to find each crossing, but the video operator must still verify the event, bow, and crossing frame before publishing a time.
 
-It is strongly recommended to test the full suite of hardware and software before your actual regatta. Although the overall process is not complicated, it is more involved then operating a clicker or Add Split button on the CrewTimer Mobile App.
+Test the complete camera, recorder, network, and review workflow before the regatta. Video review is straightforward after practice, but it involves more setup and judgment than operating a clicker or using **Add Split** in the CrewTimer Mobile App.
 
-The *CrewTimer Recorder* application utilizes NDI streaming cameras while the *RiaB Camera* application uses Basler machine vision cameras.  These applications record a series of mp4 files providing continuous coverage with no gaps. Each mp4 file is timeboxed to a specific time period and has embedded  timestamps for each video frame.  When used in conjunction with the *CrewTimer Video Review* application, the operator is able to easly access all video for the regatta for use in determining finish order quickly as well as to determine accurate timing.
+Watch the [CrewTimer Video Review training videos](https://www.youtube.com/playlist?list=PLSIPH6-6DDtDjL5tFoddhv9D5MfUjvS0b) for guided demonstrations of the review workflow.
 
-- [Video processing with CrewTimer Video Review](#video-processing-with-crewtimer-video-review)
-  - [Introduction](#introduction)
-  - [Getting started](#getting-started)
-  - [Configuration](#configuration)
-    - [Associating with the correct CrewTimer regatta](#associating-with-the-correct-crewtimer-regatta)
-    - [Other setup](#other-setup)
-    - [Selecting the video directory](#selecting-the-video-directory)
-  - [Using the software](#using-the-software)
-    - [(1) Video Timeline](#1-video-timeline)
-    - [(2) Previous | Next File](#2-previous--next-file)
-    - [(3) Jump to end | Split Video](#3-jump-to-end--split-video)
-    - [(4) Video Scrub](#4-video-scrub)
-    - [(5) Previous | Next Frame](#5-previous--next-frame)
-    - [(6) Save Screenshot](#6-save-screenshot)
-    - [(7) Timestamp](#7-timestamp)
-    - [(8) Assign Bow](#8-assign-bow)
-      - [(9) Select Event](#9-select-event)
-    - [(10) Assign Split](#10-assign-split)
-    - [(11) File Selector](#11-file-selector)
-    - [(12) Assigned Timestamps](#12-assigned-timestamps)
-      - [Jumping to scored entries](#jumping-to-scored-entries)
-    - [Advanced Features](#advanced-features)
-      - [Keyboard Shortcuts](#keyboard-shortcuts)
-      - [Zoom](#zoom)
-      - [Hyperzoom](#hyperzoom)
-      - [Moving the finish line](#moving-the-finish-line)
-      - [Using lane guides](#using-lane-guides)
-  - [Suggested Equipment](#suggested-equipment)
+## Table of contents
 
+- [Install and update](#install-and-update)
+- [Testing with demo regatta](#testing-with-demo-regatta)
+- [Connect to the regatta](#connect-to-the-regatta)
+  - [Waypoint choices](#waypoint-choices)
+- [Configure video review](#configure-video-review)
+  - [Course configuration](#course-configuration)
+  - [Interface settings](#interface-settings)
+  - [AI Assist](#ai-assist)
+  - [Guide visibility](#guide-visibility)
+- [Select the recording folder](#select-the-recording-folder)
+- [Main review workflow](#main-review-workflow)
+  - [Timeline and hints](#timeline-and-hints)
+  - [Scrub and frame navigation](#scrub-and-frame-navigation)
+  - [Select an event and bow](#select-an-event-and-bow)
+  - [Add or replace a split](#add-or-replace-a-split)
+  - [Review, seek, and delete times](#review-seek-and-delete-times)
+  - [File list and recording cleanup](#file-list-and-recording-cleanup)
+- [Zoom and crossing alignment](#zoom-and-crossing-alignment)
+  - [Normal zoom](#normal-zoom)
+  - [Automatic zoom to the timing guide](#automatic-zoom-to-the-timing-guide)
+  - [Hyperzoom](#hyperzoom)
+  - [Move the timing guide](#move-the-timing-guide)
+  - [Lane guides](#lane-guides)
+- [Keyboard and mouse reference](#keyboard-and-mouse-reference)
+- [Screenshots and image archives](#screenshots-and-image-archives)
+- [Suggested equipment](#suggested-equipment)
 
-## Getting started
+## Install and update
 
-You will need to download and install the CrewTimer Video Review software from the [Downloads Page](https://admin.crewtimer.com/help/Downloads). These links will always take you to the latest version available. It is recommended that you always update the software to the latest version as part of the preparation for your regatta.
+Download CrewTimer Video Review from the [CrewTimer Downloads page](https://admin.crewtimer.com/help/Downloads). Install the latest version before each regatta.
 
-You can determine the current version you are running by clicking the three lines at the top right of the application window and selecting *About*. A window will show you the current version.
+To check the installed version, open the menu at the upper right and select **About**.
 
-**Please watch [this introductory video](https://youtu.be/rMzJ9kCMo-Y) for an overview of the CrewTimer Video Review app.**
+An introductory video is also available on [YouTube](https://youtu.be/rMzJ9kCMo-Y). The interface has evolved since that video was recorded, so use this document for current control names and behavior.
 
-## Configuration
+## Testing with demo regatta
 
-There are a few setups steps to complete before you can process results. You will need to complete these steps before each regatta.
+Use the CrewTimer demonstration regatta to practice the complete review workflow without affecting a live regatta:
 
-Firstly, you will need the regattas **MobileID** and **MobilePIN** from the CrewTimer admin website.
+1. Open the **CrewTimer Settings** tab.
+2. Sign in with Mobile ID **r16305** and Mobile PIN **22809**.
+3. Set **Waypoint** to **FinishCam**.
+4. Set **Hint Waypoint** to **Finish**.
+5. Download [VideoReviewTutorial.zip](https://storage.googleapis.com/resources.crewtimer.com/DemoData/VideoReviewTutorial.zip) and extract it to a local folder.
+6. Open the **Video Review** tab, select **Folder**, and choose the extracted video folder.
 
-### Associating with the correct CrewTimer regatta
+The demo regatta is reset every 30 minutes, on the hour and half hour. Any timing data you add may therefore disappear at the next reset. The supplied video files remain on your computer and can be reused after each reset.
 
-If you are familiar with the CrewTimer Mobile App, this is going to be very familiar.
+## Connect to the regatta
 
-Before you can complete the next steps, work with your CrewTimer regatta administrator to get the MobileID and MobilePIN. Also make sure that you have both **Finish** and **Finish2** "WAYPOINTS" setup in the regatta. This screenshot shows what it would look like in the [CrewTimer Admin Portal](https://admin.crewtimer.com/):
+Obtain the regatta's **Mobile ID** and **Mobile PIN** from the regatta administrator.
 
-![image-20240602182404056](assets/image-20240602182404056.png)
+1. Open the **CrewTimer Settings** tab (rower icon).
+2. Enter the Mobile ID and Mobile PIN.
+3. Select **Sign In**.
+4. Confirm that the regatta title and green check mark appear.
+5. If the regatta spans multiple configured days, select the correct **Day**.
+6. Select the **Waypoint** where reviewed times will be published.
+7. Select a **Hint Waypoint**, if available.
+8. Optionally select a **Second Hint Waypoint**.
 
-CrewTimer Video Review works the same way as any other timing station. Using both **Finish** and **Finish2** names provides some additional functionality for review in the admin portal.
+![CrewTimer credentials](assets/image-20240602182639603.png)
 
-If you are confident about your video setup, it's recommended that the video system is your primary (most accurate) source of timing.
+### Waypoint choices
 
-- [ ] Select the "CrewTimer Settings" tab in the main Connect window (the rower icon)
-- [ ] Enter your MobileID and MobilePin for the regatta
+- **Waypoint** is the station to which Video Review publishes times. Use the waypoint designated by the regatta administrator.
+- **Hint Waypoint** supplies the primary clicker or timing markers shown in Video Review.
+- **Second Hint Waypoint** is a fallback used when you double-click an entry that has no reviewed camera time or primary hint time.
+- **Day** filters the events shown in Video Review when the regatta uses CrewTimer's multi-day configuration.
 
-![image-20240602182639603](assets/image-20240602182639603.png)
+The video system is normally the most accurate timing source. A common arrangement is to publish video times to one finish waypoint and use a separate clicker waypoint for hints. The exact waypoint names are regatta-specific; they do not have to be `Finish` and `Finish2`.
 
-- [ ] Press the "SIGN IN" button (a stable internet connection is an important requirement)
+## Configure video review
 
-If all goes well you should see the name of the regatta and a green checkbox appear to indicate you have properly logged into the regatta.
+Open the **Video Settings** tab (playback-and-gear icon).
 
-You will now be able to test the final two settings here:
+![Video Settings](assets/VideoSettings.png)
 
-- [ ] The "Timing Waypoint Selection" is where the video scoring will publish its results. As mentioned earlier, the video station should be your most accurate station and probably be assigned the "Finish" Waypoint.
-- [ ] The "Timing Hint Waypoint" is a fantastic feature which will help you locate crews crossing the line much faster. If another volunteer is using CrewTimer with station "Finish2", select that station from the dropdown. You will see later in this manual how beneficial is it (but not required!).
+### Course configuration
 
-Your setting will likely look like the below:
-
-![image-20240602183212027](assets/image-20240602183212027.png)
-
-### Other setup
-
-You have a few other options to review that can help you process your results faster.  These are found on the Video Settings tab (the playback + gear icon, the second from the left).
-
-| Course Configuration | Description |
+| Setting | Operation |
 | --- | --- |
-| Course Timezone | If you are reviewing the video in a different timezone than where the regatta is, you can set the "Course Timezone" to where the event is taking place. This will ensure that timestamps are shown in the local timezone for where the event takes place. This is very convenient when you are looking at the times on a race schedule or heat sheet.|
-| Lane is Below Guide Line | Check if lane 1 is on the far side of the course. |
-| Travel Right to Left | Check if boats move right to left on the video. |
+| **Travel Direction** | Select **Left to Right** or **Right to Left** to match boats as displayed in the recording. This also determines the logical forward and backward jog direction. |
+| **Lane Position** | Select whether each lane is above or below its lane guide. This is used when selecting a bow by lane. |
 
-| Interface Settings | Description |
+### Interface settings
+
+| Setting | Operation |
 | --- | --- |
-| Hyperzoom Resolution | Sets the time resolution used when video is zoomed. Select *Native Video* to disable Hyperzoom. Hypezoom uses video processing to calculate the speed of objects and extrapolate their position between video frames. |
-| Invert wheel  direction| Allows adjusting the behavior of the scroll wheel to your preference. |
-| Mouse Wheel Factor | Adjusts the sensitivity of the mouse wheel in relation to frame scrolling. Higher numbers provide finer control if you are seeing multi-frame jumps for each wheel click. Adjust this to fit your workflow.  For windows, 100 seems to work well while on MacOS, 4 works well. |
+| **Invert wheel direction** | Reverses mouse-wheel frame navigation. |
+| **Automatic next timestamp** | After a split is recorded, advances to the next unprocessed timing hint. If AI zoom is enabled, the application also attempts to locate that boat at the timing guide. |
+| **Automatic Recorder File Splitting** | Requests recorder file splits based on incoming timing activity. Use this only when Video Review can communicate with the recorder. A new timing hint re-arms automatic requests. |
 
-| Guide Visibility | Description |
+### AI Assist
+
+| Setting | Operation |
 | --- | --- |
-| Finish | Check to show a finish line over the video. The *Reset Finish* button will reset the finish position to the center of the video.|
-| Lane X | Check to show invidual horizontal lane guides. The advanced features section covers it's use.|
+| **Hyperzoom Resolution** | Selects the timestamp step used while zoomed. **Native Video** disables interpolated sub-frame movement; 10 ms through 1 ms enable progressively finer interpolation. |
+| **Card Type: Numeric** | Uses OCR optimized for numeric bow cards. |
+| **Card Type: Alphanumeric** | Uses OCR that accepts a single letter prefix followed by digits. **Card Digits** is disabled in this mode. |
+| **Card Digits** | Limits numeric OCR to the selected number of trailing digits. With **Auto**, an event containing only one-digit numeric endings uses one digit; an event containing two-digit endings uses two. Otherwise automatic/default behavior is retained. |
+| **Annotate Boat Detections** | Draws detected boats, bow-card boxes, recognized bow values, and confidence on the video. Click a recognized bow label to select it. |
+| **Zoom to Timing Guide on Double Click** | On an unzoomed double-click, detects the nearby boat and seeks to its estimated crossing of the timing guide. If detection fails, normal 5x zoom is used. |
 
-Your setting will look like the below for an 8 lane course.
+AI recognition is an aid, not the official result. Always verify the bow and crossing frame before adding a split.
 
-![image-20240609172140888](assets/image-20240609172140888.png)
+### Guide visibility
 
-### Selecting the video directory
-
-Before you can use the video review features, you need to let the software know where the video files can be found. The software will monitor this directory for any new files. When a new file is generated by the capture software, the file will automatically be added to the file list.
-
-- [ ] Select the "Video Review" tab in the main window (the leftmost icon)
-- [ ] Select the "CHOOSE FOLDER" button in the top right corner of the interface
-
-![image-20240601174018477](assets/image-20240601174018477.png)
-
-- [ ] In the folder explorer that now opens, browse to the directory that will contain the video file
-
-Your UI will now update with any files that exist in the directory you selected. It's fine if there is no files yet.
-
-## Using the software
-
-We will start with an overview of the main User Interface to get you familiar:
-
-![Main_UI](assets/Main_UI.png)
-
-1. Video Timeline
-2. Previous | Next File
-3. Jump to end | Split Video
-4. Video Scrub
-5. Previous | Next Frame
-6. Save Screenshot
-7. Timestamp | Previous | Next Frame
-8. Assign Bow
-9. Select Event
-10. Assign Split
-11. File Selector
-12. Assigned Timestamps
-
-### (1) Video Timeline
-
-This bar will show all the different capture files present in your chosen folder. Note that you should not have files from previous days in the same directory to avoid conflicts with timestamp names in the filenames. The currently active video is shown in blue. Other files are green. You can click on any of the "blocks" to jump to that file.
-
-Note that this is also where you will see any (orange) markers from the CrewTimer Station you picked for your "Hints":
-
-![image-20240602185530131](assets/image-20240602185530131.png)
-
-### (2) Previous | Next File
-
-Instead of using your mouse to select the file of interest, you can click the single arrow on the left and right side of the video timeline. This is another way to navigate the timeline.
-
-### (3) Jump to end | Split Video
-
-This double arrow button jumps to the last file in the video directory. If you are in the same network as the capture software this button might also do two other things:
-
-- Start the recorder software if it was not running
-- Ask the recorder software to start a new file
-
-This is very helpful in the normal finishline workflow. As you see boats approaching, generate a new file. This will allow you to later remove blank video files and make review faster.
-
-### (4) Video Scrub
-
-The blue dot can be selected with the mouse and dragged left and right. Or, you can click the left mouse button on a position on the timeline to jump there. This is your primary method for quick navigation within a video file.
-
-Note that when your current video file has CrewTimer hints, they will also show here:
-
-![image-20240602185711841](assets/image-20240602185711841.png)
-
-Clicking on one of the markers will be the fastest way to locate areas of interest.
-
-If the CrewTimer station using the mobile app already assigned the split, ***CrewTimer Video Review*** will pre-populate the Bow and Event for you!
-
-**Note: Make very sure in your review that you agree with the Bow number selection.**
-
-### (5) Previous | Next Frame
-
-Much like the similar buttons in the video timeline, these buttons allow you to move by a single frame within the selected video. This is typically used to narrow down the exact moment the bow crosses the line.
-
-### (6) Save Screenshot
-
-If your umpires or maybe the media team wants to document a particularly close finish. The "Save Screenshot" button can be used to make a copy of the active video frame.
-
-### (7) Timestamp
-
-This panel show the timestamp associated with the current video frame. This is the timestamp used to populate the result when you hit the "ADD SPLIT" button.
-
-If the timestamp has been computed utilizing Hyperzoom, an hourglass icon shows up next to the timestamp.
-
-### (8) Assign Bow
-
-This is where you enter the bow number. You can do this several ways:
-
-- [ ] Enter the bow number into the field directly
-- [ ] Click the "ENTRY" for the bow number in the event list
-- [ ] Click on the video between lane guides (if using lane guides)
-
-#### (9) Select Event
-
-You select the event that you want to score from the dropdown or move to the previous or next event with the arrows to the side.
-
-![image-20240602110317753](assets/image-20240602110317753.png)
-
-### (10) Assign Split
-
-To assign a split there are three things that need to be set:
-
-- [ ] Make sure you have selected the frame that best reflects the time the boat crossed the finish line
-- [ ] Make sure the correct event is selected
-- [ ] Enter the "BOW" number for the boat you are scoring or click on the screen between lane guides
-- [ ] Press the "ADD SPLIT" button
-
-As soon as you do this, it will be reflected on the CrewTimer website, like any other CrewTimer timing signal.
-
-Please note that "EVENT" and "BOW" might have been pre-populated when you clicked the marker in the timeline.
-
-### (11) File Selector
-
-Another way to select the file you want to look at, is by selecting it from the file list. This can be useful if you have the time in the filename and you want to quickly jump to a given time.
-
-The more common use is to delete files without any finishes from there. It's common that you have recordings from periods without finishes, for review and data storage considerations, it's recommended to delete them whenever there is some time available. Deleting a file is straight forward:
-
-- [ ] Review the "VIDEO TIMELINE" for any files that do now show any results
-- [ ] Select the segment in the "VIDEO TIMELINE", this will highlight the video in the "FILE SELECTOR"
-- [ ] Right click the mouse button on the file in question (the file should be highlighted) and select "DELETE"
-
-![image-20240602104450606](assets/image-20240602104450606.png)
-
-- [ ] Confirm the delete action if you are sure this the file you want to remove
-
-### (12) Assigned Timestamps
-
-After you start scoring races, your assigned times will start to show here.
-
-If you want to remove a timestamp, click on the triple dot and select "DELETE":
-
-![image-20240602110548970](assets/image-20240602110548970.png)
-
-You will be asked to confirm that you want to delete this timestamp:
-
-![image-20240602110659225](assets/image-20240602110659225.png)
-
-#### Jumping to scored entries
-
-By double clicking an already scored entry in the event list, the software will open the exact time in the video for the entry. This can be be very useful in facilitating close finish reviews after a race completed.
-
-### Advanced Features
-
-#### Keyboard Shortcuts
-
-| Video Gestures | Action |
+| Setting | Operation |
 | --- | --- |
-| space | Trigger the video recorder to close the current video file being recorded and start a new file. |
-| Mouse Wheel, Left Arrow Key, or Right Arrow Key | Jog the timeline by one video frame.  If zoomed, jog by a partial frame if possible. |
-| Right Click | Record the current Timestamp and Bow as if the Add Split button was pressed. | 
-| Tab | Jump to the next available clicker hint in the timeline. |
-| Double Click | Enter or Exit video zoom.  If auto-zoom is enabled and shift held, the click point is used to attempt to move the point to the finish guide. |
-| Shift click | Attempt to automatically move the selected point to the finish guide and enter 5x zoom.  Auto-zoom must be enabled in settings.|
-| z or / or double click | Exit video zoom. |
-| Shift Click on lane or finish guide drag handle| Restore guide to vertical or horizontal orientation. See also reset option in settings. |
+| **Timing Guide** | Shows or hides the line used to judge the crossing. |
+| **Set to Center** | Restores the timing guide to the center of the video. |
+| **Set from Recording** | Restores the guide position saved by the recorder in the recording metadata. |
+| **Enable Lane Guides** | Enables lane guides and their individual visibility controls. |
+| **Guide Color** | Changes the color of the timing and lane guides for better contrast. |
+| **Lane 0–11** | Shows or hides individual lane guides. |
 
-| Recorder Gestures | Action |
+Settings for guide positions are saved with the video sidecar information.
+
+## Select the recording folder
+
+1. Open the **Video Review** tab (video icon).
+2. Select **Folder** above the file list.
+3. Choose the directory containing the recording files.
+
+The button beside **Folder** opens the selected directory in the system file explorer. Video Review monitors the directory and adds new recording files as they appear. Keep recordings from different regatta days in separate directories when practical.
+
+![Select the recording folder](assets/image-20240601174018477.png)
+
+## Main review workflow
+
+![Main user interface](assets/Main_UI.png)
+
+A reliable workflow for every crossing is:
+
+1. Find the crossing using a timing hint, the timeline, the file list, or the event entry.
+2. Select the event and bow.
+3. Zoom or jog until the bow reaches the timing guide.
+4. Verify the displayed timestamp, event, and bow.
+5. Select **Add Split**, or right-click the video.
+6. Confirm any warning about replacing a time or using a bow not found in the schedule.
+
+The split is saved locally and published to the selected CrewTimer waypoint. If **Automatic next timestamp** is enabled, Video Review then advances to the next unprocessed hint.
+
+### Timeline and hints
+
+The upper timeline represents all recordings in the selected directory. Select a file segment to open it, or use the **<** and **>** buttons to move to the previous or next file.
+
+Hint and scored-time markers appear above or below the timeline. Select a marker to seek to its timestamp. When a hint includes a known event and bow, Video Review also selects them. Markers outside the currently recorded time range may still be shown so the operator can recognize missing video coverage. Cross-hatched rectangles represent recording files that contain no timing data.
+
+![Timeline files and timing hints](assets/TimelineHints.png)
+
+The fast-forward button at the right requests the recorder to close its current file and begin another. The spacebar performs the same action. It does not simply jump to the last local file.
+
+### Scrub and frame navigation
+
+Use the file scrubber to move quickly within the active recording. For precise positioning, use the previous/next-frame controls, the mouse wheel, or the left and right arrow keys. When zoomed and Hyperzoom is enabled, these controls can move by sub-frame timestamp increments.
+
+The timestamp displayed for the current image is the value recorded by **Add Split**. An hourglass indicator means the image and timestamp were produced by Hyperzoom interpolation.
+
+### Select an event and bow
+
+Select the event from the **Event** list or use its previous and next buttons. Events are filtered by the selected day. Combined races configured in CrewTimer display their entries together.
+
+Select a bow in any of these ways:
+
+- select its entry in the event list or grid;
+- enter or select the bow in the scoring controls;
+- select an available nearby hint button;
+- click a recognized label when detection annotations are enabled; or
+- click the appropriate area between configured lane guides.
+
+Unknown or nearby unprocessed hints are displayed as buttons above the file list. Selecting one seeks to its time and carries over any known event or bow.
+
+Never assume that a hint or OCR result is correct. Compare it with the visible bow card and event schedule.
+
+### Add or replace a split
+
+Select **Add Split** or right-click the video after the crossing frame, event, and bow have been verified.
+
+- A bow and event are required.
+- If the bow is not in the selected event, Video Review asks whether to add it anyway.
+- If a time already exists for that bow, Video Review asks whether to replace it.
+- Rapid duplicate actions are ignored to reduce accidental double submissions.
+
+### Review, seek, and delete times
+
+Recorded times appear beside the entries in the timing sidebar and in **Timing History**.
+
+- Select an entry to make its event and bow active.
+- Double-click a scored entry to seek to its recorded camera time.
+- If it has no camera time, double-click seeks to the primary hint, then the secondary hint if configured.
+- Right-click a scored entry and select **Delete** to remove its recorded time.
+
+Deleting or replacing a time is published to CrewTimer just like adding one.
+
+### File list and recording cleanup
+
+The file list is another way to open recordings. Filenames include time information, which can help locate a known period. Use the list's context menu for available file operations.
+
+Before deleting any recording, verify that it contains no required crossing and that another copy is not needed. File deletion is separate from deleting a scored CrewTimer timestamp.
+
+## Zoom and crossing alignment
+
+### Normal zoom
+
+Double-click an unzoomed video at the boat's vertical position to enter 5x zoom centered on the timing guide. Double-click again, or press **Z**, **/**, or **Escape**, to leave zoom.
+
+While zoomed, drag horizontally to jog through time. Hold **Shift** and drag vertically to adjust the zoom scale. Holding **Shift** without dragging shows a magnified inspection view when the pointer is away from guide handles.
+
+### Automatic zoom to the timing guide
+
+When **Zoom to Timing Guide on Double Click** is enabled, double-click near a boat. Video Review attempts to track the boat, seek to its crossing, zoom the image, and recognize its bow card. A bow is filled automatically only when recognition meets the application's validation requirements. If automatic tracking cannot produce a result, Video Review falls back to normal zoom.
+
+![AI-assisted bow-card recognition at the timing guide](assets/AIAssist.png)
+
+When reviewing an already recorded entry at its exact saved time, double-click uses normal zoom so the saved crossing is not moved.
+
+### Hyperzoom
+
+Hyperzoom interpolates movement between native video frames. It is useful when a bow crosses the guide between frames. Select the desired resolution in **Video Settings**, enter zoom, then jog or drag horizontally to select the best interpolated position.
+
+Interpolation improves timing resolution but does not add detail that was absent from the source recording. Use the coarsest resolution that clearly resolves the crossing.
+
+### Move the timing guide
+
+When the pointer approaches a guide endpoint, a drag handle appears. Drag the upper timing-guide handle to move the line; drag the lower handle to change its angle. Hold **Shift** while dragging a guide handle to restore vertical or horizontal alignment.
+
+Use **Set to Center** or **Set from Recording** in Video Settings to restore the guide.
+
+![Angled timing guide](assets/image-20240602204657986.png)
+
+### Lane guides
+
+Enable lane guides in Video Settings and select the guides required for the course. Drag their endpoints to match the lanes in the image. The **Lane Position** setting tells Video Review whether the lane lies above or below its guide, and **Travel Direction** determines the crew's direction of motion.
+
+When lane guides are correctly configured, clicking in a lane can select the scheduled bow for that lane.
+
+![Lane guides](assets/image-20240603082612026.png)
+
+## Keyboard and mouse reference
+
+| Input | Action |
 | --- | --- |
-| Spacebar | Pressing the space bar while over video will request the recorder to start a new recording file. |
-| >> Icon | Request the recorder to start a new recording file. |
+| **Spacebar** | Request a new recording file from CrewTimer Recorder. |
+| **Tab** | Seek to the next available timing point or hint. |
+| **Left/Right Arrow**, **,/.**, or **</>** | Jog backward or forward according to the configured travel direction. |
+| **Mouse wheel** | Jog through video; direction follows the invert-wheel setting. |
+| **P** | Start diagnostic/continuous playback. Lowercase **p** starts the alternate playback mode. |
+| **Right-click video** | Add the current split. |
+| **Single-click detected bow label** | Select the recognized bow. |
+| **Double-click video** | Enter zoom or run automatic crossing detection; double-click while zoomed exits zoom. |
+| **Z**, **/**, or **Escape** | Exit zoom. |
+| **Shift + vertical drag while zoomed** | Adjust zoom scale. |
+| **Shift + guide-handle drag** | Restore guide alignment. |
+| **Click event entry** | Select its event and bow. |
+| **Double-click event entry** | Seek to its camera time or configured hint time. |
+| **Right-click scored event entry** | Open the delete menu. |
 
-| Timing Sidebar Gestures | Action |
-| --- | --- |
-| Click on Bow| Set the **Add Split** button Bow and Event properties. |
-| Right click on Bow | Open menu to delete timestamp if a timestamp has been recorded. |
-| Double click on Bow| Seek to associated timestamp.  If no timestamp recorded yet, a seek using the timing hint waypoint is done. |
+## Screenshots and image archives
 
+Use the camera control to save the current displayed frame and overlays. Shift-click the camera control to save the raw video frame instead. The application menu also provides archival operations. **Archive Video Files** is available in the normal menu; advanced image-archive and diagnostic items appear when the menu is opened with **Shift** held.
 
-#### Zoom
+## Suggested equipment
 
-When reviewing the video it can be helpful to zoom into the bow ball of a boat. This is done by placing the mouse cursor on the point of interest, using double-click to zoom.
-
-![image-20240602203828239](assets/image-20240602203828239.png)
-
-To fully reset the zoom, press escape, double-click anywhere in the image, or select another point in the timeline.
-
-#### Hyperzoom
-
-Hypezoom uses video processing to calculate the speed of objects and extrapolate their position between video frames.
-
-While the image is zoomed, dragging the mouse left and right moves the video in finer resolution than the native video resolution.  The movement resolution is controlled by the *Hyperzoom Resolution* setting.
-
-#### Moving the finish line
-
-It's best practice to ensure the center line of the camera is exactly on the finish line, and pointed exactly at the finish marker at the far side of the course.
-
-If this is not possible, CrewTimer Video Review allow you to move the finish line marker. When you move your mouse close to the top of the finish line, you will see a small white box appear on both ends of the line.
-
-When you drag the top marker, the line moves in it's entirety. When you move the bottom marker, only the bottom end moves. This allow you to angle the finish line:
-
-![image-20240602204657986](assets/image-20240602204657986.png)
-
-To undo any introduced angle, press and hold SHIFT while moving either marker.
-
-To bring the finish line back to the center and undo any angle, go back into the "Video Settings" and press the "RESET FINISH" button.
-
-
-
-#### Using lane guides
-
-The software allows you to place lane guides. When you click between the lane guides, the software will populate the bow number based on the information you provided.
-
-When lane guides are enabled, they can be adjusted in a manner similar to the finish guide by clicking and dragging the end points:
-
-![image-20240603082612026](assets/image-20240603082612026.png)
-
-Visibility of lane guides is configured in the "Video Settings" tab. See the "Other Setup" section earlier in this document.
-
-## Suggested Equipment
-
-Please visit the [Suggested Equipment Page](https://crewtimer.com/help/Equipment) for various options.
+See the [CrewTimer Suggested Equipment page](https://crewtimer.com/help/Equipment) for current hardware options.
