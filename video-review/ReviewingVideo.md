@@ -14,32 +14,35 @@ Watch the [CrewTimer Video Review training videos](https://www.youtube.com/playl
 
 ## Table of contents
 
-- [Install and update](#install-and-update)
-- [Testing with demo regatta](#testing-with-demo-regatta)
-- [Connect to the regatta](#connect-to-the-regatta)
-  - [Waypoint choices](#waypoint-choices)
-- [Configure video review](#configure-video-review)
-  - [Course configuration](#course-configuration)
-  - [Interface settings](#interface-settings)
-  - [AI Assist](#ai-assist)
-  - [Guide visibility](#guide-visibility)
-- [Select the recording folder](#select-the-recording-folder)
-- [Main review workflow](#main-review-workflow)
-  - [Timeline and hints](#timeline-and-hints)
-  - [Scrub and frame navigation](#scrub-and-frame-navigation)
-  - [Select an event and bow](#select-an-event-and-bow)
-  - [Add or replace a split](#add-or-replace-a-split)
-  - [Review, seek, and delete times](#review-seek-and-delete-times)
-  - [File list and recording cleanup](#file-list-and-recording-cleanup)
-- [Zoom and crossing alignment](#zoom-and-crossing-alignment)
-  - [Normal zoom](#normal-zoom)
-  - [Automatic zoom to the timing guide](#automatic-zoom-to-the-timing-guide)
-  - [Hyperzoom](#hyperzoom)
-  - [Move the timing guide](#move-the-timing-guide)
-  - [Lane guides](#lane-guides)
-- [Keyboard and mouse reference](#keyboard-and-mouse-reference)
-- [Screenshots and image archives](#screenshots-and-image-archives)
-- [Suggested equipment](#suggested-equipment)
+- [Reviewing video with CrewTimer Video Review](#reviewing-video-with-crewtimer-video-review)
+  - [Introduction](#introduction)
+  - [Table of contents](#table-of-contents)
+  - [Install and update](#install-and-update)
+  - [Testing with demo regatta](#testing-with-demo-regatta)
+  - [Connect to the regatta](#connect-to-the-regatta)
+    - [Waypoint choices](#waypoint-choices)
+  - [Configure video review](#configure-video-review)
+    - [Course configuration](#course-configuration)
+    - [Interface settings](#interface-settings)
+    - [AI Assist](#ai-assist)
+    - [Guide visibility](#guide-visibility)
+  - [Select the recording folder](#select-the-recording-folder)
+  - [Main review workflow](#main-review-workflow)
+    - [Timeline and hints](#timeline-and-hints)
+    - [Scrub and frame navigation](#scrub-and-frame-navigation)
+    - [Select an event and bow](#select-an-event-and-bow)
+    - [Add or replace a split](#add-or-replace-a-split)
+    - [Review, seek, and delete times](#review-seek-and-delete-times)
+    - [File list and recording cleanup](#file-list-and-recording-cleanup)
+  - [Zoom and crossing alignment](#zoom-and-crossing-alignment)
+    - [Normal zoom](#normal-zoom)
+    - [Automatic zoom to the timing guide](#automatic-zoom-to-the-timing-guide)
+    - [Hyperzoom](#hyperzoom)
+    - [Move the timing guide](#move-the-timing-guide)
+    - [Lane guides](#lane-guides)
+  - [Keyboard and mouse reference](#keyboard-and-mouse-reference)
+  - [Screenshots and image archives](#screenshots-and-image-archives)
+  - [Suggested equipment](#suggested-equipment)
 
 ## Install and update
 
@@ -53,14 +56,17 @@ An introductory video is also available on [YouTube](https://youtu.be/rMzJ9kCMo-
 
 Use the CrewTimer demonstration regatta to practice the complete review workflow without affecting a live regatta:
 
-1. Open the **CrewTimer Settings** tab.
-2. Sign in with Mobile ID **r16305** and Mobile PIN **22809**.
-3. Set **Waypoint** to **FinishCam**.
-4. Set **Hint Waypoint** to **Finish**.
-5. Download [VideoReviewTutorial.zip](https://storage.googleapis.com/resources.crewtimer.com/DemoData/VideoReviewTutorial.zip) and extract it to a local folder.
-6. Open the **Video Review** tab, select **Folder**, and choose the extracted video folder.
+1. Download and install the latest [CrewTimer Video Review release](https://github.com/crewtimer/crewtimer-video-review/releases/latest).
+2. Open the **CrewTimer Settings** tab.
+3. Sign in with Mobile ID **r16305** and Mobile PIN **22809**.
+4. Set **Waypoint** to **FinishCam**.
+5. Set **Hint Waypoint** to **Finish**.
+6. Download [VideoReviewTutorial.zip](https://storage.googleapis.com/resources.crewtimer.com/DemoData/VideoReviewTutorial.zip) and extract it to a local folder.
+7. Open the **Video Review** tab, select **Folder**, and choose the extracted video folder.
 
 The demo regatta is reset every 30 minutes, on the hour and half hour. Any timing data you add may therefore disappear at the next reset. The supplied video files remain on your computer and can be reused after each reset.
+
+Watch the [CrewTimer Video Review Tutorial](https://www.youtube.com/playlist?list=PLSIPH6-6DDtDjL5tFoddhv9D5MfUjvS0b) which uses the demo regatta.
 
 ## Connect to the regatta
 
