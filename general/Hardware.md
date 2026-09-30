@@ -12,13 +12,15 @@
 
 Firmware updates are provided for all CrewTimer Hardware devices **Except V1 Clickers**.  The same firmware image is used for all types of hardware.  To upgrade the firmware in your devices, download the firmware image below and follow the instructions in the PDF document.
 
-* [CrewTimer Firmware Image 4.05](https://storage.googleapis.com/resources.crewtimer.com/firmware/crewtimer-4.05.uf2)
+* [CrewTimer Firmware Image 4.07](https://storage.googleapis.com/resources.crewtimer.com/firmware/crewtimer-4.07.uf2)
 * [CrewTimer Firmware Upgrade Instructions](../general/FirmwareUpgrade.md)
 
 ### Firmware History
 
 | Version | Date       | Notes                                                                                                                                        |
 | ------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| 4.07    | 2026-09-09 | Audio Horn V2 support                  |
+| 4.05    | 2026-06-19 | Update for relay to suppress duplicate relay closures. Regression from 4.03.   |
 | 4.03    | 2026-06-08 | Restore multiclick for firmware updating.                     |
 | 4.01    | 2026-05-26 | Dev release only. Add support for Beach Buttons and direct BLE messages for horn, relay, and lights                    |
 | 3.09    | 2026-01-30 | Add support Light Starting System and Pursuit Starts                     |
