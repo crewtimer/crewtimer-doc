@@ -53,7 +53,7 @@ The best way to get started is to begin with a copy of the example spreadsheet (
 Also available is a French version and manual provided by Bruno Pommiez:
 
 - [CrewTimer exemple pour REGATES ou PCM](https://docs.google.com/spreadsheets/d/1OAHqU631r0Pa-UqAQUdxxnLrJ_YjSajtlcIvvTj2394/edit?usp=sharing)
-- [Mémo tablette CrewTimer](https://drive.google.com/file/d/1DZvooqkDjxM8e1h9bcT_6BZrzABY0LV0/view?usp=sharing)
+- [Mémo tablette CrewTimer](https://drive.google.com/file/d/1lj_TACyWyu-rxiV8Dt02vgIoDOIMYGTV/view?usp=sharing)
 
 Once you open one of these spreadsheets, select File/Make a Copy to start your own spreadsheet.  Delete or change rows to suit your needs.  Additional columns are OK and are ignored by CrewTimer.  If you have an Excel spreadsheet you can import this into Google Sheets and start from that as well.  The column headings should match the headers in the example sheets which are further described in the CrewTimer Data Dictionary link above.  The minimum set is:
 
