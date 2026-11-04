@@ -62,7 +62,8 @@ Use the CrewTimer demonstration regatta to practice the complete review workflow
 4. Set **Waypoint** to **FinishCam**.
 5. Set **Hint Waypoint** to **Finish**.
 6. Download [VideoReviewTutorial.zip](https://storage.googleapis.com/resources.crewtimer.com/DemoData/VideoReviewTutorial.zip) and extract it to a local folder.
-7. Open the **Video Review** tab, select **Folder**, and choose the extracted video folder.
+7. On the Video Settings tab, set travel direction to Right-to-Left.  For full AI experience, enable all the AI checkboxes.
+8. Open the **Video Review** tab, select the green **Folder** button, and choose the extracted video folder.
 
 The demo regatta is reset every 30 minutes, on the hour and half hour. Any timing data you add may therefore disappear at the next reset. The supplied video files remain on your computer and can be reused after each reset.
 
@@ -122,7 +123,7 @@ Open the **Video Settings** tab (playback-and-gear icon).
 | **Card Type: Alphanumeric** | Uses OCR that accepts a single letter prefix followed by digits. **Card Digits** is disabled in this mode. |
 | **Card Digits** | Limits numeric OCR to the selected number of trailing digits. With **Auto**, an event containing only one-digit numeric endings uses one digit; an event containing two-digit endings uses two. Otherwise automatic/default behavior is retained. |
 | **Annotate Boat Detections** | Draws detected boats, bow-card boxes, recognized bow values, and confidence on the video. Click a recognized bow label to select it. |
-| **Zoom to Timing Guide on Double Click** | On an unzoomed double-click, detects the nearby boat and seeks to its estimated crossing of the timing guide. If detection fails, normal 5x zoom is used. |
+| **Zoom to Timing Guide on Single Click** | On an unzoomed view, single-click, detects the nearby boat and seeks to its estimated crossing of the timing guide. If detection fails, normal 5x zoom is used. |
 
 AI recognition is an aid, not the official result. Always verify the bow and crossing frame before adding a split.
 
@@ -212,7 +213,7 @@ Recorded times appear beside the entries in the timing sidebar and in **Timing H
 - Select an entry to make its event and bow active.
 - Double-click a scored entry to seek to its recorded camera time.
 - If it has no camera time, double-click seeks to the primary hint, then the secondary hint if configured.
-- Right-click a scored entry and select **Delete** to remove its recorded time.
+- Right-click a scored entry and select **Delete** to remove its recorded time.  Right-click also allows selecting how to jump to that spot in the video.
 
 Deleting or replacing a time is published to CrewTimer just like adding one.
 
@@ -232,7 +233,7 @@ While zoomed, drag horizontally to jog through time. Hold **Shift** and drag ver
 
 ### Automatic zoom to the timing guide
 
-When **Zoom to Timing Guide on Double Click** is enabled, double-click near a boat. Video Review attempts to track the boat, seek to its crossing, zoom the image, and recognize its bow card. A bow is filled automatically only when recognition meets the application's validation requirements. If automatic tracking cannot produce a result, Video Review falls back to normal zoom.
+When **Zoom to Timing Guide on Single Click** is enabled, single-click near a boat. Video Review attempts to track the boat, seek to its crossing, zoom the image, and recognize its bow card. A bow is filled automatically only when recognition meets the application's validation requirements. If automatic tracking cannot produce a result, Video Review falls back to normal zoom.
 
 ![AI-assisted bow-card recognition at the timing guide](assets/AIAssist.png)
 
@@ -271,7 +272,8 @@ When lane guides are correctly configured, clicking in a lane can select the sch
 | **P** | Start diagnostic/continuous playback. Lowercase **p** starts the alternate playback mode. |
 | **Right-click video** | Add the current split. |
 | **Single-click detected bow label** | Select the recognized bow. |
-| **Double-click video** | Enter zoom or run automatic crossing detection; double-click while zoomed exits zoom. |
+| **Single-click video**| If enabled, attempt to automatically move the selected boat to the timing line. |
+| **Double-click video** | Enter zoom. double-click while zoomed exits zoom. |
 | **Z**, **/**, or **Escape** | Exit zoom. |
 | **Shift + vertical drag while zoomed** | Adjust zoom scale. |
 | **Shift + guide-handle drag** | Restore guide alignment. |
