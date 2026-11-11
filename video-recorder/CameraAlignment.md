@@ -2,6 +2,8 @@
 
 **Goal:** Align the camera so the finish line stays locked on the far marker at all zoom levels and matches the physical guide wire/string.
 
+**This process is really on for the ultimate Geek Alignment.**. In most cases placing the camera on a tripod or rail and establishing the finish line by eye and small 3-axis tweaks is sufficient.
+
 ---
 
 ## Preparation

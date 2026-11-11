@@ -287,4 +287,4 @@ Use the camera control to save the current displayed frame and overlays. Shift-c
 
 ## Suggested equipment
 
-See the [CrewTimer Suggested Equipment page](https://crewtimer.com/help/Equipment) for current hardware options.
+See [Recommended Video Equipment](../video-recorder/VideoEquipment.md) for the recommended camera, mounting, networking, and computer setup.

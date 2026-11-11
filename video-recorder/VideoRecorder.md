@@ -26,9 +26,6 @@ Watch the [CrewTimer Video Recorder training videos](https://www.youtube.com/pla
     - [Hardwired Internet available](#hardwired-internet-available)
     - [Only WiFi available](#only-wifi-available)
   - [Camera Selection](#camera-selection)
-  - [Other useful equipment](#other-useful-equipment)
-    - [Camera Mounting](#camera-mounting)
-    - [Networking and Power](#networking-and-power)
   - [Software Tools](#software-tools)
   - [Internet Connection Sharing](#internet-connection-sharing)
   - [Setting network priority](#setting-network-priority)
@@ -147,7 +144,7 @@ Try focusing at a point 1/3 across the timing zone.  Generally the area in focus
 If your recording includes the far line marker and you do not need to change zoom settings you can simply use the adjustment in the recorder app to set 'Finish Line'.  However, you need to change the camera angle or zoom
 differently than for production recording you will need to refine your camera mount a bit more so when you zoom you know you haven't moved off your finsih line.
 
-See the [Camera Alignment](./CameraAlignment.md) document for a detailed walkthrough to get ultimate alignment.
+See the [Geek Level Camera Alignment](./CameraAlignment.md) document for a detailed walkthrough to get ultimate alignment.
 
 ## Internet Connectivity
 
@@ -159,7 +156,7 @@ If the only use for the video is for finish order determination, Internet connec
 
 ### Hardwired Internet available
 
-If local hardwired internet is available, simply ensure the camera network connection has access to the network.  Hardwired Internet can be from a facility LAN drop or it could be from a hotspot with RJ45 cabled network connections.  The recording computer should preferably be on the same network switch as the camera.  See the equipment list below for an example hotspot.
+If local hardwired internet is available, simply ensure the camera network connection has access to the network.  Hardwired Internet can be from a facility LAN drop or it could be from a hotspot with RJ45 cabled network connections.  The recording computer should preferably be on the same network switch as the camera.  See [Recommended Video Equipment](./VideoEquipment.md#networking) for an example LTE router.
 
 ### Only WiFi available
 
@@ -171,55 +168,9 @@ If only WiFi is available, there are several configurations which can work in th
 
 ## Camera Selection
 
-For suggested configurations, please check out the [Equipment Page](../general/Equipment.md).
+See [Recommended Video Equipment](./VideoEquipment.md) for the recommended camera, mounting, networking, and power equipment.
 
-Most NDI or SRT capable cameras should work with CrewTimer Video Recorder.  However, some low end SMTAV cameras provide unreliable frame timing.  The following cameras have been tested and work well with CrewTimer Video Recorder.
-
-When recording 1080P provides a good tradeoff between resolution and computer resources and file size.  A recording file using 4K uses 4x the space as 1080P and your computer will need to be top of the line.
-
-If you find a camera that works well for you please send an email to [CrewTimer](info@crewtimer.com) so it can be added to the list.
-
-| Price | Zoom | Pan/Tilt | Res |FPS |                                          | Verified | Model                                                                                                                                   |
-| ----- | ---- | --- | --- | --- | ---------------------------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| $1075 | 30X  | No   | 4K | 60  | ![Aida](./assets/aida-UHD-NDI3-X30.png)  | Yes | [AIDA UHD-NDI3-X30](https://a.co/d/1T1P2zE) |
-| $1450 | 20X  | Yes | 4K | 120 | ![Aida](./assets/aida-PTZ-NDI3-X20.png)  | Yes  | [AIDA PTZ-NDI3-X20](https://usbroadcast.co/product/aida-imaging-ptz-ndi3-x20b-full-hd-ndihx2-ptz-camera-20x-zoom-black/)                |
-| $719  | 30X  | Yes | 1080P | 60  | ![SMTAV BX30N](./assets/SMTAV-BX30N.png) | Yes  | [SMTAV BX30N](https://www.smtav.com/collections/ndi/products/smtav-ai-tracking-ndi-ptz-camera-30x-optics-zoom)                          |
-| $799  | 30X  | Yes | 1080P | 60  | ![AKVANS 30X](./assets/AKVANS-30X.png)   | Yes  | [AVKANS NDI PTZ Camera](https://a.co/d/acMZ1qf)                                                                                         |
-| $475| 8x (manual) | No    | 1080P | 60  | ** Do not use ** ![Aida](./assets/aida-HD-NDI-TF.png)  | **NOT RECOMMENDED.  Drops random frames.**  | AIDA HD-NDI-TF |
- 
- **Note**:Cameras often needed software upgrades to operate properly.  Be sure to update software as soon as you purchase one.  The SMTAV BA series had unreliable NDI timestamps and are not recommended.
-
-The SMTAV BX30N camera requires a software update to version 8.02.88 or better to properly work with DHCP.  Contact <info@smtav.com> for firmware updates.  They also have a .pkg file update to fix an issue with the Chrome browser on version 8.02.88.
-
-## Other useful equipment
-
-### Camera Mounting
-
-<img src="./assets/AidaCameraMounted.png" alt="AIDA UHD-NDI3-X30 mounted vertically" width="500">
-
-*AIDA UHD-NDI3-X30 mounted at 90 degrees with an L bracket on a three-way geared tripod head.*
-
-| Item                                            | Description                                         |
-| ----------------------------------------------- | --------------------------------------------------- |
-| [NEEWER Tripod Head](https://amzn.to/4cq5cpn)   | Three way geared tripod head.                       |
-| [Camera L Bracket](https://a.co/d/00L4ildj)     | Mounts the AIDA UHD-NDI3-X30 at 90 degrees for portrait recording. |
-| [3D-printed L-bracket shim](./assets/L-Bracket-Shim-v13.stl) | Printable shim that helps fit the AIDA UHD-NDI3-X30 securely to the L bracket. |
-| [3D-printed AIDA rain shield](./assets/Aida-Rain-Cover-Rotated-v10.stl) | Printable rain protection for the rotated AIDA camera. Secure it with a [1/4-20 camera screw](https://a.co/d/06aEvW0P). |
-| [Manfroto Super Clamp](https://amzn.to/4bNIYO1) | Handy to mount your camera to scaffolding or rails. |
-| [SLIK Pro 700 DX](https://amzn.to/3KO2ZIP)      | Sturdy Tripod.                                      |
-| [SLIK Pro CF-734](https://amzn.to/4cuixxg)      | Carbon Fiber Tripod.  Can fit in carry-on luggage   |
-| [Focusing Rail](https://amzn.to/3wIi37i)        | Optional horizontal adjustment of camera on tripod head. |
-
-### Networking and Power
-
-| Item                                                  | Description                                          |
-| ----------------------------------------------------- | ---------------------------------------------------- |
-| [STEAMEMO 5 Port Gigabit Ethernet Unmanaged PoE Switch](https://a.co/d/g7WprQ4) | Network switch to power camera over CAT5/6 cable.  |
-| [BVTech PoE+ Gitabit Switch](https://amzn.to/3QSzwkt) | Network switch to power camera over CAT5/6 cable.  (uses AC Adapter)  |
-| [LTE Router](https://amzn.to/3QMPTP9)                 | Provide local DHCP and Internet access               |
-| [Micro USB PoE+](https://amzn.to/3QSqzHw)             | Power micro usb device (e.g. router) via PoE+ switch |
-| [USB C PoE+](https://amzn.to/3QU2Vup)                 | Power USB C device (e.g. router) via PoE+ switch     |
-| [Eco Flow River 2](https://a.co/d/asskFah)            | Portable power without using a generator.            |
+Most NDI or SRT capable cameras should work with CrewTimer Video Recorder, but some low-end cameras provide unreliable frame timing. See [Camera Testing Results](./CameraTesting.md) for the cameras that have been tested and which ones to avoid.
 
 ## Software Tools
 

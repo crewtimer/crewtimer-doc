@@ -2,25 +2,24 @@
 
 ## Basic Timing
 
-1. [2x CrewTimer Clickers](https://www.ebay.com/itm/284203833727?mkcid=16&mkevt=1&mkrid=711-127632-2357-0&ssspo=owmzbom4r2i&sssrc=2047675&ssuid=8mnCHnGtRgq&var=585700090989&widget_ver=artemis&media=COPY). One for Start and one for Finish.  1x Yellow and 1x Orange.
-2. [CrewTimer Horn](https://www.ebay.com/itm/285257431393?mkcid=16&mkevt=1&mkrid=711-127632-2357-0&ssspo=owmzbom4r2i&sssrc=2047675&ssuid=8mnCHnGtRgq&var=587137568080&widget_ver=artemis&media=COPY) if your event prefers a horn at start or finish.
-3. 2x Android Tablets or iPad Mini Tablets with LTE or solid WiFi
+| Item | Qty | Notes |
+| ---- | --- | ----- |
+| Android tablets or iPad Mini | 2 | One for Start and one for Finish. Use a separate device for each position. Each needs LTE (3G/4G) or a reliable WiFi hotspot. Phones also work. |
+| [CrewTimer Clickers](https://store.crewtimer.com) | 2 | Bluetooth buttons that record a time the moment they are pressed, so the timer can watch the boats instead of the screen. Get one Yellow and one Orange so the Start and Finish clickers don't get swapped. Clickers store times and send them to the app when it reconnects. |
+| [CrewTimer Horn](https://store.crewtimer.com) | Optional | For events that want a horn at the start or finish. |
+| Portable battery packs | 1 per position | Keep tablets charged through a long day. |
+| Zip-lock bags | 1 per tablet | Protects tablets used in a launch. The touch screen still works through the bag. |
 
-## Basic Video Package using an NDI camera
+### Backup timing
 
-CrewTimer does not resell the items listed below.  LOCs are free to obtain equipment from their preferred source.
+For a second record of times, add Start2 and Finish2 positions, each with its own tablet. A second clicker for each position is optional. See [Regatta Management](./RegattaManagement.md) for how backup times are used.
 
-This package assumes you have wired internet available via either a facility drop or a WiFi client or LTE Router.  The wired internet plugs into the PoE+ capable switch which then powers your camera via an ethernet cable.
+### Manuals
 
-1. [$1230 AIDA UHD-NDI3-X30 30x zoom Video Camera](https://www.bhphotovideo.com/c/product/1776614-REG/aida_imaging_uhd_ndi3_x30_uhd_4k_60_ndihx3_ip_srt_hdmi_poe.html)
-2. [$159 NEEWER Tripod Head](https://amzn.to/4cq5cpn) Three way geared tripod head.
-3. [$29 Steamemo 5 Port PoE Gigabit Switch](https://a.co/d/0cdOYMXW)
-4. [$37 Manfroto Super Clamp](https://amzn.to/4bNIYO1) for scaffolding/railing mounting.
-5. [$140 SLIK Pro 700 DX Tripod](https://a.co/d/09MtQcZa) for portable mounting.
-6. [$171 2TB Portable SSD](https://amzn.to/3Rvhghm) if your computer needs more storage. 1TB enough for a regatta.
-7. Macbook Air M series or Intel based mid+ range laptop
-8. Ehternet Cables
+Clicker and horn manuals and firmware updates are on the [Hardware](./Hardware.md) page.
 
-**Note** The cameras need Internet access to synchronize their time for recording.  This can be done using a [LTE Router](https://a.co/d/09MtQcZa), a local wired etherenet drop to the PoE switch, or using Internet Connection Sharing on Mac or Windows.  The Internet connection and camera operation should be tested before the regatta!
+## Video Finish Line Package
 
-Other cameras are listed on the [Video Recorder](../video-recorder/VideoRecorder.md) page.  See [Example Video Setup and Configuration](../video-recorder/VideoSetup.md) for a sample camera, network, and laptop setup.
+For video, see [Recommended Video Equipment](../video-recorder/VideoEquipment.md). It is a curated list built around the AIDA UHD-NDI3-X30 camera, including the tripod, mounting, networking, computer, and power. Other cameras that have been tested are listed in [Camera Testing Results](../video-recorder/CameraTesting.md).
+
+See [Example Video Setup and Configuration](../video-recorder/VideoSetup.md) for how to connect it all together.

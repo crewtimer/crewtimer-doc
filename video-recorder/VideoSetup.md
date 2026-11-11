@@ -10,6 +10,8 @@ The following shows configuring a Macbook to act as video recorder and video rev
 * 3-axis camera mount
 * Camera rail
 
+See [Recommended Video Equipment](./VideoEquipment.md) for links to each item.
+
 ## Step by Step
 
 See the following diagram and details for hooking up the video camera and computer.
@@ -39,6 +41,31 @@ See the following diagram and details for hooking up the video camera and comput
 ### Laptop Dongle Connections
 
 <img src="assets/LaptopDongle.jpg" alt="Laptop Dongle" width="400">
+
+## Camera Settings
+
+Use these settings for the AIDA UHD-NDI3-X30.
+
+### In the camera
+
+Set these once using the camera's web page. Click the camera icon in the recorder app to open it.
+
+| Setting | Value | Notes |
+| ------- | ----- | ----- |
+| Resolution | 1080p @ 60Hz | 4K is not recommended. It needs much more computer power and storage. |
+| SRT | Enabled on port 1600, security off. | |
+| NTP Server | time.cloudflare.com | Keeps the camera clock accurate for video timestamps. Requires Internet access. |
+
+### In the recorder app
+
+| Setting | Value | Notes |
+| ------- | ----- | ----- |
+| Rotation | 90 degrees | Matches the camera mounted on its side with the L bracket for portrait recording. |
+| Recording Quality | High Quality | |
+| Focus | Manual | Prevents the camera from refocusing on passing boats. |
+| Exposure | Manual | |
+| Shutter Speed | 1/1000 or faster | Freezes motion at the finish line. |
+| Aperture | f8 or higher if possible | A higher f-stop keeps more of the course in focus. Use gain if more light is needed. |
 
 
 ## Video Camera Alignment
@@ -75,8 +102,8 @@ In this scenario the camera tripod is placed 'best effort' to be on the finish l
 
 * Disable WiFi or it may not communicate well with the PoE Camera on the wired network due to wired having a higher priority.
 * Disable updates so bandwidth is not consumed
-* Note that the rear USB connection is usually the highest bandwidth so should receive the dongle.
-* On macos you can run `caffienate -s' to keep the laptop from sleeping
+* Note that the rear USB connection near the power port is usually the highest bandwidth so should receive the network dongle.
+* On macos you can run `caffienate -s' to keep the laptop from sleeping.  Install Amphetamine to close the lid and keep everything going.
 
 ## Other configurations
 
